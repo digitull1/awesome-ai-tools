@@ -109,7 +109,7 @@ Every concept below has passed the CLICK score ([02-packaging.md](02-packaging.m
 **Titles**
 - A: Stop Asking Which Jobs AI Can't Replace (Do This Instead)
 - B: Every "AI-Proof Jobs" List Is a Guess. Here's What to Do.
-- C: Will AI Take My Job? Run This 20-Minute Test on Your Week
+- C: Which Jobs Are Safe From AI? Here's the Honest Answer *(replaces "Will AI Take My Job?…", which the research sprint found is dominated by a Channel 4 documentary of that name)*
 
 **Thumbnails**
 - A (B · The Stamp): a printed list headed **AI-PROOF JOBS** with an orange **GUESS** stamp, and the host's hand holding a pen.
@@ -398,7 +398,7 @@ Every concept below has passed the CLICK score ([02-packaging.md](02-packaging.m
 **Last Tuesday** · 10–11 min · Students ("help people"), career changers · Search ("day in the life of a paramedic") and Suggested · Low cost · CLICK C4 L4 I4 C4 K5 = **21**
 
 **Titles**
-- A: What a Paramedic Actually Did Last Tuesday (Hour by Hour)
+- A: What Does a Paramedic Actually Do? (Hour by Hour) *(matches "what does a paramedic do" from the research sprint)*
 - B: The Part of Being a Paramedic Nobody Posts
 - C: Before You Become a Paramedic, Hear About Their Worst Week
 
@@ -453,7 +453,7 @@ Every concept below has passed the CLICK score ([02-packaging.md](02-packaging.m
 **Honest Answers** · 8–10 min · The Quietly Stuck (late 20s–early 30s) · Search · Low cost · CLICK C4 L4 I5 C4 K5 = **22**
 
 **Titles**
-- A: Is 30 Too Late to Change Careers? Try This 2-Week Test First
+- A: Career Change at 30: Is It Too Late? (Try This 2-Week Test) *(leads with "career change at 30", the phrase people type)*
 - B: Changing Careers at 30: Change One Thing, Not Everything
 - C: 30 and Want a Different Career? Don't Buy a Degree Yet.
 
@@ -646,7 +646,7 @@ Every concept below has passed the CLICK score ([02-packaging.md](02-packaging.m
 **Last Tuesday** · 10 min · Students ("work with nature") · Search ("vet nurse day in the life") and Suggested · Low–medium cost · CLICK C4 L5 I4 C3 K5 = **21**
 
 **Titles**
-- A: What a Vet Nurse Actually Did Last Tuesday (Hour by Hour)
+- A: Vet Nurse Day in the Life (The Honest Version) *(matches "vet nurse day in the life")*
 - B: Before You Become a Vet Nurse, Watch This
 - C: The Part of Vet Nursing Nobody Posts
 

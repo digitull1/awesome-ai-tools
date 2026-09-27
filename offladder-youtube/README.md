@@ -30,6 +30,7 @@ A complete system for producing YouTube videos for [offladder.com](https://offla
 | [08-analytics.md](08-analytics.md) | The scoreboard, diagnosis matrix, review cadence, decision rules, funnel measurement, experiment backlog | Packaging lead |
 | [09-launch-plan.md](09-launch-plan.md) | Research sprint, channel set-up, trailer script, the 12-week calendar and checkpoints | Producer |
 | [templates/](templates/) | Concept card, claims register, script, thumbnail brief, release and safety checklist, publish checklist, packaging log, post-mortem | Everyone |
+| [launch/](launch/) | **What's been made and scheduled:** the launch log, six rendered Shorts queued in Metricool, channel art, the search-language research, and the Shorts renderer | Everyone |
 
 ---
 

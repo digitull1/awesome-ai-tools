@@ -6,7 +6,7 @@
 | **Target length** | 10:00 |
 | **Central question** | If nobody can say which jobs are safe from AI, what should I actually do? |
 | **Viewer** | The AI-Anxious, of any age, and especially the Quietly Stuck |
-| **Titles** | A: *Stop Asking Which Jobs AI Can't Replace (Do This Instead)* · B: *Every "AI-Proof Jobs" List Is a Guess. Here's What to Do.* · C: *Will AI Take My Job? Run This 20-Minute Test on Your Week* |
+| **Titles** | A: *Stop Asking Which Jobs AI Can't Replace (Do This Instead)* · B: *Every "AI-Proof Jobs" List Is a Guess. Here's What to Do.* · C: *Which Jobs Are Safe From AI? Here's the Honest Answer* |
 | **Thumbnail** | Archetype B: a printed list headed **AI-PROOF JOBS** with an orange **GUESS** stamp, and the host's hand holding a pen |
 | **Props** | Printed copies of the lists (see Research), an orange ink stamp reading GUESS, a highlighter, a printout of the host's real week |
 
