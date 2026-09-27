@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>OffLadder Shorts engine</title>
+<style>
+/*FONTS*/
+:root {
+  --orange: #FA5608;
+  --ink: #0C0C0C;
+  --paper: #F4F2EE;
+  --paper2: #FBFAF7;
+  --muted: #54524F;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--paper); }
+body { font-family: 'Hind', sans-serif; color: var(--ink); -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; }
+#stage { position: relative; width: 1080px; height: 1920px; background: var(--paper); overflow: hidden; }
+
+/* Brand strip: always on, inside the Shorts safe area */
+.brand { position: absolute; left: 72px; top: 200px; display: flex; align-items: center; gap: 22px; }
+.wordmark { font-family: 'Archivo Black'; font-size: 50px; line-height: 1; letter-spacing: -0.01em; }
+.wordmark .l { color: var(--orange); }
+.chip { font-family: 'Archivo Black'; font-size: 28px; line-height: 1; letter-spacing: .08em; text-transform: uppercase;
+        background: var(--ink); color: var(--paper); padding: 11px 16px 9px; }
+
+/* Scenes: content box stays clear of the Shorts UI (right-hand buttons, bottom caption area) */
+.scene { position: absolute; left: 72px; top: 300px; width: 808px; height: 1160px;
+         display: flex; flex-direction: column; justify-content: center; gap: 34px; visibility: hidden; }
+.scene.top { justify-content: flex-start; padding-top: 40px; }
+.b { opacity: 0; transform-origin: left center; will-change: transform, opacity; }
+
+.h1 { font-family: 'Archivo Black'; font-size: 108px; line-height: .98; letter-spacing: -0.01em; text-transform: uppercase; }
+.h1.xl { font-size: 136px; }
+.nw { white-space: nowrap; }
+.h1.m { line-height: 1.26; }
+.mark { background: var(--orange); color: var(--ink); border: 6px solid var(--ink); box-shadow: 10px 10px 0 var(--ink);
+        padding: 4px 16px 0; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.body { font-family: 'Hind'; font-weight: 600; font-size: 60px; line-height: 1.2; }
+.small { font-family: 'Hind'; font-weight: 600; font-size: 44px; line-height: 1.25; color: var(--muted); }
+.label { font-family: 'Archivo Black'; font-size: 32px; line-height: 1.1; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.g { font-family: 'Archivo Black'; font-weight: 400; }
+
+.card { position: relative; background: var(--paper2); border: 6px solid var(--ink); box-shadow: 12px 12px 0 var(--ink);
+        padding: 26px 28px 24px; display: grid; grid-template-columns: 88px 1fr; gap: 26px; align-items: start; width: 790px; }
+.card .num { width: 88px; height: 88px; background: var(--orange); border: 6px solid var(--ink);
+             display: flex; align-items: center; justify-content: center; font-family: 'Archivo Black'; font-size: 54px; line-height: 1; padding-top: 6px; }
+.card .title { font-family: 'Archivo Black'; font-size: 64px; line-height: .98; text-transform: uppercase; padding-top: 6px; }
+.card .desc { font-family: 'Hind'; font-weight: 600; font-size: 44px; line-height: 1.18; color: var(--muted); margin-top: 12px; }
+.card.compact .title { font-size: 56px; }
+.card.compact .desc { font-size: 40px; }
+
+.bigcard { background: var(--paper2); border: 8px solid var(--ink); box-shadow: 16px 16px 0 var(--ink); padding: 44px 40px 36px; width: 780px; }
+.bigcard .title { font-family: 'Archivo Black'; font-size: 100px; line-height: .98; text-transform: uppercase; }
+
+.timer { width: 360px; height: 360px; background: var(--orange); border: 8px solid var(--ink); box-shadow: 16px 16px 0 var(--ink);
+         display: flex; align-items: center; justify-content: center; font-family: 'Archivo Black'; font-size: 250px; line-height: 1; padding-top: 22px; }
+.timer.sm { width: 190px; height: 190px; font-size: 120px; padding-top: 12px; box-shadow: 10px 10px 0 var(--ink); border-width: 6px; }
+
+.tally { display: grid; grid-template-columns: repeat(5, 96px); gap: 22px; }
+.tally i { display: block; width: 96px; height: 96px; border: 6px solid var(--ink); background: var(--paper2); }
+
+.stamp { display: inline-block; align-self: center; font-family: 'Archivo Black'; color: var(--orange); border: 12px solid var(--orange);
+         padding: 18px 34px 6px; font-size: 150px; line-height: 1; text-transform: uppercase; background: rgba(251, 250, 247, .7); transform-origin: center; }
+.card .stamp { position: absolute; right: 22px; top: -46px; font-size: 44px; border-width: 7px; padding: 8px 16px 2px; }
+
+.cta { font-family: 'Hind'; font-weight: 600; font-size: 40px; line-height: 1.25; border-top: 6px solid var(--ink); padding-top: 20px; }
+.cta u { text-decoration: none; font-family: 'Archivo Black'; font-weight: 400; box-shadow: inset 0 -14px 0 var(--orange); }
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+/*SPEC*/
+(function () {
+  const S = window.SPEC;
+  const stage = document.getElementById('stage');
+  const blocks = [];
+  const timers = [];
+  const scenes = [];
+
+  function el(tag, cls, html) {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (html != null) e.innerHTML = html;
+    return e;
+  }
+  // Hind has no arrow glyphs, so arrows are always set in Archivo Black.
+  function glyphs(s) { return String(s).replace(/([→↓])/g, '<span class="g">$1</span>'); }
+  const DEFAULT_CTA = 'Try careers before you choose one · <u>offladder.com</u>';
+
+  function makeBlock(b) {
+    switch (b.type) {
+      case 'h1': return el('div', 'h1' + (b.size ? ' ' + b.size : ''), glyphs(b.text));
+      case 'mark': { const d = el('div', 'h1 m' + (b.size ? ' ' + b.size : '') + (b.nowrap ? ' nw' : '')); d.appendChild(el('span', 'mark', glyphs(b.text))); return d; }
+      case 'body': return el('div', 'body', glyphs(b.text));
+      case 'small': return el('div', 'small', glyphs(b.text));
+      case 'label': return el('div', 'label', glyphs(b.text));
+      case 'card': {
+        const d = el('div', 'card' + (b.compact ? ' compact' : ''));
+        d.appendChild(el('div', 'num', b.num));
+        const t = el('div', 'tx');
+        t.appendChild(el('div', 'title', b.title));
+        if (b.desc) t.appendChild(el('div', 'desc', glyphs(b.desc)));
+        d.appendChild(t);
+        if (b.stamp) {
+          const s = el('div', 'stamp', b.stamp.text);
+          d.appendChild(s);
+          blocks.push({ el: s, in: b.stamp.in, anim: 'stamp', rot: -9 });
+        }
+        return d;
+      }
+      case 'bigcard': return (() => { const d = el('div', 'bigcard'); d.appendChild(el('div', 'title', b.title)); return d; })();
+      case 'timer': { const d = el('div', 'timer' + (b.small ? ' sm' : '')); d.textContent = b.from; timers.push({ el: d, in: b.in, from: b.from }); return d; }
+      case 'tally': { const d = el('div', 'tally'); for (let i = 0; i < b.n; i++) d.appendChild(el('i')); return d; }
+      case 'stamp': return el('div', 'stamp', b.text);
+      case 'cta': return el('div', 'cta', b.text || DEFAULT_CTA);
+      default: throw new Error('unknown block ' + b.type);
+    }
+  }
+
+  window.build = function () {
+    const brand = el('div', 'brand');
+    brand.appendChild(el('div', 'wordmark', 'off<span class="l">ladder</span>'));
+    if (S.chip) brand.appendChild(el('div', 'chip', glyphs(S.chip)));
+    stage.appendChild(brand);
+
+    for (const sc of S.scenes) {
+      const s = el('div', 'scene' + (sc.align === 'top' ? ' top' : ''));
+      for (const b of sc.blocks) {
+        const e = makeBlock(b);
+        e.classList.add('b');
+        s.appendChild(e);
+        blocks.push({ el: e, in: b.in, anim: b.anim || 'up', rot: b.rot });
+      }
+      stage.appendChild(s);
+      scenes.push({ el: s, in: sc.in, out: sc.out });
+    }
+    fit();
+    return { scenes: scenes.length, blocks: blocks.length };
+  };
+
+  // Shrink any text that would overflow its box, then shrink a whole scene if it is too tall.
+  function fit() {
+    for (const s of scenes) s.el.style.visibility = 'visible';
+    document.querySelectorAll('.h1, .title').forEach(e => {
+      let size = parseFloat(getComputedStyle(e).fontSize);
+      let guard = 0;
+      while (e.scrollWidth > e.clientWidth + 1 && size > 28 && guard++ < 80) { size -= 2; e.style.fontSize = size + 'px'; }
+    });
+    for (const s of scenes) {
+      let guard = 0;
+      while (s.el.scrollHeight > s.el.clientHeight + 1 && guard++ < 30) {
+        s.el.querySelectorAll('.h1, .title, .body, .small, .desc').forEach(e => {
+          e.style.fontSize = (parseFloat(getComputedStyle(e).fontSize) * 0.95) + 'px';
+        });
+      }
+      s.el.dataset.overflow = s.el.scrollHeight > s.el.clientHeight + 1 ? 'yes' : 'no';
+    }
+    for (const s of scenes) s.el.style.visibility = 'hidden';
+  }
+
+  const easeOut = p => 1 - Math.pow(1 - p, 3);
+  const back = p => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(p - 1, 3) + c1 * Math.pow(p - 1, 2); };
+
+  window.seek = function (t) {
+    for (const sc of scenes) sc.el.style.visibility = (t >= sc.in && t < sc.out) ? 'visible' : 'hidden';
+    for (const b of blocks) {
+      const e = b.el;
+      if (b.anim === 'none') { e.style.opacity = t >= b.in ? 1 : 0; e.style.transform = ''; continue; }
+      const dur = b.anim === 'stamp' ? 0.22 : b.anim === 'pop' ? 0.3 : 0.34;
+      const p = Math.max(0, Math.min(1, (t - b.in) / dur));
+      if (b.anim === 'up') {
+        e.style.opacity = easeOut(p);
+        e.style.transform = `translateY(${(1 - easeOut(p)) * 42}px)`;
+      } else if (b.anim === 'pop') {
+        e.style.opacity = Math.min(1, p * 1.8);
+        e.style.transform = `scale(${0.9 + 0.1 * back(p)})`;
+      } else if (b.anim === 'stamp') {
+        e.style.opacity = Math.min(1, p * 2.2);
+        e.style.transform = `rotate(${b.rot ?? -8}deg) scale(${1.9 - 0.9 * back(p)})`;
+      }
+    }
+    for (const tm of timers) {
+      const k = Math.floor(t - tm.in + 1e-6);
+      tm.el.textContent = Math.max(1, tm.from - Math.max(0, k));
+      const frac = (t - tm.in) - Math.floor(t - tm.in);
+      const pulse = t >= tm.in ? 1 + 0.07 * Math.max(0, 1 - frac / 0.18) : 1;
+      tm.el.style.scale = pulse;
+    }
+  };
+
+  window.report = function () {
+    return scenes.map((s, i) => ({ scene: i, overflow: s.el.dataset.overflow, h: s.el.scrollHeight }));
+  };
+})();
+</script>
+</body>
+</html>
