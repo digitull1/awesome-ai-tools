@@ -229,7 +229,9 @@ Recruit through the channel's casting form and personal networks. **Never throug
 
 ## [19:40–20:00] Bridge
 
-**VO:** "Next: eight years without a job title, about forty jobs, and six weeks to find out where they fit now." *(Only once episode 19 exists; otherwise bridge to video 15.)*
+**VO (if episode 19 is already live):** "Next: eight years without a job title, about forty jobs, and six weeks to find out where they fit now."
+
+**VO (otherwise):** "If you're wondering whether it's too late for you, this is the one to watch next: is thirty too late to change careers? It's right here." *(Video 15, published the week before.)*
 
 **ON SCREEN:** End screen. Element 1: the next Change One Thing episode, or video 15. Element 2: the Change One Thing playlist. Element 3: subscribe.
 

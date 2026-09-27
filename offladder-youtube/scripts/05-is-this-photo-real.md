@@ -201,9 +201,9 @@ We make every image ourselves, so no real person, event or news story is faked o
 
 ## [11:00–11:30] Bridge
 
-**HOST:** "Next, I tried a job that exists because AI gets things wrong: I had ninety minutes to make one fail on purpose. It's right here."
+**HOST:** "If AI has you worried about your own job, this is the one I'd watch next: why every 'AI-proof jobs' list is a guess, and what to do instead. It's right here."
 
-**ON SCREEN:** End screen. Element 1: video 08 (or video 03 until 08 is published). Element 2: The Job Nobody Told You About playlist. Element 3: subscribe.
+**ON SCREEN:** End screen. Element 1: video 03. Element 2: The Job Nobody Told You About playlist. Element 3: subscribe.
 
 ---
 

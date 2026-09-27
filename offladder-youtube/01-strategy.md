@@ -30,7 +30,7 @@ Career content on YouTube clusters into four crowded shapes. Each one leaves an 
 | What's crowded | What it gets wrong | OffLadder's opening |
 |---|---|---|
 | Salary lists ("highest-paying jobs without a degree") | Says what a job pays, not what the hours feel like | Film the hour of work |
-| AI-fear lists ("jobs AI will replace", "AI-proof jobs") | Predictions presented as facts, which contradict each other year to year | Name the guess, then give viewers a habit that survives any prediction |
+| AI-fear lists ("jobs AI will replace", "AI-proof jobs") | Predictions presented as facts, which often disagree with each other (script 03 tests this on camera) | Name the guess, then give viewers a habit that survives any prediction |
 | Glossy day-in-the-life vlogs | Shows the best day | Shows the worst week and the part they'd delete |
 | Talking-head career advice | Advice with nothing to do afterwards | An experiment the viewer can start before the video ends |
 
@@ -108,7 +108,7 @@ These are the recurring elements that make an OffLadder video recognisable withi
 | **The Delete Question** | Every practitioner is asked: *"Which part of your job would you delete if you could?"* | OffLadder's advice on informational interviews |
 | **Evidence Cards** | On-screen source cards (organisation, report and year) whenever a fact appears | OffLadder's editorial rule: *"We only state what can be checked."* |
 
-The Verdict stamp, the Clock and the orange highlight box also carry through into thumbnails. See [02-packaging.md](02-packaging.md#thumbnail-system).
+The Verdict stamp, the Clock and the orange highlight box also carry through into thumbnails. See [02-packaging.md](02-packaging.md#4-thumbnail-system).
 
 ---
 
@@ -144,7 +144,7 @@ Watch a video
 
 - **YouTube's job** is to create the *"I could try that"* moment and to show that the method works. It is not the place to sell membership. We never mention prices on camera, because founding pricing changes, and "free to start" is the honest, lower-friction message.
 - **Series and CTA strength vary.** Honest Answers viewers arrive with a question the product answers, so they get the clearest product call to action. Experiment viewers arrive for the story, so the product appears *inside* the story (the host's own three-question result picks the episode's direction). See [05-ctas.md](05-ctas.md).
-- **Everything is tracked.** Every link carries UTM parameters so the site can count three-question starts by series and by video. See [05-ctas.md](05-ctas.md#tracking-links).
+- **Everything is tracked.** Every link carries UTM parameters so the site can count three-question starts by series and by video. See [05-ctas.md](05-ctas.md#9-tracking-links).
 
 ---
 

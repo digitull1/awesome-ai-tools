@@ -164,7 +164,7 @@ Twenty-two techniques, grouped by what they do. The **Where** column says which 
 | **Micro-payoffs** | Something new every 45–90 seconds: a fact, a laugh, a surprise, a small win | All |
 | **Callbacks** | The last line echoes the first. It feels complete, and viewers remember it | All |
 | **Late CTA** | The product CTA comes *after* the payoff, never before the verdict | All |
-| **Bridge ending** | The last 20 seconds give a specific reason to watch the next video. Never *"thanks for watching, see you next time"*, which viewers hear as permission to leave | All |
+| **Bridge ending** | The last 20 seconds give a specific reason to watch the next video, naming only a video that's already live. Never *"thanks for watching, see you next time"*, which viewers hear as permission to leave | All |
 
 ### Retention killers (search the rough cut for these)
 

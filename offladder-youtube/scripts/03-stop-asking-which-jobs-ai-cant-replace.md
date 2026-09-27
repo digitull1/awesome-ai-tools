@@ -179,9 +179,9 @@ This video's authority rests on one piece of real research, done on camera-ready
 
 ## [9:40–10:00] Bridge
 
-**HOST:** "Want to see what testing a direction actually looks like? I had ninety minutes to do a job that exists *because* AI gets things wrong: making it fail on purpose. It's right here."
+**HOST:** "Want to see what testing a direction actually looks like? I had ninety minutes to plan a festival with a real event producer, who had a surprise planned. It's right here."
 
-**ON SCREEN:** End screen. Element 1: video 08 (or video 04 until 08 is published). Element 2: the Honest Answers playlist. Element 3: subscribe.
+**ON SCREEN:** End screen. Element 1: video 02. Element 2: the Honest Answers playlist. Element 3: subscribe.
 
 ---
 

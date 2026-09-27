@@ -247,9 +247,11 @@ Build this with the practitioner. Every number in it is part of a fictional scen
 
 ## [13:45–14:05] Beat 12 · Bridge
 
-**HOST:** "If you enjoyed watching me panic about a festival, the next one's worse. I had ninety minutes to make an AI fail on purpose. It's a real job, and it's right here."
+**HOST:** "If you want to find a direction of your own to test, this is the one to watch next. It walks you through it in about ten minutes. It's right here."
 
-**ON SCREEN:** End screen. Element 1: video 08 (or, before it's published, video 03). Element 2: the 90 Minutes As… playlist. Element 3: subscribe.
+**ON SCREEN:** End screen. Element 1: video 01 (published alongside this one). Element 2: the 90 Minutes As… playlist. Element 3: subscribe.
+
+*Spoken bridges must name a video that is already live on publish day, because the audio can't be changed later. Once more 90 Minutes As… episodes exist, later episodes bridge to each other.*
 
 ---
 

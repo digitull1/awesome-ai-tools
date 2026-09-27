@@ -81,9 +81,14 @@ Only promise what the team can deliver. If we say we'll reply, we reply.
 
 ### Bridge lines (the last 20 seconds)
 
-- *"If you enjoyed watching me panic about a festival, the next one's worse. I had ninety minutes to make an AI fail on purpose. It's right here."*
-- *"If this was your question, the next video is the one to watch: how to test a direction without quitting anything."*
-- *"Next week, a paramedic tells us about the worst week of their year. It's not the week you'd guess."* **[Only if true of the next episode]**
+A spoken bridge must name a video that is **already live on publish day**. The audio can't be changed after upload, and the end screen can only link to published videos.
+
+- *"If you enjoyed watching me panic about a festival, this one's worse: I had ninety minutes to make an AI fail on purpose. It's right here."*
+- *"If this was your question, the next video is the one to watch: how to test a direction without quitting anything. It's right here."*
+
+### Subscribe teasers (optional, before the bridge)
+
+- *"Next week, a paramedic tells us about the worst week of their year. Subscribe so you don't miss it."* **[Only if that episode is genuinely scheduled]**
 
 ### Casting lines (career-change videos)
 
