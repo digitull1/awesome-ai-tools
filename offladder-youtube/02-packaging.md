@@ -114,7 +114,7 @@ These are for episodes beyond the launch slate in [06-video-slate.md](06-video-s
 - Parents: Don't Ask Your Teen What They Want to Be. Ask This.
 
 **Change One Thing**
-- 30, Burnt Out, and Scared He's Left It Too Late
+- 30, Burnt Out, and Scared It's Too Late
 - The Teacher Who Tested UX Research for 6 Weeks
 - 52 and Starting Something New Without Quitting
 

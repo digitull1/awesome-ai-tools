@@ -9,6 +9,7 @@ Every concept below has passed the CLICK score ([02-packaging.md](02-packaging.m
 - **Hook numbers** refer to the archetypes in [03-hooks-and-openings.md](03-hooks-and-openings.md#3-twelve-hook-archetypes).
 - **Structures** refer to [04-story-and-retention.md](04-story-and-retention.md#part-1--six-story-structures).
 - **Risk and fact-check** lists what must be verified, permitted or protected before publishing.
+- **People who haven't been cast yet.** Working titles and hooks that describe a specific person (for example *41, a Mortgage, and Done With Her Job*) are placeholders. Once someone is cast, rewrite them around that real person, including their age, situation and pronouns.
 
 ---
 
@@ -293,10 +294,10 @@ Every concept below has passed the CLICK score ([02-packaging.md](02-packaging.m
 - A (D · Split Reality): left, **IMAGINED**: a teacher at a whiteboard with an engaged class (a staged or stock-free re-creation without pupils' faces). Right, **TUESDAY**: a stack of marking on a kitchen table at night. Badge **TUE**.
 - B: a real calendar close-up with one week blocked solid. Text **THIS WEEK.**
 
-**Hook:** *"This is a teacher's calendar from the worst week of her year. Look at Thursday."* (Use the real calendar.)
+**Hook:** *"This is a teacher's calendar from the worst week of their year. Look at Thursday."* (Use the real calendar.)
 **Opening scene:** a slow push-in on the real calendar, then the teacher reading it aloud.
 
-**Structure:** The Tuesday Clock, stretched across a week. The worst week, hour by hour at the key moments → the best week, for balance → the part she'd delete → *"What makes you stay?"* → her smallest real task for viewers: *"Explain something you know to someone who doesn't, and notice exactly where they get lost."*
+**Structure:** The Tuesday Clock, stretched across a week. The worst week, hour by hour at the key moments → the best week, for balance → the part they'd delete → *"What makes you stay?"* → their smallest real task for viewers: *"Explain something you know to someone who doesn't, and notice exactly where they get lost."*
 
 **Why they click.** The protective framing (*before you…*) pulls in anyone considering teaching, and everyone who ever had teachers is curious about the backstage.
 
@@ -370,14 +371,14 @@ Every concept below has passed the CLICK score ([02-packaging.md](02-packaging.m
 
 **Titles**
 - A: I Tried Being a Drone Survey Operator for 90 Minutes
-- B: I Had 90 Minutes to Tell a Farmer Something She Didn't Know
+- B: I Had 90 Minutes to Find a Problem in a Farmer's Field
 - C: Flying Drones for Money Isn't What I Thought
 
 **Thumbnails**
 - A (A · Mid-Task): host with the controller, looking up, drone against the sky and a field below. Badge **90:00**, text **FIND THE PROBLEM**.
 - B (C · The Artefact): an aerial image of a field with an orange circle around one patch. Text **WHAT'S THIS?**
 
-**Hook:** *"This is a drone. In ninety minutes I need to use it to tell a farmer something she doesn't already know about her own field."* **Opening scene:** Blueprint 1.
+**Hook:** *"This is a drone. In ninety minutes I need to use it to tell a farmer something they don't already know about their own field."* **Opening scene:** Blueprint 1.
 
 **Structure:** The Experiment Arc. The expectation-against-reality beat is built in: the host expects flying, but the job is mostly flight planning and making sense of images. **Curveball:** the farmer asks a different question from the one planned (*"actually, I need to know about drainage"*). **Output:** a one-page finding for a real recipient, the farmer, whose reaction is the payoff → review → Scorecard → Verdict.
 **Your Version:** take a photo of the same outdoor spot at the same time on three days, and write down one thing that changed and why it might matter to someone.
@@ -488,7 +489,7 @@ Every concept below has passed the CLICK score ([02-packaging.md](02-packaging.m
 - A (A · Mid-Task): host indoors in a coat, holding a thermal camera, with an inset thermal image showing a cold patch around a window. Text **WHERE'S THE HEAT?**
 - B (C · The Artefact): the thermal image full-frame with an orange circle. Text **FOUND IT.**
 
-**Hook:** *"My flat is always cold. Today, the person whose job is to find out why is letting me try her job, on my own flat."* **Opening scene:** Blueprint 1, the host's breath visible (if it genuinely is) as the thermal camera switches on.
+**Hook:** *"My flat is always cold. Today, the person whose job is to find out why is letting me try their job, on my own flat."* **Opening scene:** Blueprint 1, the host's breath visible (if it genuinely is) as the thermal camera switches on.
 
 **Structure:** The Experiment Arc. **The brief:** find the three biggest reasons this home is cold and rank the fixes by cost and impact, without causing damp. Tools: a thermal camera, a moisture meter and a draught check → **curveball:** the assessor shows why the host's "obvious fix" (seal everything) could cause condensation and damp → a prioritised plan → review → Scorecard → Verdict.
 **Your Version:** walk around your home with the back of your hand near window frames and doors, and write down the three coldest spots in order.
@@ -571,7 +572,7 @@ Every concept below has passed the CLICK score ([02-packaging.md](02-packaging.m
 - A (E · Person + Clock): a portrait with the progress bar and her own words as the quote (for example *"am I still employable?"*).
 - B: her handwritten list of everything she ran during the break (school fundraiser treasurer, carer, community organiser…). Orange box: **[N] JOBS.**
 
-**Hook:** hook bank #17, *"She hasn't had a job title in eight years. She's had about forty jobs."* (her real inventory). **Opening scene:** she writes the list on camera.
+**Hook:** hook bank #17, *"Eight years without a job title. About forty jobs."* (the subject's real inventory). **Opening scene:** she writes the list on camera.
 
 **Structure:** The Six-Week Arc. The inventory of the break → where it fits now → conversations → the smallest real piece of work → the decision.
 
@@ -650,10 +651,10 @@ Every concept below has passed the CLICK score ([02-packaging.md](02-packaging.m
 - C: The Part of Vet Nursing Nobody Posts
 
 **Thumbnails**
-- A: the vet nurse with a calm patient (owner's consent), badge **TUE**, text: her "delete" answer **[real]**.
+- A: the vet nurse with a calm patient (owner's consent), badge **TUE**, text: their "delete" answer **[real]**.
 - B (D · Split Reality): **IMAGINED**, cuddling puppies; **TUESDAY**, a difficult conversation at reception or a cleaning rota.
 
-**Hook:** her real "delete" answer, quoted. **Opening scene:** the quote on screen, then her voice.
+**Hook:** their real "delete" answer, quoted. **Opening scene:** the quote on screen, then their voice.
 
 **Structure:** The Tuesday Clock.
 

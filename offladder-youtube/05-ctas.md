@@ -35,7 +35,7 @@
 | **90 Minutes As…** | Beat 2: host shows their real three-question result and picks the direction | Prediction prompt at beat 3 (*"comment your verdict before you see mine"*) | After the curveball resolves | Your Version → *"or get your own two directions"* | Next 90 Minutes |
 | **Last Tuesday** | None mid-video | *"Which part of your job would you delete?"* after the hook payoff | After the worst-week segment | Your Version → product line | Matching 90 Minutes, or next Last Tuesday |
 | **The Job Nobody Told You About** | Optional: *"this is one of the directions OffLadder can suggest"* | *"Would you try this? Yes, no, or 'depends on…'"* | After "what it grows out of" | One small test → product line | Next unknown job |
-| **Change One Thing** | Week 1: the subject answers the three questions (only if they genuinely used it) | *"What would you decide in her position?"* before week 6 | After week 5 | The six-week template → product line → casting | Next person |
+| **Change One Thing** | Week 1: the subject answers the three questions (only if they genuinely used it) | *"What would you decide in their position?"* before week 6 | After week 5 | The six-week template → product line → casting | Next person |
 | **Honest Answers** | None until the end | A participation beat that doubles as a comment prompt | After the second method step | **The strongest product CTA** (the viewer's question is the one the product answers) | Next logical question |
 | **Shorts** | Rarely (at most one Short in four) | On-screen text | Never spoken | The **related video** link to the long-form | The loop |
 
@@ -70,7 +70,7 @@
 - *"Comment your hobby. We'll reply to as many as we can with the verb underneath it and a job it points to."*
 - *"What did a career test once tell you to be? Best answer gets pinned."*
 - *"Which job should we test next? We read every suggestion, and the most-liked ones go on the shortlist."*
-- *"What would you decide in her position, and why?"*
+- *"What would you decide in their position, and why?"*
 
 Only promise what the team can deliver. If we say we'll reply, we reply.
 
@@ -83,7 +83,7 @@ Only promise what the team can deliver. If we say we'll reply, we reply.
 
 - *"If you enjoyed watching me panic about a festival, the next one's worse. I had ninety minutes to make an AI fail on purpose. It's right here."*
 - *"If this was your question, the next video is the one to watch: how to test a direction without quitting anything."*
-- *"Next week, a paramedic tells us about the worst week of her year. It's not the week you'd guess."* **[Only if true of the next episode]**
+- *"Next week, a paramedic tells us about the worst week of their year. It's not the week you'd guess."* **[Only if true of the next episode]**
 
 ### Casting lines (career-change videos)
 

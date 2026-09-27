@@ -10,7 +10,7 @@ YouTube Studio's retention report labels the **Intro** as the share of viewers s
 
 | Time | Job | What it sounds like |
 |---|---|---|
-| **0–5 s** | **Confirm the click.** The first frame and line pay off the title and thumbnail immediately. If the thumbnail shows a drone, the first shot is the drone. | *"This is a drone. In ninety minutes I need to use it to tell a farmer something she doesn't know about her own field."* |
+| **0–5 s** | **Confirm the click.** The first frame and line pay off the title and thumbnail immediately. If the thumbnail shows a drone, the first shot is the drone. | *"This is a drone. In ninety minutes I need to use it to tell a farmer something they don't know about their own field."* |
 | **5–15 s** | **Open the loop.** Name the question the video will answer, specifically enough that it itches. | *"Can I actually do this? And more to the point: would I want to do it twice?"* |
 | **15–25 s** | **Raise the stakes.** Say why it matters, whether to the host, the subject or the viewer. | *"Because if I like it, it's a real direction, and if I hate it, I've saved myself a two-year course."* |
 | **25–30 s** | **Promise the path.** Give a reason to stay until the end: the verdict, the scorecard, the viewer's own experiment. | *"At the end I'll score it with three questions, and give you a version you can try this weekend."* |
@@ -79,7 +79,7 @@ Each archetype has a ready-to-use OffLadder line. Lines marked **[HOST: real]** 
 - **Why it works:** a vivid image plus "wait, that's a job?" Novelty is one of the strongest click drivers, and the specificity makes it believable.
 
 ### 8 · Real or Fake?
-> *[A photo fills the screen.] "Real or fake? Three seconds. [Beat.] I said real. I was wrong. The woman you're about to meet worked it out in under a minute, and that's her job."* **[HOST: real]**
+> *[A photo fills the screen.] "Real or fake? Three seconds. [Beat.] I said real. I was wrong. The person you're about to meet worked it out in under a minute, and that's their job."* **[HOST: real]**
 
 - **Use for:** the provenance episode, and any job with a skill the viewer can attempt.
 - **Why it works:** instant participation, a small failure, then an expert. The viewer wants to learn the method that beat them.
@@ -169,14 +169,14 @@ These are ready to adapt. Keep the bracket notes: they are the checks that keep 
 
 ### 90 Minutes As…
 1. *"Game writers have to make you care about something in three lines. I've got ninety minutes to make you care about a rock."*
-2. *"This is a drone. In ninety minutes I need to use it to tell a farmer something she doesn't already know about her own field."*
-3. *"My flat is always cold. Today the person whose job is to find out why is letting me try her job on my own flat."*
+2. *"This is a drone. In ninety minutes I need to use it to tell a farmer something they don't already know about their own field."*
+3. *"My flat is always cold. Today the person whose job is to find out why is letting me try their job on my own flat."*
 4. *"I have ninety minutes to make an AI fail on purpose. It turns out that's a job, and the people who do it are very good at it."*
 5. *"Vet nurses kept telling me the hardest part of the job isn't the animals. I've got ninety minutes to find out what it is."* **[VERIFY in pre-interviews]**
 
 ### Last Tuesday
 6. *"This is a teacher's calendar from last Tuesday. Look at 3:40pm."*
-7. *"'The forty minutes in the hospital car park.' That's the part one paramedic said she'd delete from her job."* **[Template: use the practitioner's real answer, word for word]**
+7. *"'The forty minutes in the hospital car park.' That's the part one paramedic said they'd delete from their job."* **[Template: use the practitioner's real answer, word for word]**
 8. *"Day-in-the-life videos show you the best day. We asked for last Tuesday, whatever it was."*
 9. *"Everyone asks what the best part of the job is. We asked about the worst week of the year."*
 
@@ -188,9 +188,9 @@ These are ready to adapt. Keep the bracket notes: they are the checks that keep 
 14. *"Most of the electricity question isn't how much we use. It's when. And somebody gets paid to move 'when'."* **[FACT-CHECK with practitioner]**
 
 ### Change One Thing
-15. *"Six weeks ago, [Name] told us she wanted out. Today she decides. She doesn't know which way it's going to go, and neither do we."*
-16. *"He's thirty. He thinks he's left it too late. He gets six weeks, four hours a week, and he's not allowed to quit."*
-17. *"She hasn't had a job title in eight years. She's had about forty jobs."* **[Template: use the subject's real list from the week-1 inventory]**
+15. *"Six weeks ago, [Name] said: 'I want out.' Today is the decision. [Name] doesn't know which way it's going to go, and neither do we."*
+16. *"[Name] is thirty and convinced it's too late. Six weeks, four hours a week, and quitting isn't allowed."*
+17. *"Eight years without a job title. About forty jobs."* **[Template: use the subject's real list from the week-1 inventory]**
 
 ### Honest Answers
 18. *"Before you take another career test, do this with the last one you took."*

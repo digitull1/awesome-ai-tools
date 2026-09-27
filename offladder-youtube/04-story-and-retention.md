@@ -126,7 +126,7 @@ Twenty-two techniques, grouped by what they do. The **Where** column says which 
 | **The Verdict Loop** | Announce the Scorecard and the three possible verdicts in the first two minutes, and don't show the stamp until the last 15% | 90 Min, Change One Thing | *"At the end: more, variant, or off the table."* |
 | **Prediction Prompt** | Ask viewers to commit to a guess in the comments *before* the outcome | 90 Min, Change One Thing, Shorts | *"Comment MORE, VARIANT or OFF THE TABLE before you see mine."* |
 | **Held-back Reveal** | Tease the most interesting answer in the hook and pay it off in the last third | Last Tuesday | The "delete" answer |
-| **Open-loop Stacking** | Open the next question before you close the current one, so there's never a natural exit point | All long-form | *"She got it working, but she hadn't noticed what was in the second email yet."* |
+| **Open-loop Stacking** | Open the next question before you close the current one, so there's never a natural exit point | All long-form | *"The plan worked, but nobody had opened the second email yet."* |
 | **Chapter Questions** | Every chapter starts with a spoken question the chapter answers | All long-form | *"So what does a drone survey operator actually do all day?"* |
 
 ### B. Stakes: give the viewer a reason to care about the answer
