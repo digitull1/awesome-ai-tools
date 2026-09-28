@@ -193,4 +193,194 @@ export default {
       ] },
     ],
   },
+
+  // ---- Batch 2 (weeks 3-4). Facts checked 28 September 2026 against the
+  // U.S. Bureau of Labor Statistics Occupational Outlook Handbook: logisticians
+  // "analyze and coordinate an organization's supply chain"; emergency management
+  // directors "prepare plans and procedures for responding to natural disasters
+  // and other emergencies"; operations research analysts "use mathematics and
+  // logic to help organizations make informed decisions and solve problems".
+
+  's12-test-said-accountant': {
+    duration: 26.0,
+    chip: 'Career tests',
+    scenes: [
+      { in: 0, out: 2.8, blocks: [
+        { type: 'label', text: 'Your career test result:', in: 0, anim: 'none' },
+        { type: 'bigcard', title: 'Accountant', in: 0, anim: 'none' },
+        { type: 'small', text: '(A made-up result. Stay with us.)', in: 0.9, anim: 'up' },
+      ] },
+      { in: 2.8, out: 5.6, blocks: [
+        { type: 'h1', text: 'And your stomach', in: 2.8, anim: 'up' },
+        { type: 'mark', text: 'dropped.', in: 3.2, anim: 'pop', sfx: 'pop' },
+      ] },
+      { in: 5.6, out: 9.2, blocks: [
+        { type: 'h1', text: 'That’s not a failure.', in: 5.6, anim: 'up' },
+        { type: 'mark', text: 'It’s data.', in: 6.3, anim: 'pop', sfx: 'thud' },
+      ] },
+      { in: 9.2, out: 13.6, blocks: [
+        { type: 'body', text: 'A test can only reflect what you told it. That drop is new information about you.', in: 9.2, anim: 'up' },
+      ] },
+      { in: 13.6, out: 20.4, blocks: [
+        { type: 'label', text: 'So do this', in: 13.6, anim: 'none' },
+        { type: 'card', plain: true, num: '1', title: 'Note the reaction.', in: 13.7, anim: 'pop', sfx: 'pop' },
+        { type: 'card', plain: true, num: '2', title: 'Write down what you wish it had said.', in: 15.4, anim: 'pop', sfx: 'pop' },
+        { type: 'card', plain: true, num: '3', title: 'Test that, with one small real task this week.', in: 17.1, anim: 'pop', sfx: 'pop' },
+      ] },
+      { in: 20.4, out: 22.6, blocks: [
+        { type: 'body', text: 'Accountants: we love you. This is about fit.', in: 20.4, anim: 'up' },
+      ] },
+      { in: 22.6, out: 26.0, blocks: [
+        { type: 'h1', text: 'What did yours say?', in: 22.6, anim: 'up' },
+        { type: 'small', text: 'Comment it ↓', in: 23.1, anim: 'up' },
+        { type: 'cta', in: 23.1, anim: 'up' },
+      ] },
+    ],
+  },
+
+  's17-dont-ask-ai-this': {
+    duration: 24.4,
+    chip: 'Ask it better',
+    scenes: [
+      { in: 0, out: 2.8, blocks: [
+        { type: 'label', text: 'Don’t ask AI this:', in: 0, anim: 'none' },
+        { type: 'bigcard', title: '“What career should I do?”', in: 0, anim: 'none' },
+        { type: 'stamp', text: 'Nope.', in: 1.3, anim: 'stamp', sfx: 'thud' },
+      ] },
+      { in: 2.8, out: 6.8, blocks: [
+        { type: 'body', text: 'It only knows what you tell it, so you get a guess back.', in: 2.8, anim: 'up' },
+        { type: 'mark', text: 'Ask this instead ↓', in: 4.2, anim: 'pop', sfx: 'pop' },
+      ] },
+      { in: 6.8, out: 13.6, blocks: [
+        { type: 'prompt', text: 'Describe a normal Tuesday for a [job]. Include the repetitive and unglamorous parts, not just the interesting ones.', in: 6.8, anim: 'pop', sfx: 'pop' },
+      ] },
+      { in: 13.6, out: 18.0, blocks: [
+        { type: 'h1', text: 'Now you know what the job is.', in: 13.6, anim: 'up' },
+        { type: 'mark', text: 'Not what it sounds like.', in: 14.4, anim: 'pop', sfx: 'pop' },
+      ] },
+      { in: 18.0, out: 24.4, blocks: [
+        { type: 'small', text: 'Screenshot the prompt. Try it tonight.', in: 18.0, anim: 'up' },
+        { type: 'h1', text: 'Which job will you ask about?', in: 18.6, anim: 'up' },
+        { type: 'small', text: 'Comment it ↓', in: 19.4, anim: 'up' },
+        { type: 'cta', in: 19.4, anim: 'up' },
+      ] },
+    ],
+  },
+
+  's09-strategy-games': {
+    duration: 28.0,
+    chip: 'Hobby → Verb',
+    scenes: hobbyVerb({
+      lead: 'You play', hook: 'strategy games?', sub: 'Your hobby is hiding three jobs.',
+      verb: 'Planning with limited resources', verbRest: 'when you can’t see the whole map.',
+      listLabel: 'Planning with limited resources →',
+      jobs: [
+        ['Logistics planner', 'Coordinates how goods get where they’re needed.'],
+        ['Emergency planner', 'Plans who does what before a disaster hits.'],
+        ['Operations research analyst', 'Uses maths to find the best plan for complicated problems.'],
+      ],
+      outroA: 'You’ve been', outroB: 'training for years.', outroC: 'Just without the payslip.', duration: 28.0,
+    }),
+  },
+
+  's21-worst-week': {
+    duration: 26.4,
+    chip: 'The method',
+    scenes: [
+      { in: 0, out: 2.8, blocks: [
+        { type: 'h1', text: 'Before you choose a job,', in: 0, anim: 'none' },
+        { type: 'mark', text: 'ask about its worst week.', in: 0, anim: 'none' },
+      ] },
+      { in: 2.8, out: 7.2, blocks: [
+        { type: 'body', text: 'Anyone can handle the best week of a job.', in: 2.8, anim: 'up' },
+        { type: 'mark', text: 'Fit is often decided by the worst one.', in: 4.0, anim: 'pop', sfx: 'pop' },
+      ] },
+      { in: 7.2, out: 14.4, blocks: [
+        { type: 'label', text: 'Ask someone who does it:', in: 7.2, anim: 'none' },
+        { type: 'card', plain: true, num: '1', title: 'What does your worst week of the year look like?', in: 7.3, anim: 'pop', sfx: 'pop' },
+        { type: 'card', plain: true, num: '2', title: 'How often does it happen?', in: 9.6, anim: 'pop', sfx: 'pop' },
+        { type: 'card', plain: true, num: '3', title: 'What gets you through it?', in: 11.4, anim: 'pop', sfx: 'pop' },
+      ] },
+      { in: 14.4, out: 18.8, blocks: [
+        { type: 'h1', text: 'If you could live through their worst week,', in: 14.4, anim: 'up' },
+        { type: 'mark', text: 'it might be your job.', in: 15.6, anim: 'pop', sfx: 'pop' },
+      ] },
+      { in: 18.8, out: 21.8, blocks: [
+        { type: 'body', text: 'Under 16? Ask an adult you trust to introduce you to someone who does the work.', in: 18.8, anim: 'up' },
+      ] },
+      { in: 21.8, out: 26.4, blocks: [
+        { type: 'h1', text: 'What’s the worst week in your job?', in: 21.8, anim: 'up' },
+        { type: 'small', text: 'Comment it ↓', in: 22.5, anim: 'up' },
+        { type: 'cta', in: 22.5, anim: 'up' },
+      ] },
+    ],
+  },
+
+  's11-the-pause': {
+    duration: 25.2,
+    chip: 'The pause',
+    scenes: [
+      { in: 0, out: 2.4, blocks: [
+        { type: 'label', text: 'Every family gathering:', in: 0, anim: 'none' },
+        { type: 'bubble', text: 'So! What do you want to be?', in: 0, anim: 'none' },
+      ] },
+      { in: 2.4, out: 6.0, blocks: [
+        { type: 'bubble', text: 'So! What do you want to be?', in: 2.4, anim: 'none' },
+        { type: 'label', text: 'The pause', in: 2.4, anim: 'none' },
+        { type: 'dots', n: 3, every: 1.0, in: 2.6, anim: 'none' },
+      ] },
+      { in: 6.0, out: 10.4, blocks: [
+        { type: 'h1', text: 'Everyone’s had it.', in: 6.0, anim: 'up' },
+        { type: 'body', text: 'Nobody sensible expects a 15-year-old to pick one job for the next forty years.', in: 6.7, anim: 'up' },
+      ] },
+      { in: 10.4, out: 14.8, blocks: [
+        { type: 'label', text: 'Next time, say this:', in: 10.4, anim: 'none' },
+        { type: 'mark', text: '“I’m testing a couple of directions.”', in: 10.8, anim: 'pop', sfx: 'pop' },
+      ] },
+      { in: 14.8, out: 19.0, blocks: [
+        { type: 'body', text: 'Then make it true: try one small, real piece of a job this week.', in: 14.8, anim: 'up' },
+      ] },
+      { in: 19.0, out: 21.4, blocks: [
+        { type: 'label', text: 'Next family gathering:', in: 19.0, anim: 'none' },
+        { type: 'bubble', reply: true, text: 'Ooh. Which ones?', in: 19.2, anim: 'pop', sfx: 'pop' },
+      ] },
+      { in: 21.4, out: 25.2, blocks: [
+        { type: 'h1', text: 'What do you usually say?', in: 21.4, anim: 'up' },
+        { type: 'small', text: 'Comment it ↓', in: 22.0, anim: 'up' },
+        { type: 'cta', in: 22.0, anim: 'up' },
+      ] },
+    ],
+  },
+
+  's20-novelty-lies': {
+    duration: 24.8,
+    chip: 'The method',
+    scenes: [
+      { in: 0, out: 2.4, blocks: [
+        { type: 'h1', text: 'Everything’s fun', in: 0, anim: 'none' },
+        { type: 'mark', text: 'the first time.', in: 0, anim: 'none' },
+      ] },
+      { in: 2.4, out: 5.2, blocks: [
+        { type: 'body', text: 'New job, new hobby, new course.', in: 2.4, anim: 'up' },
+        { type: 'h1', text: 'Novelty flatters everything once.', in: 3.2, anim: 'up' },
+      ] },
+      { in: 5.2, out: 9.6, blocks: [
+        { type: 'label', text: 'The repeat test', in: 5.2, anim: 'none' },
+        { type: 'mark', text: 'Do it twice.', in: 5.5, anim: 'pop', sfx: 'pop' },
+        { type: 'body', text: 'Same task. A different day.', in: 6.4, anim: 'up' },
+      ] },
+      { in: 9.6, out: 14.6, blocks: [
+        { type: 'body', text: 'The second time, the shine’s gone. What’s left is what the work actually feels like.', in: 9.6, anim: 'up' },
+      ] },
+      { in: 14.6, out: 19.8, blocks: [
+        { type: 'label', text: 'Then ask:', in: 14.6, anim: 'none' },
+        { type: 'mark', text: 'Would I do it again next week, unasked?', in: 14.9, anim: 'pop', sfx: 'pop' },
+      ] },
+      { in: 19.8, out: 24.8, blocks: [
+        { type: 'h1', text: 'What have you only tried once?', in: 19.8, anim: 'up' },
+        { type: 'small', text: 'Comment it ↓', in: 20.5, anim: 'up' },
+        { type: 'cta', in: 20.5, anim: 'up' },
+      ] },
+    ],
+  },
 };

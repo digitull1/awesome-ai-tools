@@ -64,6 +64,19 @@ body { font-family: 'Hind', sans-serif; color: var(--ink); -webkit-font-smoothin
          padding: 18px 34px 6px; font-size: 150px; line-height: 1; text-transform: uppercase; background: rgba(251, 250, 247, .7); transform-origin: center; }
 .card .stamp { position: absolute; right: 22px; top: -46px; font-size: 44px; border-width: 7px; padding: 8px 16px 2px; }
 
+/* Batch 2 blocks: speech bubbles, prompt cards, reveal dots, plain-text cards */
+.bubble { position: relative; align-self: flex-start; max-width: 760px; background: var(--paper2); border: 6px solid var(--ink);
+          box-shadow: 12px 12px 0 var(--ink); padding: 30px 36px 22px; font-family: 'Hind'; font-weight: 600; font-size: 66px; line-height: 1.1; margin-bottom: 30px; }
+.bubble::after { content: ''; position: absolute; left: 70px; bottom: -40px; border-left: 22px solid transparent; border-right: 22px solid transparent; border-top: 34px solid var(--ink); }
+.bubble.reply { align-self: flex-end; background: var(--orange); }
+.bubble.reply::after { left: auto; right: 70px; }
+.prompt { background: var(--paper2); border: 6px solid var(--ink); box-shadow: 12px 12px 0 var(--orange); padding: 30px 32px 26px; width: 790px; }
+.prompt .plabel { font-family: 'Archivo Black'; font-size: 28px; line-height: 1; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+.prompt .ptext { font-family: 'Hind'; font-weight: 600; font-size: 56px; line-height: 1.2; }
+.prompt .ptext::after { content: ''; display: inline-block; width: .45em; height: .9em; background: var(--orange); vertical-align: -0.1em; margin-left: 8px; }
+.dots { display: flex; gap: 40px; padding: 10px 0; }
+.dots i { display: block; width: 88px; height: 88px; background: var(--ink); }
+.card.plain .title { font-family: 'Hind'; font-weight: 600; font-size: 52px; line-height: 1.15; text-transform: none; letter-spacing: 0; padding-top: 14px; }
 .cta { font-family: 'Hind'; font-weight: 600; font-size: 40px; line-height: 1.25; border-top: 6px solid var(--ink); padding-top: 20px; }
 .cta u { text-decoration: none; font-family: 'Archivo Black'; font-weight: 400; box-shadow: inset 0 -14px 0 var(--orange); }
 </style>
@@ -77,6 +90,7 @@ body { font-family: 'Hind', sans-serif; color: var(--ink); -webkit-font-smoothin
   const stage = document.getElementById('stage');
   const blocks = [];
   const timers = [];
+  const dotsets = [];
   const scenes = [];
 
   function el(tag, cls, html) {
@@ -97,7 +111,7 @@ body { font-family: 'Hind', sans-serif; color: var(--ink); -webkit-font-smoothin
       case 'small': return el('div', 'small', glyphs(b.text));
       case 'label': return el('div', 'label', glyphs(b.text));
       case 'card': {
-        const d = el('div', 'card' + (b.compact ? ' compact' : ''));
+        const d = el('div', 'card' + (b.compact ? ' compact' : '') + (b.plain ? ' plain' : ''));
         d.appendChild(el('div', 'num', b.num));
         const t = el('div', 'tx');
         t.appendChild(el('div', 'title', b.title));
@@ -115,6 +129,9 @@ body { font-family: 'Hind', sans-serif; color: var(--ink); -webkit-font-smoothin
       case 'tally': { const d = el('div', 'tally'); for (let i = 0; i < b.n; i++) d.appendChild(el('i')); return d; }
       case 'stamp': return el('div', 'stamp', b.text);
       case 'cta': return el('div', 'cta', b.text || DEFAULT_CTA);
+      case 'bubble': return el('div', 'bubble' + (b.reply ? ' reply' : ''), glyphs(b.text));
+      case 'prompt': { const d = el('div', 'prompt'); d.appendChild(el('div', 'plabel', b.label || 'Copy this prompt')); d.appendChild(el('div', 'ptext', glyphs(b.text))); return d; }
+      case 'dots': { const d = el('div', 'dots'); const n = b.n || 3; for (let i = 0; i < n; i++) d.appendChild(el('i')); dotsets.push({ el: d, in: b.in, every: b.every || 1, n }); return d; }
       default: throw new Error('unknown block ' + b.type);
     }
   }
@@ -151,7 +168,7 @@ body { font-family: 'Hind', sans-serif; color: var(--ink); -webkit-font-smoothin
     for (const s of scenes) {
       let guard = 0;
       while (s.el.scrollHeight > s.el.clientHeight + 1 && guard++ < 30) {
-        s.el.querySelectorAll('.h1, .title, .body, .small, .desc').forEach(e => {
+        s.el.querySelectorAll('.h1, .title, .body, .small, .desc, .ptext, .bubble').forEach(e => {
           e.style.fontSize = (parseFloat(getComputedStyle(e).fontSize) * 0.95) + 'px';
         });
       }
@@ -180,6 +197,10 @@ body { font-family: 'Hind', sans-serif; color: var(--ink); -webkit-font-smoothin
         e.style.opacity = Math.min(1, p * 2.2);
         e.style.transform = `rotate(${b.rot ?? -8}deg) scale(${1.9 - 0.9 * back(p)})`;
       }
+    }
+    for (const ds of dotsets) {
+      const shown = t < ds.in ? 0 : Math.min(ds.n, Math.floor((t - ds.in) / ds.every + 1e-6) + 1);
+      [...ds.el.children].forEach((d, i) => { d.style.opacity = i < shown ? 1 : 0; });
     }
     for (const tm of timers) {
       const k = Math.floor(t - tm.in + 1e-6);

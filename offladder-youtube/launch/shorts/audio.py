@@ -98,6 +98,8 @@ def cues(spec):
                 out.append((b['in'], b['sfx']))
             if b['type'] == 'timer' and b.get('ticks'):
                 out += [(b['in'] + k, 'tick') for k in range(b['from'])]
+            if b['type'] == 'dots':
+                out += [(b['in'] + k * b.get('every', 1.0), 'tick') for k in range(b.get('n', 3))]
             if b['type'] == 'card' and b.get('stamp'):
                 out.append((b['stamp']['in'], 'thud'))
     return sorted(out)
