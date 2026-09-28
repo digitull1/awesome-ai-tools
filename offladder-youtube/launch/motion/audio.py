@@ -603,6 +603,285 @@ def chord_at(plan, t):
     return bars[b].get('chord') or 'Am'
 
 
+# ---------------------------------------------------------------- the epic score
+# A cinematic hybrid orchestra, synthesised from scratch: string ostinatos, low strings, brass,
+# choir, taikos and braams. It reads the same per-bar plan as before (chord, drums, bass, pad,
+# arp, lp) and plays it as a trailer-style arrangement. Its energy sits in the midrange, so it
+# carries on a phone speaker, not just on headphones.
+
+def ensemble(f, n, voices=5, detune=12.0, seed=0, spread=0.8):
+    """Detuned sawtooth ensemble. f is a frequency array (vibrato and scoops welcome)."""
+    t = np.arange(n) / SR
+    r = rng(seed)
+    out = np.zeros((n, 2))
+    for v in range(voices):
+        c = 0.0 if voices == 1 else (v / (voices - 1) * 2 - 1) * detune
+        w = saw(f * 2 ** (c / 1200), t, r.uniform(0, 6.28))
+        out += pan(w, (0.0 if voices == 1 else (v / (voices - 1) * 2 - 1)) * spread)
+    return out / np.sqrt(voices)
+
+
+def env_asr(n, a, r, hold):
+    t = np.arange(n) / SR
+    e = np.minimum(1.0, t / max(a, 1e-4))
+    rel = np.clip((t - hold) / max(r, 1e-4), 0, 1)
+    return e * (1 - rel) ** 2
+
+
+def strings_pad(notes, dur, g=1.0, seed=0, bright=3400, tremolo=0.0):
+    n = int((dur + 0.6) * SR)
+    t = np.arange(n) / SR
+    out = np.zeros((n, 2))
+    for i, m in enumerate(notes):
+        f = hz(m) * (1 + 0.0032 * np.sin(2 * np.pi * (5.1 + 0.3 * i) * t + i))
+        out += ensemble(f, n, 5, 11, seed + i)
+    out = filt(filt(out, 'lp', bright), 'hp', 110)
+    e = env_asr(n, 0.28, 0.55, dur)
+    if tremolo:
+        e = e * (1 - tremolo + tremolo * np.abs(np.sin(2 * np.pi * 7.5 * t)))
+    return out * e[:, None] * g / max(1, len(notes)) ** 0.5
+
+
+def spiccato(m, g=1.0, seed=0, bright=True):
+    n = int(0.34 * SR)
+    t = np.arange(n) / SR
+    x = ensemble(np.full(n, hz(m)), n, 3, 9, seed, 0.5)
+    hi = filt(x, 'lp', 6200 if bright else 3000) * (np.exp(-t / 0.025))[:, None]
+    lo = filt(x, 'lp', 1900) * (np.exp(-t / 0.09))[:, None]
+    e = np.minimum(1, t / 0.003)[:, None]
+    return np.tanh(1.5 * (hi * 0.8 + lo)) * e * g
+
+
+def low_string(m, dur, g=1.0, seed=0):
+    n = int((dur + 0.15) * SR)
+    t = np.arange(n) / SR
+    x = ensemble(np.full(n, hz(m)), n, 3, 10, seed, 0.3)
+    x = filt(x, 'lp', 1700) + stereo(0.22 * np.sin(2 * np.pi * hz(m) * t))
+    e = np.minimum(1, t / 0.004) * np.exp(-t / 0.16) * 0.7 + 0.3 * env_asr(n, 0.004, 0.08, dur)
+    return np.tanh(1.3 * x * e[:, None]) * g
+
+
+def brass(m, dur, g=1.0, seed=0, stab=False):
+    n = int((dur + 0.35) * SR)
+    t = np.arange(n) / SR
+    scoop = 2 ** ((-0.4 / 12) * np.exp(-t / 0.045))
+    vib = 1 + 0.0045 * np.sin(2 * np.pi * 5.0 * t) * np.minimum(1, t / 0.5)
+    f = hz(m) * scoop * vib
+    x = ensemble(f, n, 3, 7, seed, 0.4)
+    fc = 450 + (2800 if not stab else 3600) * (1 - np.exp(-t / 0.05)) * (np.exp(-t / 1.6) * 0.5 + 0.5)
+    x = np.stack([sweep_filter(x[:, c], 'lp', fc, block=256) for c in range(2)], axis=1)
+    e = env_asr(n, 0.025, 0.25, dur) if not stab else np.minimum(1, t / 0.01) * np.exp(-t / 0.22)
+    return np.tanh(1.8 * x * e[:, None]) * g
+
+
+def choir(notes, dur, g=1.0, seed=0):
+    n = int((dur + 0.9) * SR)
+    t = np.arange(n) / SR
+    src = np.zeros((n, 2))
+    for i, m in enumerate(notes):
+        f = hz(m) * (1 + 0.005 * np.sin(2 * np.pi * (4.6 + 0.4 * i) * t + 2 * i))
+        src += ensemble(f, n, 3, 16, seed + 10 * i, 0.9)
+    ah = filt(src, 'bp', (650, 950)) * 1.0 + filt(src, 'bp', (1050, 1350)) * 0.6 + filt(src, 'bp', (2500, 3100)) * 0.28
+    e = env_asr(n, 0.55, 0.85, dur)
+    return ah * e[:, None] * g / max(1, len(notes)) ** 0.5
+
+
+def braam(root_m, g=1.0, seed=0, dur=2.8):
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    x = np.zeros((n, 2))
+    for i, m in enumerate((root_m, root_m + 7, root_m + 12)):
+        x += ensemble(np.full(n, hz(m)), n, 5, 22, seed + i, 0.9)
+    x = np.tanh(3.2 * x)
+    fc = 260 + 2600 * np.exp(-((t - 0.18) / 0.45) ** 2) + 500 * np.exp(-t / 1.2)
+    x = np.stack([sweep_filter(x[:, c], 'lp', fc, block=256) for c in range(2)], axis=1)
+    sub = np.sin(2 * np.pi * hz(root_m - 12) * t) * 0.6
+    e = np.minimum(1, t / 0.03) * np.exp(-t / 1.25)
+    return (x + stereo(sub)) * e[:, None] * g * 0.8
+
+
+def taiko(g=1.0, pitch=1.0, seed=0):
+    n = int(1.1 * SR)
+    t = np.arange(n) / SR
+    f = (58 + 120 * np.exp(-t * 20)) * pitch
+    body = sine_sweep(f, n) * np.exp(-t / 0.28) * 0.75
+    over = sine_sweep(f * 1.51, n) * np.exp(-t / 0.12) * 0.6 + sine_sweep(f * 2.63, n) * np.exp(-t / 0.06) * 0.3
+    slap = filt(rng(seed).standard_normal(n), 'bp', (220 * pitch, 2400 * pitch)) * np.exp(-t / 0.03) * 1.15
+    return np.tanh(2.2 * (body + over + slap)) * g
+
+
+def epic_snare(g=1.0, seed=0):
+    n = int(0.9 * SR)
+    t = np.arange(n) / SR
+    r = rng(seed)
+    noise = filt(r.standard_normal((n, 2)), 'bp', (900, 9000)) * np.exp(-t / 0.2)[:, None]
+    body = stereo(np.sin(2 * np.pi * (200 + 60 * np.exp(-t * 30)) * t) * np.exp(-t / 0.07))
+    return np.tanh(1.4 * (0.9 * noise + 0.7 * body)) * g
+
+
+def crash(g=1.0, seed=0, dur=2.6):
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    r = rng(seed)
+    x = filt(r.standard_normal((n, 2)), 'hp', 3200) * np.exp(-t / 1.1)[:, None]
+    x += filt(r.standard_normal((n, 2)), 'bp', (5000, 12000)) * (0.4 * np.exp(-t / 0.3))[:, None]
+    return x * np.minimum(1, t / 0.002)[:, None] * g * 0.5
+
+
+def shaker(g=1.0, seed=0):
+    n = int(0.08 * SR)
+    t = np.arange(n) / SR
+    x = filt(rng(seed).standard_normal(n), 'bp', (4500, 11000)) * np.sin(np.pi * np.clip(t / 0.06, 0, 1)) ** 2
+    return x * g
+
+
+def piano(m, dur=2.2, g=1.0):
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    f = hz(m)
+    x = np.zeros(n)
+    for k in range(1, 9):
+        fk = k * f * np.sqrt(1 + 0.00035 * k * k)
+        if fk > 16000:
+            break
+        x += np.sin(2 * np.pi * fk * t) * (1 / k ** 1.25) * np.exp(-t / (1.8 / (1 + 0.45 * k)))
+    hammer = filt(rng(int(m)).standard_normal(n), 'bp', (900, 4200)) * np.exp(-t / 0.008) * 0.15
+    return (x + hammer) * np.minimum(1, t / 0.002) * g * 0.45
+
+
+def build_epic(plan, n):
+    """Returns (music, reverb send, extra) for the mixer, like build_music."""
+    bpm = plan.get('bpm', 120)
+    beat = 60 / bpm
+    bar = 4 * beat
+    six = beat / 4
+    bars = plan['bars']
+    drums = np.zeros((n, 2)); low = np.zeros((n, 2)); mid = np.zeros((n, 2)); send = np.zeros((n, 2))
+    lp = np.ones(n) * 20000.0
+    T_LO, T_HI = taiko(1.0, 1.0, 1), taiko(1.0, 1.75, 2)
+    SN = epic_snare(1.0, 3)
+    prev_mode = 'none'
+    for b, spec in enumerate(bars):
+        t0 = b * bar + plan.get('offset', 0.0)
+        g = spec.get('gain', 1.0)
+        mode = spec.get('drums', 'none')
+        f = spec.get('lp', 1.0)
+        f0, f1 = (f, f) if not isinstance(f, list) else f
+        i0, i1 = int(t0 * SR), min(n, int((t0 + bar) * SR))
+        if i1 > i0:
+            x = np.linspace(f0, f1, i1 - i0)
+            lp[i0:i1] = 900 * (20000 / 900) ** x          # never fully muffled: phones need the mids
+        root, q = chord_notes(spec.get('chord'))
+        # A drop: the music arrives. Braam, crash, and a reversed cymbal sucking into it.
+        drop = mode in ('four', 'full', 'build') and prev_mode in ('none', 'pulse', 'intro', 'half')
+        if (drop or b == 0 or spec.get('hit')) and root is not None:
+            add(mid, braam(near(root, 33), 1.0, seed=b), t0, (0.55 if b else 0.7) * g)
+            add(send, braam(near(root, 33), 1.0, seed=b), t0, 0.25 * g)
+            add(drums, T_LO, t0, 1.0 * g)
+            if b:
+                add(drums, crash(1.0, b), t0, 0.8 * g)
+                rc = crash(1.0, 50 + b, 1.2)[::-1]
+                add(drums, rc, t0 - len(rc) / SR, 0.5 * g)
+        # Drums
+        if mode == 'pulse':
+            for k in (0, 2):
+                add(drums, T_LO, t0 + k * beat, 0.85 * g)
+                add(drums, T_LO, t0 + k * beat + 0.2, 0.45 * g)
+        if mode == 'intro':
+            for k, v in ((0, 0.9), (1.5, 0.55), (2, 0.8), (3.5, 0.5)):
+                add(drums, T_LO, t0 + k * beat, v * g)
+        if mode in ('four', 'full', 'build'):
+            for k, v in ((0, 1.0), (0.75, 0.55), (2, 0.95), (2.5, 0.6)):
+                add(drums, T_LO, t0 + k * beat, v * g)
+            for k in (1, 3):
+                add(drums, SN, t0 + k * beat, 0.62 * g)
+                add(send, SN, t0 + k * beat, 0.3 * g)
+            for s in range(16):
+                add(drums, pan(shaker(1.0, s), 0.3 if s % 2 else -0.3), t0 + s * six, (0.22 if s % 4 == 2 else 0.12) * g)
+            if mode in ('full', 'build'):
+                for k in (0.5, 1.5, 2.75, 3.5):
+                    add(drums, T_HI, t0 + k * beat, 0.45 * g)
+        if mode == 'half':
+            add(drums, T_LO, t0, 1.0 * g)
+            add(drums, T_LO, t0 + 1.5 * beat, 0.6 * g)
+            add(drums, SN, t0 + 2 * beat, 0.7 * g)
+            add(send, SN, t0 + 2 * beat, 0.4 * g)
+        if mode == 'build' or spec.get('fill'):
+            start = 2 if mode == 'build' else 3
+            steps = int((4 - start) * 4)
+            for s in range(steps):
+                v = 0.35 + 0.6 * s / max(1, steps - 1)
+                add(drums, T_HI if s % 2 else T_LO, t0 + start * beat + s * six, v * g)
+        prev_mode = mode
+        if root is None:
+            continue
+        chord_pcs = [(root + iv) % 12 for iv in q[:3]]
+        # Low strings: driving eighths on the root, octave jump on the 'and' of 2.
+        if spec.get('bass', 0):
+            bm = near(root, 36)
+            for s in range(8):
+                m = bm + (12 if s in (3, 7) else 0)
+                v = (1.0 if s in (0, 3, 4) else 0.62) * spec['bass']
+                add(low, low_string(m, beat / 2 * 0.9, 1.0, seed=b * 8 + s), t0 + s * beat / 2, 0.5 * v * g)
+        # Strings pad and choir.
+        if spec.get('pad', 0):
+            notes = sorted(near(pc, 55) for pc in chord_pcs) + [near(chord_pcs[0], 67)]
+            trem = 0.5 if mode in ('pulse', 'none') else 0.0
+            add(mid, strings_pad(notes, bar, 1.0, seed=b, tremolo=trem), t0, 0.5 * spec['pad'] * g)
+            add(send, strings_pad(notes, bar, 1.0, seed=b + 99), t0, 0.18 * spec['pad'] * g)
+            if mode not in ('pulse',):
+                cn = sorted(near(pc, 60) for pc in chord_pcs)
+                add(mid, choir(cn, bar, 1.0, seed=b), t0, 0.34 * spec['pad'] * g)
+                add(send, choir(cn, bar, 1.0, seed=b + 7), t0, 0.22 * spec['pad'] * g)
+        # Spiccato ostinato: the engine of an epic cue.
+        arp = spec.get('arp')
+        if arp:
+            tones = sorted(near(pc, 57) for pc in chord_pcs)
+            pat = [tones[0], tones[0], tones[2], tones[0], tones[1] + 12, tones[0], tones[2], tones[1]]
+            if arp == 'down':
+                pat = pat[::-1]
+            ag = spec.get('arpgain', 1.0)
+            for s in range(16):
+                m = pat[s % 8] + (12 if s % 8 == 4 else 0)
+                acc = 1.0 if s % 4 == 0 else (0.75 if s % 2 == 0 else 0.55)
+                add(mid, pan(spiccato(m, 1.0, seed=s + b * 16)[:, 0], 0.25 * np.sin(s)), t0 + s * six, 0.3 * acc * ag * g)
+        # The theme: brass in the big moments, piano when it's quiet.
+        mel = spec.get('melody')
+        if mel is None and b >= len(bars) - 3 and mode in ('full', 'four', 'build'):
+            mel = 'brass'
+        if mel:
+            top = sorted(near(pc, 64) for pc in chord_pcs)
+            phrase = [(0, 1.5, top[2]), (1.5, 0.5, top[0] + 12 if top[0] + 12 <= 81 else top[1]), (2.0, 2.0, top[1] + 12 if top[1] + 12 <= 83 else top[2])]
+            for (s, d, m) in phrase:
+                if mel == 'brass':
+                    x = brass(m, d * beat, 1.0, seed=b * 3 + int(s * 2))
+                    add(mid, x, t0 + s * beat, 0.34 * g)
+                    add(mid, brass(m - 12, d * beat, 1.0, seed=b * 5 + 1), t0 + s * beat, 0.22 * g)
+                    add(send, x, t0 + s * beat, 0.22 * g)
+                else:
+                    x = piano(m, 2.2)
+                    add(mid, stereo(x), t0 + s * beat, 0.5 * g)
+                    add(send, stereo(x), t0 + s * beat, 0.3 * g)
+    # Risers and rolls from the plan.
+    for rz in plan.get('risers', []):
+        a, b_ = rz[0], rz[1]
+        gg = rz[2] if len(rz) > 2 else 1.0
+        add(drums, fx_riser(b_ - a, seed=int(a * 10)), a, 0.45 * gg)
+    for rl in plan.get('rolls', []):
+        a, b_ = rl[0], rl[1]
+        t = a
+        k = 0
+        while t < b_ - 1e-6:
+            p = (t - a) / (b_ - a)
+            add(drums, epic_snare(0.3 + 0.6 * p, seed=40 + k), t, 0.55)
+            t += six * (2 if p < 0.5 else 1)
+            k += 1
+    music = drums * 0.9 + low * 0.85 + mid * 1.1
+    music = sweep_filter(music, 'lp', lp, block=256)
+    send = sweep_filter(send, 'lp', lp, block=256)
+    return music, send, np.zeros_like(music)
+
+
 # ---------------------------------------------------------------- mix
 def main(meta_path, wav_path):
     meta = json.load(open(meta_path))
@@ -610,7 +889,7 @@ def main(meta_path, wav_path):
     n = int((dur + TAIL) * SR)
     plan = meta.get('music') or {'bpm': meta.get('bpm', 120), 'bars': []}
 
-    music, msend, music_verb = build_music(plan, n)
+    music, msend, music_verb = build_epic(plan, n)
     sfx = np.zeros((n, 2))
     send = msend + music_verb
 
@@ -666,9 +945,12 @@ def main(meta_path, wav_path):
         else:
             raise SystemExit(f'unknown cue {name}')
 
-    ir = make_ir()
+    ir = make_ir(dur=3.4, rt60=2.6)
     wet = reverb(send, ir)
-    mix = music * 0.9 + sfx + wet * 0.35
+    mix = music * 0.9 + sfx + wet * 0.42
+    # Master EQ for small speakers: clear the sub rumble, lift the presence band.
+    mix = filt(mix, 'hp', 38)
+    mix = mix + 0.35 * filt(mix, 'bp', (1400, 5200))
 
     # The Short loops, so whatever rings past the end plays over the start.
     N = int(dur * SR)
