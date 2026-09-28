@@ -21,9 +21,9 @@ From episode 6 the Shorts become **Cooked or not?**, built to spread: each one p
 | **Tue 6 Oct, 18:00** | 5 · The 80% test | Nvidia's CEO: you won't lose your job to AI. You'll lose it to this | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-6355916932022384116) |
 | **Thu 8 Oct, 18:00** | 6 · Cooked or not? The 785-job heat map | Microsoft ranked 785 jobs by AI overlap. Is yours top 10? | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=7184454675539837540) |
 | **Sat 10 Oct, 18:00** | 7 · Cooked or not? Computer science | Is a computer science degree cooked? (NY Fed data) | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-3496651101519591838) |
-| **Mon 12 Oct, 18:00** | Social cut · POV: telling your mum | POV: telling your mum you want to study computer science | YT_SX05 |
-| **Tue 13 Oct, 18:00** | Social cut · AI tier list | AI tier list: 15 jobs ranked by Microsoft's data. Where's yours? | YT_SX02 |
-| **Wed 14 Oct, 18:00** | Social cut · Pick one | Pick one. It shows jobs you'd never have thought of | YT_SX01 |
+| **Mon 12 Oct, 18:00** | Social cut · POV: telling your mum | POV: telling your mum you want to study computer science | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-916658662858406949) |
+| **Tue 13 Oct, 18:00** | Social cut · AI tier list | AI tier list: 15 jobs ranked by Microsoft's data. Where's yours? | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-6603483595876775985) |
+| **Wed 14 Oct, 18:00** | Social cut · Pick one | Pick one. It shows jobs you'd never have thought of | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=3862560102615172819) |
 | From Thu 15 Oct, daily | 8 onwards · Cooked or not? | Customer service, writers, graphic design, then whatever the comments ask for | [slate](../scripts/cooked-or-not.md#cadence-and-slate) |
 
 All posts are public YouTube Shorts in *Education*, **not made for kids**, and not flagged as synthetic content (they're typographic motion design with no realistic generated people or voices). The people quoted appear as text only, with no photos, and nothing implies they endorse OffLadder. Each post's description lists its sources, and its first comment asks the episode's question. The videos are in [motion/videos/](motion/videos/) and the post copy is in [motion/posts.json](motion/posts.json).
@@ -58,15 +58,21 @@ From 28 September every short is built once for TikTok, Reels and Shorts to the 
 
 | Goes live (UK) | Reel | Job it gives the viewer | Metricool |
 |---|---|---|---|
-| **Tue 29 Sep, 18:00** | POV: telling your mum what you want to study | Recognise the chat, laugh at the ending, send it to your mum | IG_SX05 |
-| **Thu 1 Oct, 18:00** | AI tier list | Argue with where 15 jobs land, by Microsoft's data | IG_SX02 |
-| **Sat 3 Oct, 18:00** | Pick one | Pick one; each pick shows two directions you'd never have thought of | IG_SX01 |
-| **Mon 5 Oct, 18:00** | Guess #1 | Guess the top job of 785, then comment yours | IG_SX03 |
-| **Wed 7 Oct, 18:00** | Is a CS degree cooked? | Watch the needle, then comment your degree | IG_SX04 |
+| **Tue 29 Sep, 18:00** | POV: telling your mum what you want to study | Recognise the chat, laugh at the ending, send it to your mum | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-3637511346048515290) |
+| **Thu 1 Oct, 18:00** | AI tier list | Argue with where 15 jobs land, by Microsoft's data | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=6934987345918445199) |
+| **Sat 3 Oct, 18:00** | Pick one | Pick one; each pick shows two directions you'd never have thought of | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=6825747789232098301) |
+| **Mon 5 Oct, 18:00** | Guess #1 | Guess the top job of 785, then comment yours | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-195366417915820977) |
+| **Wed 7 Oct, 18:00** | Is a CS degree cooked? | Watch the needle, then comment your degree | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-6561201692308781502) |
 
 The chat, the tier list and *Pick one* also go to YouTube Shorts on 12 to 14 October (table above). *Guess #1* and the CS cut stay off YouTube, where episodes 6 and 7 already cover them.
 
 **TikTok isn't connected to Metricool yet** (only Instagram and YouTube are). Connect the OffLadder TikTok account in Metricool and these can be scheduled the same way; until then, upload the files in [motion/videos/](motion/videos/) natively in the TikTok app with the captions in `social-posts.json`, in the same order. Business accounts can only use TikTok's Commercial Music Library, so keep the original score: it's ours and cleared everywhere.
+
+What these need from a person, in the Instagram (and TikTok) app:
+
+- [ ] **Pin** each Reel's first comment once it's live. Metricool posts it; pinning is manual.
+- [ ] **Answer comments for the first two hours** after each Reel goes live. For "my job is…" or "my degree is…", paste the reply [lookup/lookup.py](lookup/) prints. Early replies keep the thread going, and comments are one of the interactions both apps rank on.
+- [ ] **Connect TikTok** in Metricool, or upload the five files natively, in the order above.
 
 ---
 
