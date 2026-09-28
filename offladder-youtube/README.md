@@ -25,12 +25,12 @@ A complete system for producing YouTube videos for [offladder.com](https://offla
 | [04-story-and-retention.md](04-story-and-retention.md) | Six story structures with beat timings, 22 retention techniques, the four-pass edit, reading the retention graph | Host, editor |
 | [05-ctas.md](05-ctas.md) | The CTA ladder, placement by series, a line bank, description and pinned-comment templates, end screens, UTM tracking | Host, packaging lead |
 | [06-video-slate.md](06-video-slate.md) | 22 long-form concepts and 24 Shorts, each with titles, thumbnails, hook, opening, structure, and why they'd click and stay | Everyone |
-| [scripts/](scripts/) | Seven long-form shooting scripts and twelve Shorts scripts | Host, editor |
+| [scripts/](scripts/) | Seven long-form shooting scripts, twelve Shorts scripts, and **[the AI-and-work Shorts series](scripts/ai-series.md)** with its claims register | Host, editor |
 | [07-production-workflow.md](07-production-workflow.md) | Team, the eight-stage pipeline with gates, weekly rhythm, safeguarding, brand look, kit | Producer |
 | [08-analytics.md](08-analytics.md) | The scoreboard, diagnosis matrix, review cadence, decision rules, funnel measurement, experiment backlog | Packaging lead |
 | [09-launch-plan.md](09-launch-plan.md) | Research sprint, channel set-up, trailer script, the 12-week calendar and checkpoints | Producer |
 | [templates/](templates/) | Concept card, claims register, script, thumbnail brief, release and safety checklist, publish checklist, packaging log, post-mortem | Everyone |
-| [launch/](launch/) | **What's been made and scheduled:** the launch log, six rendered Shorts queued in Metricool, channel art, the search-language research, and the Shorts renderer | Everyone |
+| [launch/](launch/) | **What's been made and scheduled:** the launch log, the AI series (live and queued in Metricool), the motion engine that renders it, channel art, and the search-language research | Everyone |
 
 ---
 

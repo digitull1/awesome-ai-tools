@@ -6,32 +6,42 @@ The channel is [@offladder](https://www.youtube.com/@offladder). Posting runs th
 
 ---
 
-## Scheduled on YouTube
+## On YouTube: the AI-and-work series
 
-Six Shorts from the plan's Shorts slate, queued in Metricool as **public YouTube Shorts**. Each is set to category *Education*, **not made for kids**, and not flagged as synthetic content (they're typographic animations, with nothing realistic generated). Each has a first comment that asks the Short's question.
+On 28 September the slate changed. The first six launch Shorts weren't strong enough, so the schedule now leads with **The ladder is breaking**, a series built on the anxiety most viewers share about AI and work. Each episode opens on a verbatim quote or a sourced figure, turns it into an approach, and shows OffLadder's adaptive loop as the answer. Scripts, rules and the claims register are in [scripts/ai-series.md](../scripts/ai-series.md).
 
-| Goes live (UK) | New York | Singapore | Short | Title | Metricool |
-|---|---|---|---|---|---|
-| **Tue 29 Sep, 18:00** | 13:00 | Wed 30 Sep, 01:00 | S22 · 10 jobs, 10 seconds | Name 10 jobs in 10 seconds | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=3524237111787144982) |
-| **Thu 1 Oct, 18:00** | 13:00 | Fri 2 Oct, 01:00 | S05 · Hobby → Verb | 3 jobs for people who argue about football tactics | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=6847026069562738771) |
-| **Sat 3 Oct, 18:00** | 13:00 | Sun 4 Oct, 01:00 | S04 · The delete question | The best question to ask anyone about their job | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=1182546707768233435) |
-| **Tue 6 Oct, 18:00** | 13:00 | Wed 7 Oct, 01:00 | S06 · Hobby → Verb | 3 jobs for people who love editing videos | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-6355916932022384116) |
-| **Thu 8 Oct, 18:00** | 13:00 | Fri 9 Oct, 01:00 | S07 · Hobby → Verb | 3 jobs for the friend everyone calls when there's drama | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=7184454675539837540) |
-| **Sat 10 Oct, 18:00** | 13:00 | Sun 11 Oct, 01:00 | S15 · Real or made up? | Real job or made up? Guess before the reveal | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-3496651101519591838) |
+| Goes live (UK) | Episode | Title | Metricool |
+|---|---|---|---|
+| **Mon 28 Sep, 05:46** | 1 · Musk and Altman, the WEF grid | Elon Musk: "Probably none of us will have a job." Here's what to do instead | [live on YouTube](https://www.youtube.com/shorts/c62_PVxUDCo) |
+| **Tue 29 Sep, 18:00** | 2 · The departures board | The jobs employers expect to shrink by 2030 (and what to do instead) | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=6275145739427529921) |
+| **Thu 1 Oct, 18:00** | 3 · 39% of your skills | 39% of your skills will change by 2030. So what should you learn? | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=6847026069562738771) |
+| **Sat 3 Oct, 18:00** | 4 · The people building AI can't agree | *being swapped in* | [slot](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=1182546707768233435) |
+| **Tue 6 Oct, 18:00** | 5 · The 80% test | *being swapped in* | [slot](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-6355916932022384116) |
+| **Thu 8 Oct, 18:00** | 6 · Half of workers are worried | *being swapped in* | [slot](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=7184454675539837540) |
 
-**Why 18:00 UK.** Metricool's suggested best times are generic figures in the brand's Singapore time zone (weekday peaks around 16:00 there, which is 9 am in the UK and 4 am in New York). OffLadder's audience is mostly UK and US, so the slot is UK evening and US lunchtime. Keep it consistent, then let [08-analytics.md](../08-analytics.md) decide whether to move it. UK clocks go back on 25 October: keep the UK time and update the other columns.
+All posts are public YouTube Shorts in *Education*, **not made for kids**, and not flagged as synthetic content (they're typographic motion design with no realistic generated people or voices). The people quoted appear as text only, with no photos, and nothing implies they endorse OffLadder. Each post's description lists its sources, and its first comment asks the episode's question. The videos are in [motion/videos/](motion/videos/) and the post copy is in [motion/posts.json](motion/posts.json).
+
+**Why 18:00 UK.** Metricool's suggested best times are generic figures in the brand's Singapore time zone. OffLadder's audience is mostly UK and US, so the slot is UK evening and US lunchtime. Keep it consistent, then let [08-analytics.md](../08-analytics.md) decide whether to move it. UK clocks go back on 25 October: keep the UK time.
 
 **To change or cancel anything,** open the post in Metricool (links above) before its time. Every post publishes automatically unless it's edited or deleted there.
 
-The files are in [shorts/videos/](shorts/videos/). Titles, descriptions, tags and first comments are in [shorts/posts.json](shorts/posts.json).
+### How the Shorts are made
 
-### How these Shorts differ from the plan
+They're motion-designed with the engine in [motion/](motion/): a paused GSAP timeline per episode, rendered frame by frame in Chromium with adaptive motion blur (up to 16 samples on fast moves), and a soundtrack synthesised from the same timeline, so every hit lands on its frame. Audio is normalised to -14 LUFS. Nothing is licensed and nothing is generated by an AI image or voice model.
 
-The plan's Shorts assume a host on camera. Until host shoots begin, these six are **text-led adaptations** of scripts S22, S05, S06, S07, S04 and S15 ([scripts/shorts.md](../scripts/shorts.md)). They keep the hook, loop and comment prompt, and use no human presenter, no synthetic voice and no invented people.
+```sh
+cd offladder-youtube/launch/shorts && ./fetch-fonts.sh   # brand fonts (SIL Open Font License)
+cd ../motion
+pip install numpy scipy imageio-ffmpeg
+FONTS_DIR=../shorts/fonts node render.cjs ai01-none-of-us --sheet     # contact sheet, every 0.5 s
+FONTS_DIR=../shorts/fonts node render.cjs ai01-none-of-us             # full 1080x1920 MP4 in ./out
+```
 
-- **S15 changed on purpose.** The script invented a fake job ("robot mood coach"), but real research exists on robots that coach people's moods, so the "made up" reveal wouldn't have been clean. The rendered version shows three **real** jobs and reveals that all three are real. It's more surprising and entirely true.
-- **Facts on screen were checked on 27 September 2026:** show caller (a live-events role that calls every cue), precision fermentation technician (live job listings), community health navigator (an established patient-navigation role).
-- **Sound** is synthesised from scratch (a soft chord pad, plus pop, tick and stamp effects), so there's no music licensing to worry about. To use a track from YouTube's audio library instead, swap it in the Shorts editor after publishing.
+The renderer warns when any text leaves the Shorts safe area (clear of the right-hand buttons and the caption), and `--strip=a,b` draws a filmstrip for checking a transition.
+
+### The first six (replaced)
+
+The original text-led Shorts (S22, S05, S04, S06, S07, S15) are still in [shorts/](shorts/) for reference. Their slots now carry the AI series.
 
 ---
 
@@ -65,17 +75,4 @@ The research sprint's title changes are already applied to the slate: [research/
 
 ## Making more Shorts
 
-Everything here is reproducible. To render a new Short:
-
-```sh
-cd offladder-youtube/launch/shorts
-./fetch-fonts.sh                       # brand fonts (SIL Open Font License)
-pip install numpy imageio-ffmpeg       # audio synthesis and a static ffmpeg
-node render.cjs --stills s05-football-tactics   # check one frame per scene first
-node render.cjs s05-football-tactics            # full 1080x1920 MP4 in ./out
-```
-
-- Add a Short by adding an entry to [shorts/specs.mjs](shorts/specs.mjs). Scenes list their blocks (`h1`, `mark`, `body`, `small`, `label`, `card`, `bigcard`, `timer`, `tally`, `stamp`, `cta`) with start times, animations (`none`, `up`, `pop`, `stamp`) and sound cues (`pop`, `tick`, `thud`).
-- The renderer refuses to output a scene that overflows the Shorts safe area (clear of the right-hand buttons and bottom caption zone).
-- Audio is normalised to -14 LUFS, YouTube's loudness reference, so every Short plays at the same volume.
-- Every line on screen must pass the playbook's claims rules ([templates/claims-register.md](../templates/claims-register.md)).
+New episodes follow the format and rules in [scripts/ai-series.md](../scripts/ai-series.md): a verbatim quote or sourced figure that's legible on the first frame, the evidence, the approach, OffLadder's loop, and a seamless loop back to the hook. Build them as pieces in [motion/pieces/](motion/pieces/) (shared components are in `ai-shared.js`), check the contact sheet and the safe-area warnings, render, then add the post to [motion/posts.json](motion/posts.json) and schedule it in Metricool with its sources in the description.

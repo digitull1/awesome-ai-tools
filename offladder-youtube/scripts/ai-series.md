@@ -1,6 +1,6 @@
 # The ladder is breaking: the AI-and-work Shorts series
 
-*Added 28 September 2026. This series replaces the first six launch Shorts in the schedule.*
+*Added 28 September 2026. This series replaces the first six launch Shorts in the schedule. Episode 1 went live on 28 September: [youtube.com/shorts/c62_PVxUDCo](https://www.youtube.com/shorts/c62_PVxUDCo).*
 
 ## Why this series
 
@@ -53,13 +53,26 @@ Checked on 28 September 2026.
 | C10 | Worker worry | 52% of US workers worried about the future impact of AI use in the workplace; 32% expect fewer opportunities for themselves (survey of 5,273 employed adults, 7–13 October 2024) | [Pew Research Center, 25 February 2025](https://www.pewresearch.org/social-trends/2025/02/25/u-s-workers-are-more-worried-than-hopeful-about-future-ai-use-in-the-workplace/) | Verified |
 | C11 | Jensen Huang, May 2025 | "You're not going to lose your job to an AI, but you're going to lose your job to someone who uses AI." (Milken Institute Global Conference) | [Fortune, 29 May 2025](https://fortune.com/2025/05/29/billionaire-nvidia-ceo-jensen-huang-ai-replace-jobs-if-technology-not-embraced/) | Verified |
 | C12 | Emerging directions | AI workflow designer, model evaluation writer, robot fleet supervisor, synthetic data curator, drone survey operator, energy retrofit assessor, agentic systems operator, precision fermentation technician | [offladder.com/directions](https://offladder.com/directions) (the site notes none is yet a settled job title) | Our own index |
+| C14 | Dario Amodei, May 2025 | Anthropic's CEO warned AI could wipe out about half of all entry-level white-collar jobs (Axios interview; reported, not a direct quote, so it's shown as "warned…" with no quotation marks) | [Fortune, 11 June 2025](https://fortune.com/2025/06/11/nvidia-jensen-huang-disagress-anthropic-ceo-dario-amodei-ai-jobs) | Verified as reported |
+| C15 | Jensen Huang, June 2025 | "Everybody's jobs will be changed. Some jobs will be obsolete, but many jobs are going to be created" (VivaTech, Paris) | [Fortune, 11 June 2025](https://fortune.com/2025/06/11/nvidia-jensen-huang-disagress-anthropic-ceo-dario-amodei-ai-jobs) | Verified |
 | C13 | What OffLadder does | "the career app that learns from what you actually try"; 3 questions, free, no account for first directions; experiments; the loop and its illustrative example | offladder.com home page | Our own copy |
 
 ---
 
+## Schedule
+
+| Episode | Goes live (UK) | Status |
+|---|---|---|
+| 1 · "Probably none of us will have a job." | Mon 28 Sep, 05:46 | [Live](https://www.youtube.com/shorts/c62_PVxUDCo) |
+| 2 · The jobs employers expect to shrink | Tue 29 Sep, 18:00 | Scheduled |
+| 3 · 39% of your skills | Thu 1 Oct, 18:00 | Scheduled |
+| 4 · The people building AI can't agree | Sat 3 Oct, 18:00 | Rendering |
+| 5 · The 80% test | Tue 6 Oct, 18:00 | Rendering |
+| 6 · Half of workers are worried | Thu 8 Oct, 18:00 | Rendering |
+
 ## Episode 1 · "Probably none of us will have a job."
 
-**Slot:** Tue 29 Sep, 18:00 UK · **File:** [launch/motion/pieces/ai01-none-of-us.js](../launch/motion/pieces/ai01-none-of-us.js)
+**Live:** Mon 28 Sep ([youtube.com/shorts/c62_PVxUDCo](https://www.youtube.com/shorts/c62_PVxUDCo)) · **File:** [launch/motion/pieces/ai01-none-of-us.js](../launch/motion/pieces/ai01-none-of-us.js)
 
 **Title:** Elon Musk: "Probably none of us will have a job." Here's what to do instead
 **First comment:** What job were you told was 'safe'?
@@ -79,53 +92,48 @@ Checked on 28 September 2026.
 
 **Why it works.** The first frame is a sentence from the world's most-watched tech figure, readable at thumbnail size, and it names the viewer's fear exactly. The second quote proves it isn't one person's hot take. The grid makes an abstract number physical, and the honest half of it (170 million new jobs) sets up the turn. The job cards create a curiosity gap, and "Not even the people building AI" converts fear into permission to stop guessing. The product appears as the answer to the question the video raised, not as an ad break.
 
-## Episode 2 · The jobs employers expect to shrink fastest
+## Episode 2 · The jobs employers expect to shrink
 
-**Slot:** Thu 1 Oct · **Title:** The jobs employers expect to shrink fastest by 2030 (and what to do instead)
-**First comment:** What were you told to study?
+**File:** [launch/motion/pieces/ai02-shrinking-jobs.js](../launch/motion/pieces/ai02-shrinking-jobs.js) · **Title:** The jobs employers expect to shrink by 2030 (and what to do instead) · **First comment:** What were you told to study?
 
-- **Hook:** EMPLOYERS EXPECT THESE TO SHRINK FASTEST BY 2030 — bank teller, data entry clerk, postal service clerk, cashier, administrative assistant, accountant and auditor (C7), stamped one by one.
-- **Proof:** Meanwhile, about 60% of US jobs are types of work created since 1940 (C9). New work keeps being invented.
-- **Twist:** The job you'll love may not have a name yet. Cards: directions from offladder.com (C12).
-- **Approach:** Don't choose a title. Find the kind of work you're good at, and test it.
-- **OffLadder:** the loop (C13). **End:** as episode 1.
+- **Hook (0–4 s):** a split-flap departures board: *Employers expect these jobs to shrink by 2030:* bank tellers, data entry clerks, postal service clerks, cashiers, admin assistants, accountants and auditors (C7). *Is yours on the list?* At 2 s every leaf clatters over to the fastest-growing roles (C8).
+- **Proof (4–8 s):** about 60% of US jobs are types of work created since 1940 (C9): ten figures, six turn orange. *New work keeps being invented.*
+- **Twist (8–12 s):** six directions from offladder.com dealt onto the frame (C12). *Your job might not have a name yet.*
+- **Approach (12–16 s):** *So don't choose a job title. Find the kind of work you're good at. Then test it.*
+- **OffLadder (16–24 s):** question one from the site, a cursor taps *Figure things out*, directions appear, then *Try tonight: trace one viral image to its source.* *Then it learns what you liked, and adapts.*
 
 ## Episode 3 · 39% of your skills
 
-**Slot:** Sat 3 Oct · **Title:** 39% of your skills will change by 2030. So what should you learn?
-**First comment:** What's one skill you want to learn this year?
+**File:** [ai03-skills-change.js](../launch/motion/pieces/ai03-skills-change.js) · **Title:** 39% of your skills will change by 2030. So what should you learn? · **First comment:** What skill do you want to learn next?
 
-- **Hook:** giant **39%**: *of your skills will change by 2030* — World Economic Forum (C5).
-- **Proof:** If the world's workforce were 100 people, 59 would need training by 2030 (C6): 100 figures, 59 light up.
-- **Twist:** The skill that doesn't expire is finding out, fast, what you're good at.
-- **Approach:** Learn inside real work, not about it: one small experiment a week.
-- **OffLadder:** experiments and the weekly brief (C13).
+- **Hook:** giant **39%**, *of your skills will change by 2030* (C5), over a skills bar whose orange 39% crumbles away and regrows as new skills.
+- **Proof:** *If the world's workforce were 100 people, 59 would need training by 2030* (C6): 100 figures, 59 light up.
+- **Twist:** *So what should you learn? The skill that doesn't expire: finding out what you're good at. Fast.*
+- **Approach:** *Before you pay for a course, try an hour of the real work. Then decide.*
+- **OffLadder:** the site's four-step loop (answer 3 questions, try one out, tell Laddie how it went, get a weekly brief), run twice by an orange marker. *Every round sharpens what comes next.*
 
-## Episode 4 · "You're going to be talking to an AI."
+## Episode 4 · The people building AI can't agree
 
-**Slot:** Tue 6 Oct · **Title:** Sam Altman says customer support will be AI. What about your job?
-**First comment:** Which part of your week could a model already do?
+**File:** [ai04-cant-agree.js](../launch/motion/pieces/ai04-cant-agree.js) · **Title:** AI CEOs can't agree what happens to jobs. Here's what to do anyway · **First comment:** Which part of your week could AI already do?
 
-- **Hook:** SAM ALTMAN · JULY 2025 — *"When you call customer support, you're going to be talking to an AI."* (C3, verified against the video first; otherwise use C2).
-- **Proof:** AI changes the tasks inside jobs before it changes job titles (offladder.com's AI guide), and WEF's employers expect clerical roles to shrink fastest (C7).
-- **Approach:** Audit one week: mark each block *cheap to produce* or *hard to replace*.
-- **OffLadder:** test an adjacent direction before you need one.
+- **Hook:** a split screen. Top: Dario Amodei *warned AI could wipe out half of all entry-level white-collar jobs* (C14, shown as a report). Bottom: Jensen Huang, verbatim: *"Some jobs will be obsolete, but many jobs are going to be created."* (C15). A VS between them. At 2 s the halves pull apart: *The people building AI can't agree.*
+- **Proof:** *So who's right? NOBODY KNOWS YET. But one thing is already happening:*
+- **Twist:** a job title breaks into its tasks, and the ones getting cheap to produce turn orange (illustrative). *Tasks change before titles do* (offladder.com's AI guide).
+- **Approach:** *Audit one week. Then test one direction next to yours, before you need to.*
+- **OffLadder:** every try becomes a star in your constellation (*a record of what you can do, backed by something you actually did*), and a dashed star marks what to test next.
 
-## Episode 5 · "Someone who uses AI."
+## Episode 5 · The 80% test
 
-**Slot:** Thu 8 Oct · **Title:** Nvidia's CEO: you won't lose your job to AI. You'll lose it to this
-**First comment:** What's the most repetitive task in your week?
+**File:** [ai05-80-percent.js](../launch/motion/pieces/ai05-80-percent.js) · **Title:** Nvidia's CEO: you won't lose your job to AI. You'll lose it to this · **First comment:** What's the most repetitive task in your week?
 
-- **Hook:** JENSEN HUANG · MAY 2025 — *"You're not going to lose your job to an AI, but you're going to lose your job to someone who uses AI."* (C11).
-- **Proof:** AI and big data top WEF's fastest-growing skills (C8 and the report's skills findings).
-- **Approach:** Take your most repetitive task, have a model do the first 80%, and write down what you had to fix. That list is where your value is.
-- **OffLadder:** directions like AI workflow designer and model evaluation writer (C12), each with an experiment.
+- **Hook:** Jensen Huang, verbatim (C11), then *So become that someone.*
+- **The test:** *Give AI your most repetitive task* (an illustrative prompt types in, a draft appears), then *write down what you had to fix*: an orange pen strikes and circles, and the fix list builds. *That list is where your value sits* (offladder.com's AI guide).
+- **OffLadder:** *Some people are turning that list into a job:* AI workflow designer and model evaluation writer, as described on offladder.com, each with a test for tonight. *It adapts to what you enjoyed.*
 
 ## Episode 6 · Half of workers are worried
 
-**Slot:** Sat 10 Oct · **Title:** Half of workers are worried about AI. Here's what to do this month
-**First comment:** Which of the four are you starting with?
+**File:** [ai06-worried.js](../launch/motion/pieces/ai06-worried.js) · **Title:** Half of workers are worried about AI. Here's what to do this month · **First comment:** Which of the four are you starting with?
 
-- **Hook:** **52%** of US workers are worried about AI's future impact at work (C10).
-- **Approach:** the four moves from offladder.com's AI guide: audit one week; use a model on one cheap block, properly; get deliberately better at one hard-to-replace block; test one adjacent direction.
-- **OffLadder:** the fourth move is what OffLadder is for.
+- **Hook:** a donut drawn to **52%**: *of US workers are worried about the future impact of AI at work* (C10). *If that's you, here's what to do this month.*
+- **Approach:** the four moves from offladder.com's AI guide, ticked off one by one: audit one week; use AI on one cheap block, properly; get better at one hard block; test one direction next to yours.
+- **OffLadder:** *OffLadder is for this one.* 3 questions, 2 directions you'd never have thought of, 1 experiment for tonight. *Then tell Laddie how it went. It remembers, spots patterns, and adapts your next step.*

@@ -2,6 +2,8 @@
 
 > **The thesis in one line:** OffLadder's method (try a small, real piece of a career before you choose one) is already one of YouTube's most dependable formats: the on-camera experiment. The channel films the method.
 
+> **Update, 28 September 2026: lead with AI anxiety.** The fear that AI will change or remove the work people are doing or studying for is shared across every age and career stage (52% of US workers say they're worried, [Pew, 2025](https://www.pewresearch.org/social-trends/2025/02/25/u-s-workers-are-more-worried-than-hopeful-about-future-ai-use-in-the-workplace/)). It's also the problem OffLadder was built for. So the Shorts now lead with **The ladder is breaking** ([scripts/ai-series.md](scripts/ai-series.md)): verbatim quotes from the people building AI and sourced figures, then the approach (*nobody knows which jobs will last, so test before you bet*), then OffLadder's adaptive loop as the answer. The AI-Anxious move from reach engine to the lead Shorts audience; the guardrails in §6 apply unchanged.
+
 ---
 
 ## 1. What we are building
@@ -62,11 +64,12 @@ OffLadder serves anyone unsure what's next: people choosing subjects, starting o
 - **Why they click:** permission not to know, strange but real jobs, and a person actually trying something.
 - **Why they stay:** fast pace, honest failures, humour, and experiments they can do this weekend without asking anyone.
 
-### Reach engine: The AI-Anxious (any age)
+### Lead for Shorts: The AI-Anxious (any age, any stage)
 
-- **What they type:** "will AI take my job", "AI-proof jobs", "jobs of the future".
-- **Why they click:** a contrarian frame ("every list is a guess") that respects their intelligence.
-- **Why they stay:** a concrete audit they can run on their own working week, on screen, in real time.
+- **Who:** the student choosing what to study, the graduate looking at entry-level roles, the mid-career worker watching their tasks change, the parent. The anxiety cuts across every other audience here.
+- **What they type:** "will AI take my job", "AI-proof jobs", "jobs of the future", "what should I study".
+- **Why they click:** the people building AI saying it out loud, in their own words, and a number that makes it concrete.
+- **Why they stay:** the honest turn (*nobody knows which jobs will last, not even them*), then a move they can make this week, and new kinds of work they'd never have thought of.
 
 ### Secondary: The Returner
 
@@ -89,7 +92,7 @@ Five long-form series and a family of Shorts. Each has a specific job in the por
 | **The Job Nobody Told You About** | A mini-documentary on one emerging direction, told OffLadder's way: what the days contain, why it's appearing now, what's genuinely unknown, and one test for this week | 10–13 min | Browse and Suggested | Novelty, curiosity and AI topicality | Medium–high |
 | **Change One Thing** | A real person tests a career change over six weeks without quitting, and makes a decision on camera | 18–25 min | Suggested (next to career-change and "I quit" videos) | Emotional retention and trust; the proof that the method works on real lives | High |
 | **Honest Answers** | A direct answer to a high-intent search question, built around exercises the viewer does while watching | 7–11 min | Search | Evergreen search traffic and the highest conversion to OffLadder | Low |
-| **Shorts** (Delete One Part, Hobby → Verb, The Pause, Real or Not?) | Vertical, 20–60 seconds (Shorts can now run to 3 minutes, [YouTube Help](https://support.google.com/youtube/answer/15424877)) | ≤ 60 s | Shorts feed | Discovery, teenage reach and comment loops | Very low |
+| **Shorts: The ladder is breaking** (lead), plus Delete One Part, Hobby → Verb, The Pause, Real or Not? | Vertical, 20–60 seconds (Shorts can now run to 3 minutes, [YouTube Help](https://support.google.com/youtube/answer/15424877)) | ≤ 60 s | Shorts feed | Discovery, teenage reach and comment loops | Very low |
 
 **Default cadence:** one long-form video per week on a four-week rotation (Honest Answers → 90 Minutes As… → The Job Nobody Told You About → Last Tuesday), plus one **Change One Thing** roughly every six to eight weeks. Add three to five Shorts a week. The 12-week calendar is in [09-launch-plan.md](09-launch-plan.md).
 

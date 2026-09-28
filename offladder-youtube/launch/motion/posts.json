@@ -37,6 +37,27 @@
    "career advice",
    "offladder"
   ],
-  "first_comment": "What were you told to study?"
+  "first_comment": "What were you told to study?",
+  "metricool_uuid": "6275145739427529921"
+ },
+ {
+  "id": "ai03-skills-change",
+  "status": "scheduled",
+  "slot_uk": "2026-10-01T18:00",
+  "date_sgt": "2026-10-02T01:00:00+08:00",
+  "metricool_uuid": "6847026069562738771",
+  "title": "39% of your skills will change by 2030. So what should you learn?",
+  "text": "Workers can expect 39% of their existing skill sets to be transformed or become outdated between 2025 and 2030, and if the world's workforce were 100 people, 59 would need training by 2030 (World Economic Forum, Future of Jobs Report 2025).\n\nSo what should you learn? The skill that doesn't expire is finding out, fast, what you're good at. Before you pay for a course, try an hour of the real work. Then decide.\n\nOffLadder keeps going with you: 3 questions, a small real experiment, tell Laddie how it went, then a weekly brief shaped by everything so far. Every round sharpens what comes next. Free, no account to start: offladder.com\n\nSource\nWEF Future of Jobs Report 2025: weforum.org/publications/the-future-of-jobs-report-2025\n\n#ai #futureofwork #careers",
+  "tags": [
+   "skills of the future",
+   "what skills to learn",
+   "future of work",
+   "ai and jobs",
+   "reskilling",
+   "career advice",
+   "world economic forum future of jobs",
+   "offladder"
+  ],
+  "first_comment": "What skill do you want to learn next?"
  }
 ]
