@@ -435,14 +435,13 @@
     const r = K.rng(seed);
     let tt = t, prev = null;
     for (const s of chars) {
-      tl.set(s, { opacity: 1 }, tt);
-      tl.set(s, { className: 'ch cur' }, tt);
-      if (prev) tl.set(prev, { className: 'ch' }, tt);
+      tl.set(s, { opacity: 1, '--cur': 1 }, tt);
+      if (prev) tl.set(prev, { '--cur': 0 }, tt);
       if (sound && s.textContent.trim()) K.sfx('type', tt, gain * (0.7 + r() * 0.6), { seed: (r() * 1e6) | 0 });
       prev = s;
       tt += (1 / cps) * (1 + (r() - 0.5) * 2 * jitter) * (s.textContent === ' ' ? 1.7 : 1);
     }
-    if (!keepCaret && prev) tl.set(prev, { className: 'ch' }, tt + 0.3);
+    if (!keepCaret && prev) tl.set(prev, { '--cur': 0 }, tt + 0.3);
     return { end: tt, chars };
   };
 

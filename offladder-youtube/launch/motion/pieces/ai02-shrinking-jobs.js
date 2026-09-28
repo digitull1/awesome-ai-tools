@@ -127,10 +127,10 @@ window.build = function () {
   K.ladder(12.0, { colors: [C.orange, C.paper2], bars: 8 });
   K.bg(C.paper, 12.0); K.theme('light', 12.0); K.camSet(12.0, { scale: 1, x: 0, y: 0 });
   const sD = K.scene(12.0, 16.3);
-  const d1 = K.lines(sD, { lines: ['SO DON’T CHOOSE', 'A JOB TITLE.'], x: 72, y: 500, size: 130, lh: 0.92 });
+  const d1 = K.lines(sD, { lines: ['SO DON’T', 'CHOOSE A', 'JOB TITLE.'], x: 72, y: 430, size: 150, lh: 0.9 });
   K.fit(d1, 900);
   K.reveal(d1, 12.08, { stagger: 0.05 });
-  const d2 = K.lines(sD, { lines: ['Find the kind of work', 'you’re good at.'], font: 'serif', size: 104, lh: 1.0, x: 72, y: 800, color: C.orange });
+  const d2 = K.lines(sD, { lines: ['Find the kind of work', 'you’re good at.'], font: 'serif', size: 104, lh: 1.0, x: 72, y: 880, color: C.orange });
   K.fit(d2, 880);
   K.reveal(d2, 12.9, { stagger: 0.04, dur: 0.65, from: 135 });
   K.check(d1.box, 13.6, 'dont choose'); K.check(d2.box, 13.6, 'find the work');
@@ -192,7 +192,7 @@ window.build = function () {
   const ad = K.lines(sE, { lines: ['Then it learns what you', 'liked, and adapts.'], font: 'serif', size: 80, lh: 1.0, x: 72, y: 318, color: C.ink });
   K.fit(ad, 900);
   ad.lines[1].words.slice(-1).forEach(w => { w.style.color = C.orange; });
-  tl.to(ill, { autoAlpha: 0, duration: 0.2 }, 20.9);
+  tl.to(ill.box, { autoAlpha: 0, duration: 0.2 }, 20.9);
   K.reveal(ad, 21.05, { stagger: 0.04, dur: 0.6, from: 135 });
   K.sfx('sparkle', 21.5, 0.6);
   K.check(tc, 22.5, 'try card'); K.check(ad.box, 22.5, 'adapts');

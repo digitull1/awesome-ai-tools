@@ -1,0 +1,14 @@
+.sbar { position: absolute; left: 72px; width: 826px; height: 96px; }
+.sbar .keep { position: absolute; left: 0; top: 0; bottom: 0; background: #F4F2EE; }
+.sbar .gone { position: absolute; top: 0; bottom: 0; background: #FA5608; }
+.sbar .fresh { position: absolute; top: 0; bottom: 0; background: repeating-linear-gradient(135deg, #F4F2EE 0 14px, #D9D5CC 14px 28px); transform: scaleX(0); transform-origin: 0 50%; }
+.person { position: absolute; width: 30px; height: 62px; color: #3A3936; }
+.person i { position: absolute; left: 7px; top: 0; width: 16px; height: 16px; background: currentColor; }
+.person b { position: absolute; left: 0; top: 21px; width: 30px; height: 41px; background: currentColor; }
+.step { position: absolute; left: 150px; width: 730px; }
+.step .no { position: absolute; left: -78px; top: -4px; width: 52px; height: 52px; background: #FBFAF7; border: 5px solid #0C0C0C;
+            font-family: 'Archivo Black', sans-serif; font-size: 22px; display: flex; align-items: center; justify-content: center; padding-top: 3px; }
+.step .no .lit { position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: #FA5608; opacity: 0; visibility: hidden; }
+.step .no .n { position: relative; }
+.step h4 { font-family: 'Archivo Black', sans-serif; font-weight: 400; font-size: 36px; line-height: 1; text-transform: uppercase; margin: 2px 0 8px; }
+.step p { font-family: 'Hind', sans-serif; font-weight: 600; font-size: 31px; line-height: 1.18; color: #54524F; }
