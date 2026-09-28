@@ -1,0 +1,10 @@
+.soring { position: absolute; width: 168px; height: 168px; border-radius: 50%; background: #FBFAF7; border: 7px solid #0C0C0C; box-shadow: 8px 8px 0 #0C0C0C; }
+.soring svg { position: absolute; left: -7px; top: -7px; }
+.soring .roller { font-family: 'Archivo Black', sans-serif; }
+.sohead { position: absolute; width: 812px; height: 200px; background: #0C0C0C; box-shadow: 12px 12px 0 #FA5608; }
+.sohead .n { position: absolute; left: 0; top: 0; width: 200px; height: 200px; background: #FA5608; font-family: 'Archivo Black', sans-serif;
+             font-size: 150px; line-height: 1; display: flex; align-items: center; justify-content: center; padding-top: 14px; color: #0C0C0C; }
+.sohead .k { position: absolute; left: 236px; top: 40px; font-family: 'Archivo Black', sans-serif; font-size: 28px; letter-spacing: 0.1em; color: #FA5608; }
+.sohead .t { position: absolute; left: 236px; top: 84px; width: 440px; font-family: 'Archivo Black', sans-serif; font-size: 46px; line-height: 0.96;
+             text-transform: uppercase; color: #F4F2EE; }
+.sohead svg path { stroke: #F4F2EE; }

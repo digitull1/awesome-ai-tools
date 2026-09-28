@@ -68,8 +68,10 @@
     dark: { wm: C.paper, l: C.orange, chipBg: C.orange, chipFg: C.ink },
     orange: { wm: C.ink, l: C.paper, chipBg: C.ink, chipFg: C.orange },
   };
-  K.init = function ({ duration, bg = C.paper, chip = '', theme = 'light', bpm = 120, grain = 0.075 }) {
+  K.init = function ({ duration, bg = C.paper, chip = '', theme = 'light', bpm = 120, grain = 0.075, safe = 'shorts' }) {
     K.duration = duration; K.bpm = bpm; K.beat = 60 / bpm; K.bar = 4 * K.beat;
+    // 'social' is the box that clears Instagram, TikTok and YouTube at once (see 10-viral-standard.md).
+    K.SAFE = safe === 'social' ? K.SAFE_SOCIAL : K.SAFE_SHORTS;
     const stage = document.getElementById('stage');
     K.stage = stage;
     K.bgl = K.el('div', 'layer bgl', stage); K.bgl.style.background = bg;
@@ -81,6 +83,7 @@
     K.pctx = K.pc.getContext('2d');
     K.fx = K.el('div', 'layer fx', stage);
     K.hud = buildHud(stage, chip, theme);
+    if (safe === 'social') K.hud.style.top = '284px';
     K.flashEl = K.el('div', 'layer flash', stage);
     K.grainEl = buildGrain(stage, grain);
     gsap.set([K.cam, K.shaker], { transformOrigin: '50% 50%' });
@@ -464,7 +467,9 @@
 
   // ---------- safe area ----------
   // Text must stay clear of the Shorts UI: the top bar, the right-hand buttons and the caption.
-  K.SAFE = { l: 40, t: 170, r: 900, b: 1500, rTop: 1020, split: 1000 };
+  K.SAFE_SHORTS = { l: 40, t: 170, r: 900, b: 1500, rTop: 1020, split: 1000 };
+  K.SAFE_SOCIAL = { l: 65, t: 270, r: 900, b: 1250, rTop: 940, split: 1000 };
+  K.SAFE = K.SAFE_SHORTS;
   K.check = function (e, t, name) { K.checks.push({ e, t, name: name || (e.textContent || '').trim().slice(0, 40) }); };
   // Measures the ink, not the layout box: words, marks, or the element itself.
   window.__checks = function () {

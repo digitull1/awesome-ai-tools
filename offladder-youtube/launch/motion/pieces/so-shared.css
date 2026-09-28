@@ -1,0 +1,15 @@
+/* Shared styles for the social-first pieces. */
+.sotask { position: absolute; background: #FBFAF7; border: 6px solid #0C0C0C; box-shadow: 12px 12px 0 #0C0C0C; }
+.sotask .n { position: absolute; left: -6px; top: -6px; width: 88px; height: 88px; background: #FA5608; border: 6px solid #0C0C0C;
+             font-family: 'Archivo Black', sans-serif; font-size: 54px; line-height: 1; display: flex; align-items: center; justify-content: center; padding-top: 6px; }
+.sotask .t { position: absolute; left: 26px; right: 18px; top: 112px; font-family: 'Archivo Black', sans-serif; font-size: 42px; line-height: 0.98; white-space: nowrap;
+             text-transform: uppercase; color: #0C0C0C; }
+.sodir { position: absolute; background: #FBFAF7; border: 6px solid #0C0C0C; box-shadow: 12px 12px 0 #FA5608; padding: 30px 28px 28px 190px; min-height: 250px; }
+.sodir h4 { font-family: 'Archivo Black', sans-serif; font-weight: 400; font-size: 46px; line-height: 0.95; text-transform: uppercase; margin-bottom: 14px; color: #0C0C0C; }
+.sodir p { font-family: 'Hind', sans-serif; font-weight: 600; font-size: 35px; line-height: 1.18; color: #54524F; }
+.solabel { position: absolute; font-family: 'Archivo Black', sans-serif; font-size: 32px; letter-spacing: 0.06em; color: #FA5608; white-space: nowrap; }
+.sobig { position: absolute; font-family: 'Archivo Black', sans-serif; font-size: 900px; line-height: 0.8; color: #FA5608; opacity: 0.1; }
+.soprog { position: absolute; height: 14px; background: #0C0C0C; opacity: 0.12; }
+.soprog.on { background: #FA5608; opacity: 1; }
+.sochip { position: absolute; width: 150px; height: 150px; background: #FBFAF7; border: 7px solid #0C0C0C; box-shadow: 9px 9px 0 #0C0C0C;
+          font-family: 'Archivo Black', sans-serif; font-size: 96px; line-height: 1; display: flex; align-items: center; justify-content: center; padding-top: 10px; color: #0C0C0C; }

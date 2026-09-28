@@ -882,6 +882,190 @@ def build_epic(plan, n):
     return music, send, np.zeros_like(music)
 
 
+
+# ---------------------------------------------------------------- the beat style
+# For games, lists and tier lists: punchy drums, a saturated 808 that phones can hear through its
+# harmonics, snaps and claps, marimba-like mallets, a warm pad ducked by the kick, and a short motif.
+def kick808(m, dur, g=1.0, seed=0):
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    f = hz(m) * (1 + 1.4 * np.exp(-t * 34))
+    body = sine_sweep(f, n) * np.exp(-t / max(0.12, dur * 0.6))
+    knock = sine_sweep(170 + 220 * np.exp(-t * 55), n) * np.exp(-t / 0.022) * 0.7
+    click = filt(rng(seed).standard_normal(n), 'hp', 3200) * np.exp(-t / 0.0022) * 0.35
+    x = np.tanh(3.6 * (body + knock)) / np.tanh(3.6) + click
+    x = filt(x, 'hp', 48) + 0.35 * filt(x, 'bp', (140, 900))
+    return x * adsr(n, 0.001, 0.05, 1, min(0.04, dur * 0.2)) * g
+
+
+def kick_tight(seed=5):
+    """The beat style's kick: less sub than the cinematic one, more knock, so it punches on a phone."""
+    n = int(0.4 * SR)
+    t = np.arange(n) / SR
+    body = 0.8 * sine_sweep(56 + 115 * np.exp(-t * 40), n) * np.exp(-t / 0.15)
+    knock = sine_sweep(190 + 160 * np.exp(-t * 70), n) * np.exp(-t / 0.024) * 0.55
+    click = filt(rng(seed).standard_normal(n), 'hp', 2800) * np.exp(-t / 0.003) * 0.4
+    x = np.tanh((body + knock) * 2.0) / np.tanh(2.0) + click
+    return filt(x, 'hp', 30)
+
+
+def snap(seed=6):
+    n = int(0.14 * SR)
+    t = np.arange(n) / SR
+    r = rng(seed)
+    crack = filt(r.standard_normal(n), 'bp', (1800, 7500)) * np.exp(-t / 0.014)
+    tone = np.sin(2 * np.pi * 2100 * t) * np.exp(-t / 0.006) * 0.4
+    return (crack + tone) * 0.9
+
+
+def mallet(m, g=1.0, dur=0.6):
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    f = hz(m)
+    x = (np.sin(2 * np.pi * f * t) * np.exp(-t / 0.22)
+         + 0.38 * np.sin(2 * np.pi * f * 3.99 * t) * np.exp(-t / 0.035)
+         + 0.16 * np.sin(2 * np.pi * f * 10.2 * t) * np.exp(-t / 0.008))
+    return x * np.minimum(1, t / 0.0015) * g
+
+
+def roll_env(n, times, depth=0.55, rel=0.13):
+    """Sidechain: a gain curve that dips at each kick and recovers."""
+    g = np.ones(n)
+    for tt in times:
+        i = int(tt * SR)
+        if i >= n:
+            continue
+        L = min(n - i, int(0.5 * SR))
+        x = np.arange(L) / SR
+        g[i:i + L] = np.minimum(g[i:i + L], 1 - depth * np.exp(-x / rel))
+    return g
+
+
+def build_beat(plan, n):
+    bpm = plan.get('bpm', 120)
+    beat = 60 / bpm
+    bar = 4 * beat
+    six = beat / 4
+    bars = plan['bars']
+    drums = np.zeros((n, 2)); low = np.zeros((n, 2)); mid = np.zeros((n, 2)); send = np.zeros((n, 2))
+    lp = np.ones(n) * 20000.0
+    kicks = []
+    KICK = kick_tight()
+    CLAP = clap(9)
+    prev_mode = 'none'
+    for b, spec in enumerate(bars):
+        t0 = b * bar + plan.get('offset', 0.0)
+        g = spec.get('gain', 1.0)
+        mode = spec.get('drums', 'none')
+        f = spec.get('lp', 1.0)
+        f0, f1 = (f, f) if not isinstance(f, list) else f
+        i0, i1 = int(t0 * SR), min(n, int((t0 + bar) * SR))
+        if i1 > i0:
+            lp[i0:i1] = 900 * (20000 / 900) ** np.linspace(f0, f1, i1 - i0)
+        root, q = chord_notes(spec.get('chord'))
+        drop = mode in ('bounce', 'trap', 'build') and prev_mode in ('none', 'intro', 'half')
+        if (drop or b == 0 or spec.get('hit')) and root is not None:
+            add(drums, stereo(fx_impact(60 + b, 0.8)), t0, 0.55 * g)
+            if b:
+                add(drums, crash(1.0, b), t0, 0.6 * g)
+                rc = crash(1.0, 70 + b, 1.0)[::-1]
+                add(drums, rc, t0 - len(rc) / SR, 0.4 * g)
+        # Drums
+        if mode in ('intro', 'bounce', 'build'):
+            for s in range(8):
+                add(drums, pan(hat(False, 30 + s), 0.25), t0 + s * beat / 2 + beat / 4 * (mode != 'intro'), (0.5 if mode == 'intro' else 0.42) * g)
+            for k in (1, 3):
+                add(drums, pan(snap(40 + k), -0.15), t0 + k * beat, (0.65 if mode == 'intro' else 0.5) * g)
+        if mode in ('bounce', 'build'):
+            for k in range(4):
+                add(drums, stereo(KICK), t0 + k * beat, 0.95 * g); kicks.append(t0 + k * beat)
+            for k in (1, 3):
+                add(drums, CLAP, t0 + k * beat, 1.05 * g); add(send, CLAP, t0 + k * beat, 0.3 * g)
+            for s in range(16):
+                add(drums, pan(hat(False, 50 + s), -0.3 if s % 2 else 0.3), t0 + s * six, (0.32 if s % 4 == 2 else 0.18) * g)
+            add(drums, pan(hat(True, 7), 0.2), t0 + 3.5 * beat, 0.35 * g)
+        if mode == 'trap':
+            for k in (0, 1.75, 2.5):
+                kicks.append(t0 + k * beat)
+            add(drums, CLAP, t0 + 2 * beat, 1.1 * g); add(send, CLAP, t0 + 2 * beat, 0.35 * g)
+            add(drums, pan(snap(8), 0.1), t0 + 2 * beat, 0.7 * g)
+            s = 0.0
+            while s < 4 - 1e-6:
+                roll = s >= 3.5
+                step = beat / 6 if roll else beat / 2 if s < 1 else beat / 4
+                add(drums, pan(hat(False, 90 + int(s * 16)), 0.35), t0 + s * beat, (0.3 if roll else 0.24) * g)
+                s += step / beat
+        if mode == 'half':
+            add(drums, stereo(KICK), t0, 0.9 * g); kicks.append(t0)
+            add(drums, CLAP, t0 + 2 * beat, 0.75 * g); add(send, CLAP, t0 + 2 * beat, 0.35 * g)
+        if mode == 'build' or spec.get('fill'):
+            start = 2 if mode == 'build' else 3
+            steps = int((4 - start) * 4)
+            for s in range(steps):
+                v = 0.3 + 0.6 * s / max(1, steps - 1)
+                add(drums, snare(v, 60 + s), t0 + start * beat + s * six, 0.55)
+        prev_mode = mode
+        if root is None:
+            continue
+        chord_pcs = [(root + iv) % 12 for iv in q[:3]]
+        # Bass: an 808 in trap bars, a bouncing sub on the off-beats in bounce bars.
+        if spec.get('bass', 0):
+            bm = near(root, 33)
+            if mode == 'trap':
+                for k, L in ((0, 1.6), (1.75, 0.7), (2.5, 1.4)):
+                    add(low, stereo(kick808(bm, L * beat, 1.0, seed=b * 4 + int(k * 4))), t0 + k * beat, 0.42 * spec['bass'] * g)
+            else:
+                for k in range(4):
+                    add(low, stereo(kick808(bm + (12 if k == 3 else 0), beat * 0.45, 1.0, seed=b * 8 + k)), t0 + k * beat + beat / 2, 0.3 * spec['bass'] * g)
+        if spec.get('pad', 0):
+            notes = sorted(near(pc, 55) for pc in chord_pcs) + [near(chord_pcs[0], 67)]
+            x = pad_chord(notes, bar, seed=b)
+            add(mid, x, t0, 0.72 * spec['pad'] * g); add(send, x, t0, 0.3 * spec['pad'] * g)
+            if mode in ('bounce', 'build'):
+                # Off-beat chord stabs: the bounce, and the presence a phone speaker needs.
+                stab = sorted(near(pc, 67) for pc in chord_pcs)
+                for k in (0.5, 1.5, 2.5, 3.5):
+                    x = sum(pluck(m, 1.0, 0.2) for m in stab)
+                    add(mid, pan(x, 0.2 if k % 2 else -0.2), t0 + k * beat, 0.2 * g)
+        arp = spec.get('arp')
+        if arp:
+            tones = sorted(near(pc, 64) for pc in chord_pcs)
+            pat = [tones[0], tones[2], tones[1] + 12, tones[2], tones[0] + 12, tones[2], tones[1] + 12, tones[2]]
+            if arp == 'down':
+                pat = pat[::-1]
+            ag = spec.get('arpgain', 1.0)
+            for s in range(16):
+                if s % 8 in (3, 7) and mode == 'trap':
+                    continue
+                acc = 1.0 if s % 4 == 0 else 0.7
+                add(mid, pan(mallet(pat[s % 8], 1.0), 0.3 * np.sin(s * 1.3)), t0 + s * six, 0.4 * acc * ag * g)
+                add(mid, pan(pluck(pat[s % 8] + 12, 1.0, 0.18), -0.3 * np.sin(s * 1.3)), t0 + s * six, 0.16 * acc * ag * g)
+        # The motif: four notes that close the piece (and any bar that asks for it).
+        mel = spec.get('melody')
+        if mel is None and b >= len(bars) - 2 and mode in ('bounce', 'trap'):
+            mel = 'motif'
+        if mel:
+            top = sorted(near(pc, 72) for pc in chord_pcs)
+            for (s, m) in ((0, top[2]), (0.75, top[1]), (1.5, top[0]), (2.5, top[2] + 12 if top[2] + 12 <= 91 else top[1])):
+                x = stereo(bell(m, 1.2, 0.9) + 0.6 * mallet(m, 1.0, 1.2))
+                add(mid, x, t0 + s * beat, 0.3 * g); add(send, x, t0 + s * beat, 0.3 * g)
+    for rz in plan.get('risers', []):
+        a, b_ = rz[0], rz[1]
+        add(drums, fx_riser(b_ - a, seed=int(a * 10)), a, 0.4 * (rz[2] if len(rz) > 2 else 1.0))
+    for rl in plan.get('rolls', []):
+        a, b_ = rl[0], rl[1]
+        t = a; k = 0
+        while t < b_ - 1e-6:
+            p = (t - a) / (b_ - a)
+            add(drums, snare(0.3 + 0.6 * p, seed=140 + k), t, 0.5)
+            t += six * (2 if p < 0.5 else 1); k += 1
+    duck = roll_env(n, kicks)[:, None]
+    mid = mid + 0.6 * filt(mid, 'bp', (1200, 4200))
+    music = drums * 0.95 + low * 0.9 * duck + mid * 1.05 * duck
+    music = sweep_filter(music, 'lp', lp, block=256)
+    send = sweep_filter(send, 'lp', lp, block=256)
+    return music, send, np.zeros_like(music)
+
 # ---------------------------------------------------------------- mix
 def main(meta_path, wav_path):
     meta = json.load(open(meta_path))
@@ -889,7 +1073,7 @@ def main(meta_path, wav_path):
     n = int((dur + TAIL) * SR)
     plan = meta.get('music') or {'bpm': meta.get('bpm', 120), 'bars': []}
 
-    music, msend, music_verb = build_epic(plan, n)
+    music, msend, music_verb = (build_beat if plan.get('style') == 'beat' else build_epic)(plan, n)
     sfx = np.zeros((n, 2))
     send = msend + music_verb
 

@@ -169,6 +169,39 @@ window.CO = (function () {
     G.box = box;
     return G;
   };
+  // The same verdict as a flat meter, for layouts with no room for the dial.
+  CO.meter = function (parent, o) {
+    const { x = 80, y = 1170, w = 812, h = 20, labels = ['FINE', 'HEATING UP', 'COOKED'], note = 'OUR READ OF THE DATA' } = o || {};
+    const M = { s: { v: 0.5, trem: 0 } };
+    const box = K.el('div', 'cometer', parent);
+    K.css(box, { left: x + 'px', top: y + 'px', width: w + 'px', height: (h + 44) + 'px' });
+    const zc = [C.mist, C.orange, C.ember];
+    [0, 1, 2].forEach(k => {
+      const z = K.el('div', 'cozone', box);
+      K.css(z, { left: (k * w / 3 + (k ? 3 : 0)) + 'px', width: (w / 3 - (k === 1 ? 6 : 3)) + 'px', height: h + 'px', background: zc[k] });
+    });
+    M.labels = labels.map((txt, k) => {
+      const L = K.el('div', 'colabel', box, txt);
+      K.css(L, { top: (h + 10) + 'px', left: ((k + 0.5) * w / 3) + 'px', fontSize: '22px' });
+      gsap.set(L, { xPercent: -50 });
+      return L;
+    });
+    M.note = K.el('div', 'conote', box, note);
+    K.css(M.note, { top: '-34px', left: '0px' });
+    M.pin = K.el('div', 'copin', box);
+    const jr = K.rng(91);
+    const noise = Array.from({ length: 64 }, () => jr() * 2 - 1);
+    const wob = t => { const q = t * 9, i = Math.floor(q), f = q - i, a = noise[((i % 64) + 64) % 64], b = noise[(((i + 1) % 64) + 64) % 64]; return a + (b - a) * (f * f * (3 - 2 * f)); };
+    K.frame(t => {
+      const v = K.clamp(M.s.v + M.s.trem * wob(t) * 0.02);
+      M.pin.style.left = (v * w) + 'px';
+      const zone = Math.min(2, Math.floor(K.clamp(v, 0, 0.999) * 3));
+      M.labels.forEach((L, k) => { L.style.color = k === zone ? C.paper2 : '#6E6B66'; });
+    });
+    M.box = box;
+    return M;
+  };
+
   // Swing the needle to v at t, overshooting like a real meter.
   CO.needle = function (G, t, v, o = {}) {
     const { dur = 0.9, sfx = true } = o;

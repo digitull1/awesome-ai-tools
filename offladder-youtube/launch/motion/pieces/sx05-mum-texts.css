@@ -1,0 +1,67 @@
+.povbar { position: absolute; left: 80px; top: 352px; width: 812px; box-sizing: border-box; background: #0C0C0C; color: #F4F2EE; padding: 20px 26px 13px;
+          font-family: 'Archivo Black', sans-serif; font-size: 40px; line-height: 1.04; text-transform: uppercase; white-space: nowrap; }
+.povbar span { color: #FA5608; }
+
+.chead { position: absolute; left: 80px; top: 486px; width: 812px; height: 82px; border-bottom: 4px solid #0C0C0C; }
+.chead .bk { position: absolute; left: -8px; top: 14px; }
+.chead .av { position: absolute; left: 40px; top: 2px; width: 64px; height: 64px; box-sizing: border-box; border-radius: 50%; background: #FA5608; border: 4px solid #0C0C0C;
+             font-family: 'Archivo Black', sans-serif; font-size: 32px; color: #0C0C0C; display: flex; align-items: center; justify-content: center; padding-top: 4px; }
+.chead .nm { position: absolute; left: 122px; top: 2px; font-family: 'Archivo Black', sans-serif; font-size: 36px; line-height: 1.1; color: #0C0C0C; white-space: nowrap; }
+.chead .st { position: absolute; left: 124px; top: 44px; font-family: 'Hind', sans-serif; font-weight: 600; font-size: 25px; line-height: 1.1; color: #6E6B66; }
+.chead .ic { position: absolute; right: 0; top: 10px; display: flex; gap: 30px; align-items: center; }
+
+.clip { position: absolute; left: 60px; top: 578px; width: 860px; height: 664px; overflow: hidden; }
+.thread { position: absolute; left: 0; top: 0; width: 860px; height: 4000px; }
+.when { position: absolute; left: 0; top: 12px; width: 860px; text-align: center; font-family: 'Hind', sans-serif; font-weight: 600; font-size: 25px; color: #8A8680; }
+
+.bub { position: absolute; max-width: 660px; box-sizing: border-box; padding: 17px 28px 11px; border: 4px solid #0C0C0C; border-radius: 34px;
+       font-family: 'Hind', sans-serif; font-weight: 600; font-size: 48px; line-height: 1.14; color: #0C0C0C; box-shadow: 6px 6px 0 #0C0C0C; }
+.bub.mum { left: 20px; background: #FBFAF7; border-bottom-left-radius: 8px; }
+.bub.me { right: 32px; background: #FA5608; border-bottom-right-radius: 8px; }
+
+.bub.card { width: 600px; padding: 22px 26px 16px; }
+.card .k { font-family: 'Archivo Black', sans-serif; font-size: 22px; line-height: 1.2; letter-spacing: 0.1em; text-transform: uppercase; }
+.card .big { font-family: 'Archivo Black', sans-serif; font-size: 92px; line-height: 1; margin: 10px 0 2px; white-space: nowrap; }
+.card .big span { font-family: 'Hind', sans-serif; font-weight: 600; font-size: 40px; letter-spacing: 0; }
+.card .sm { font-size: 38px; line-height: 1.1; }
+.card .bars { position: relative; height: 104px; margin: 40px 0 12px; }
+.card .bars i { position: absolute; bottom: 0; width: 5px; background: #0C0C0C; opacity: 0.32; }
+.card .bars i.cs { background: #FBFAF7; opacity: 1; width: 8px; margin-left: -1.5px; outline: 2px solid #0C0C0C; }
+.card .tag { position: absolute; font-family: 'Archivo Black', sans-serif; font-size: 22px; line-height: 1; color: #0C0C0C; background: #FBFAF7; padding: 4px 6px 1px; border: 2px solid #0C0C0C; }
+
+.bub.link { width: 600px; padding: 0; overflow: hidden; }
+.link .lp { height: 184px; background: #FBFAF7; border-bottom: 4px solid #0C0C0C; display: flex; align-items: center; justify-content: center; gap: 18px;
+            font-family: 'Archivo Black', sans-serif; font-size: 70px; line-height: 1; letter-spacing: -0.01em; }
+.link .lp b { color: #FA5608; font-weight: inherit; }
+.link .lp span { padding-top: 6px; }
+.link .lx { padding: 16px 26px 14px; }
+.link .lt { font-size: 38px; line-height: 1.1; }
+.link .ld { font-family: 'Archivo Black', sans-serif; font-size: 22px; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 10px; opacity: 0.8; }
+
+.tap { position: absolute; right: -30px; top: -24px; width: 70px; height: 70px; box-sizing: border-box; border-radius: 50%; background: #FA5608; border: 4px solid #0C0C0C;
+       box-shadow: 4px 4px 0 #0C0C0C; display: flex; align-items: center; justify-content: center; }
+.dots { position: absolute; left: 20px; width: 132px; height: 76px; box-sizing: border-box; background: #FBFAF7; border: 4px solid #0C0C0C; border-radius: 34px;
+        border-bottom-left-radius: 8px; box-shadow: 6px 6px 0 #0C0C0C; visibility: hidden; }
+.dots i { position: absolute; top: 26px; width: 17px; height: 17px; border-radius: 50%; background: #54524F; }
+
+.inp { position: absolute; left: 80px; top: 1262px; width: 812px; height: 80px; }
+.inp .plus { position: absolute; left: 0; top: 6px; width: 68px; height: 68px; box-sizing: border-box; border-radius: 50%; border: 4px solid #0C0C0C; background: #FBFAF7;
+             display: flex; align-items: center; justify-content: center; }
+.inp .plus.on { background: #FA5608; }
+.inp .field { position: absolute; left: 86px; top: 0; width: 726px; height: 80px; box-sizing: border-box; border: 4px solid #0C0C0C; border-radius: 40px; background: #FBFAF7; overflow: hidden; }
+.inp .ph, .inp .txt { position: absolute; left: 30px; top: 14px; white-space: nowrap; font-family: 'Hind', sans-serif; font-weight: 600; font-size: 40px; line-height: 1.2; }
+.inp .ph { color: #A6A29B; }
+.inp .txt { color: #0C0C0C; }
+.inp .caret { position: absolute; top: 15px; width: 4px; height: 44px; background: #FA5608; visibility: hidden; }
+.inp .att { position: absolute; left: 22px; top: 8px; width: 104px; height: 56px; box-sizing: border-box; background: #FA5608; border: 3px solid #0C0C0C; border-radius: 10px;
+            font-family: 'Archivo Black', sans-serif; font-size: 26px; display: flex; align-items: center; justify-content: center; padding-top: 3px; visibility: hidden; }
+.inp .send { position: absolute; right: 7px; top: 6px; width: 60px; height: 60px; box-sizing: border-box; border-radius: 50%; background: #FA5608; border: 4px solid #0C0C0C;
+             display: flex; align-items: center; justify-content: center; }
+.inp .send.on { background: #0C0C0C; }
+.inp .send.on path { stroke: #FA5608; }
+
+.kb { position: absolute; left: 0; top: 1362px; width: 1080px; height: 558px; background: #0C0C0C; }
+.key { position: absolute; height: 104px; box-sizing: border-box; border-radius: 14px; background: #2B2A28; color: #F4F2EE; box-shadow: 0 4px 0 #000;
+       font-family: 'Hind', sans-serif; font-weight: 600; font-size: 46px; line-height: 1; display: flex; align-items: center; justify-content: center; padding-top: 7px; }
+.key.fn { background: #454340; font-size: 32px; padding-top: 5px; }
+.key.on { background: #FA5608; color: #0C0C0C; }
