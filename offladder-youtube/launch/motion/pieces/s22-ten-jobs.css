@@ -1,0 +1,6 @@
+.hw { display: inline-block; }
+.hbox { position: absolute; width: 64px; height: 64px; border: 6px solid #0C0C0C; }
+.hbox i { position: absolute; left: -6px; top: -6px; width: 64px; height: 64px; background: #FA5608; transform: scale(0); }
+.pbox { position: absolute; width: 92px; height: 92px; border: 6px solid #0C0C0C; }
+.pfill { position: absolute; left: -6px; top: -6px; width: 92px; height: 92px; background: #0C0C0C; transform: scale(0); }
+.pnum { position: absolute; left: 9px; top: 10px; font-family: 'Archivo Black', sans-serif; font-size: 26px; line-height: 1; color: #0C0C0C; opacity: 0.5; }
