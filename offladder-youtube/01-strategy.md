@@ -4,6 +4,8 @@
 
 > **Update, 28 September 2026: lead with AI anxiety.** The fear that AI will change or remove the work people are doing or studying for is shared across every age and career stage (52% of US workers say they're worried, [Pew, 2025](https://www.pewresearch.org/social-trends/2025/02/25/u-s-workers-are-more-worried-than-hopeful-about-future-ai-use-in-the-workplace/)). It's also the problem OffLadder was built for. So the Shorts now lead with **The ladder is breaking** ([scripts/ai-series.md](scripts/ai-series.md)): verbatim quotes from the people building AI and sourced figures, then the approach (*nobody knows which jobs will last, so test before you bet*), then OffLadder's adaptive loop as the answer. The AI-Anxious move from reach engine to the lead Shorts audience; the guardrails in §6 apply unchanged.
 
+> **Update, 28 September 2026 (later): from Short 6, make it personal.** General AI anxiety gets nods, not shares. From episode 6 the Shorts become **Cooked or not?** ([scripts/cooked-or-not.md](scripts/cooked-or-not.md)): each one puts a single job or degree on trial with public data (Microsoft Research's ranking of 785 jobs by AI overlap, NY Fed graduate outcomes, BLS projections), swings a verdict needle with every piece of evidence, and ends *"Comment your job. We'll look it up."* Every comment gets a sourced reply, and the most requested job becomes the next episode. The verdict is never *cooked*: the needle can visit it, but the answer always says what is actually changing and what to test.
+
 ---
 
 ## 1. What we are building

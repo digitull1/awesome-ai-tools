@@ -59,5 +59,85 @@
    "offladder"
   ],
   "first_comment": "What skill do you want to learn next?"
+ },
+ {
+  "id": "ai04-cant-agree",
+  "status": "scheduled",
+  "slot_uk": "2026-10-03T18:00",
+  "date_sgt": "2026-10-04T01:00:00+08:00",
+  "metricool_uuid": "1182546707768233435",
+  "title": "AI CEOs can't agree what happens to jobs. Here's what to do anyway",
+  "text": "Anthropic CEO Dario Amodei warned AI could wipe out about half of all entry-level white-collar jobs (Axios interview, May 2025). Nvidia CEO Jensen Huang: \"Some jobs will be obsolete, but many jobs are going to be created.\" (VivaTech, June 2025)\n\nThe people building AI can't agree, so nobody knows yet. But one thing is already happening: AI changes the tasks inside a job before it changes the job title. So audit one week: mark every block as cheap to produce or hard to replace. Then test one direction next to yours, before you need to.\n\nOffLadder turns every try into evidence: a constellation of what you can do, backed by something you actually did, and it shapes what to test next. 3 questions, free, no account: offladder.com\n\nSource\nFortune, 11 June 2025: fortune.com/2025/06/11/nvidia-jensen-huang-disagress-anthropic-ceo-dario-amodei-ai-jobs\n\n#ai #futureofwork #careers",
+  "tags": [
+   "will ai take my job",
+   "ai jobs debate",
+   "entry level jobs ai",
+   "future of work",
+   "jensen huang",
+   "dario amodei",
+   "career advice",
+   "offladder"
+  ],
+  "first_comment": "Which part of your week could AI already do?"
+ },
+ {
+  "id": "ai05-80-percent",
+  "status": "scheduled",
+  "slot_uk": "2026-10-06T18:00",
+  "date_sgt": "2026-10-07T01:00:00+08:00",
+  "metricool_uuid": "-6355916932022384116",
+  "title": "Nvidia's CEO: you won't lose your job to AI. You'll lose it to this",
+  "text": "\"You're not going to lose your job to an AI, but you're going to lose your job to someone who uses AI.\" Nvidia CEO Jensen Huang, Milken Institute Global Conference, May 2025.\n\nSo become that someone. Try the 80% test this week: give AI the most repetitive task in your week, let it draft the first 80%, and write down everything you had to fix. That list is where your value sits.\n\nSome people are turning that list into a job: AI workflow designers redesign how a team works once part of the work can go to a model, and model evaluation writers design the tests that show whether an AI is good enough, and where it fails. OffLadder finds directions like these, with a small test for each, and adapts to what you enjoy. 3 questions, free, no account: offladder.com\n\nSources\nFortune, 29 May 2025: fortune.com/2025/05/29/billionaire-nvidia-ceo-jensen-huang-ai-replace-jobs-if-technology-not-embraced\nEmerging directions: offladder.com/directions\n\n#ai #futureofwork #careers",
+  "tags": [
+   "will ai take my job",
+   "jensen huang",
+   "how to use ai at work",
+   "ai skills",
+   "future of work",
+   "career advice",
+   "ai workflow",
+   "offladder"
+  ],
+  "first_comment": "What's the most repetitive task in your week?"
+ },
+ {
+  "id": "co01-785-jobs",
+  "status": "scheduled",
+  "slot_uk": "2026-10-08T18:00",
+  "date_sgt": "2026-10-09T01:00:00+08:00",
+  "metricool_uuid": "7184454675539837540",
+  "title": "Microsoft ranked 785 jobs by AI overlap. Is yours top 10?",
+  "text": "Microsoft Research studied 200,000 real conversations with its AI (Bing Copilot) and scored 785 US jobs by how much their work overlaps with what AI already does. The top 10: interpreters and translators, historians, writers and authors, services sales reps, CNC tool programmers, broadcast announcers and radio DJs, customer service reps, telemarketers, political scientists and mathematicians. Software developers come 120th.\n\nWhat it doesn't mean: that these jobs are disappearing. The researchers say reading the scores as job loss \"would be a mistake\", and the #1 job, interpreters and translators, is still projected to grow 2% in the US from 2025 to 2035 (the average job: 3%). Hot isn't cooked. Tasks change before titles do.\n\nComment your job and we'll look it up.\n\nFind what you'd be good at next: 3 questions, free, no account, at offladder.com\n\nSources\nMicrosoft Research, Tomlinson et al., Working with AI: Measuring the Applicability of Generative AI to Occupations (2025): arxiv.org/abs/2507.07935\nResults data v1.1 (CC BY 4.0): github.com/microsoft/working-with-ai\nWorker counts: US BLS, 2023, as reported in the study\nUS Bureau of Labor Statistics, Occupational Outlook Handbook, Interpreters and Translators (Aug 2026): bls.gov/ooh/media-and-communication/interpreters-and-translators.htm\n\n#ai #jobs #careers",
+  "tags": [
+   "jobs ai will replace",
+   "will ai take my job",
+   "microsoft ai jobs",
+   "ai jobs list",
+   "is my job safe from ai",
+   "future of work",
+   "career advice",
+   "offladder"
+  ],
+  "first_comment": "Comment your job title and we'll reply with where it ranks out of 785, and what that does and doesn't mean."
+ },
+ {
+  "id": "co02-cs-degree",
+  "status": "scheduled",
+  "slot_uk": "2026-10-10T18:00",
+  "date_sgt": "2026-10-11T01:00:00+08:00",
+  "metricool_uuid": "-3496651101519591838",
+  "title": "Is a computer science degree cooked? (NY Fed data)",
+  "text": "Recent computer science grads (ages 22 to 27) had the 4th-highest unemployment rate of 73 majors in 2024: 7.0%, against 4.2% for all recent grads. That's higher than art history (6.7%), English (6.1%) and philosophy (5.1%).\n\nBut only 19% of CS grads work in jobs that don't need a degree (all recent grads: 39%), and US software developer jobs are projected to grow 10% from 2025 to 2035 (the average job: 3%). Our read: not cooked, but harder to get into. So don't just collect the degree. Build proof: ship one real project a month, get good at checking AI's code, and test a direction next to yours.\n\nComment your degree and we'll look it up.\n\nOffLadder finds directions next to yours in 3 questions, then adapts to what you try. Free, no account: offladder.com\n\nSources\nFederal Reserve Bank of New York, The Labor Market for Recent College Graduates, outcomes by major (2024 data, published Feb 2026): newyorkfed.org/research/college-labor-market\nUS Bureau of Labor Statistics, Occupational Outlook Handbook, Software Developers, Quality Assurance Analysts, and Testers (Aug 2026): bls.gov/ooh/computer-and-information-technology/software-developers.htm\nDirections: offladder.com/directions\n\n#computerscience #ai #careers",
+  "tags": [
+   "is computer science worth it",
+   "is computer science cooked",
+   "computer science degree",
+   "cs major unemployment",
+   "software engineering jobs ai",
+   "should i study computer science",
+   "career advice",
+   "offladder"
+  ],
+  "first_comment": "Comment your degree and we'll reply with its numbers from the NY Fed."
  }
 ]

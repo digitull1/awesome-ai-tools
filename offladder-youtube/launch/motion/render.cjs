@@ -49,10 +49,14 @@ function buildHtml() {
     `@font-face{font-family:'${fam}';src:url(data:font/ttf;base64,${fs.readFileSync(path.join(fontsDir, file)).toString('base64')}) format('truetype');font-weight:${w};font-style:${st};}`).join('\n');
   const vendor = VENDOR.map(f => fs.readFileSync(here('vendor', f), 'utf8')).join('\n;\n');
   // A series can share components: pieces/<prefix>-shared.js and .css are included when present.
+  // A piece can name other series to borrow from with an "@shared a b" line (loaded in that order).
   const prefix = id.replace(/\d.*$/, '');
   const read = f => (fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : '');
-  const piece = read(here('pieces', `${prefix}-shared.js`)) + '\n;\n' + fs.readFileSync(here('pieces', `${id}.js`), 'utf8');
-  const pieceCss = read(here('pieces', `${prefix}-shared.css`)) + '\n' + read(here('pieces', `${id}.css`));
+  const src = fs.readFileSync(here('pieces', `${id}.js`), 'utf8');
+  const named = src.match(/@shared\s+([\w -]+)/);
+  const shared = named ? named[1].trim().split(/\s+/) : [prefix];
+  const piece = shared.map(p => read(here('pieces', `${p}-shared.js`))).join('\n;\n') + '\n;\n' + src;
+  const pieceCss = shared.map(p => read(here('pieces', `${p}-shared.css`))).join('\n') + '\n' + read(here('pieces', `${id}.css`));
   // Function replacers, because minified code is full of `$` sequences that String.replace would expand.
   return fs.readFileSync(here('shell.html'), 'utf8')
     .replace('/*FONTS*/', () => fontCss).replace('/*PIECECSS*/', () => pieceCss)

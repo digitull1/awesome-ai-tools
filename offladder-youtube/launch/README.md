@@ -6,18 +6,22 @@ The channel is [@offladder](https://www.youtube.com/@offladder). Posting runs th
 
 ---
 
-## On YouTube: the AI-and-work series
+## On YouTube: the AI-and-work series, then Cooked or not?
 
 On 28 September the slate changed. The first six launch Shorts weren't strong enough, so the schedule now leads with **The ladder is breaking**, a series built on the anxiety most viewers share about AI and work. Each episode opens on a verbatim quote or a sourced figure, turns it into an approach, and shows OffLadder's adaptive loop as the answer. Scripts, rules and the claims register are in [scripts/ai-series.md](../scripts/ai-series.md).
+
+From episode 6 the Shorts become **Cooked or not?**, built to spread: each one puts a single job or degree on trial with public data, swings a verdict needle with every number, and ends *"Comment your job. We'll look it up."* The strategy, rules, slate and claims are in [scripts/cooked-or-not.md](../scripts/cooked-or-not.md).
 
 | Goes live (UK) | Episode | Title | Metricool |
 |---|---|---|---|
 | **Mon 28 Sep, 05:46** | 1 · Musk and Altman, the WEF grid | Elon Musk: "Probably none of us will have a job." Here's what to do instead | [live on YouTube](https://www.youtube.com/shorts/c62_PVxUDCo) |
 | **Tue 29 Sep, 18:00** | 2 · The departures board | The jobs employers expect to shrink by 2030 (and what to do instead) | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=6275145739427529921) |
 | **Thu 1 Oct, 18:00** | 3 · 39% of your skills | 39% of your skills will change by 2030. So what should you learn? | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=6847026069562738771) |
-| **Sat 3 Oct, 18:00** | 4 · The people building AI can't agree | *being swapped in* | [slot](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=1182546707768233435) |
-| **Tue 6 Oct, 18:00** | 5 · The 80% test | *being swapped in* | [slot](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-6355916932022384116) |
-| **Thu 8 Oct, 18:00** | 6 · Half of workers are worried | *being swapped in* | [slot](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=7184454675539837540) |
+| **Sat 3 Oct, 18:00** | 4 · The people building AI can't agree | AI CEOs can't agree what happens to jobs. Here's what to do anyway | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=1182546707768233435) |
+| **Tue 6 Oct, 18:00** | 5 · The 80% test | Nvidia's CEO: you won't lose your job to AI. You'll lose it to this | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-6355916932022384116) |
+| **Thu 8 Oct, 18:00** | 6 · Cooked or not? The 785-job heat map | Microsoft ranked 785 jobs by AI overlap. Is yours top 10? | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=7184454675539837540) |
+| **Sat 10 Oct, 18:00** | 7 · Cooked or not? Computer science | Is a computer science degree cooked? (NY Fed data) | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-3496651101519591838) |
+| From Mon 12 Oct, daily | 8 onwards · Cooked or not? | Customer service, writers, graphic design, then whatever the comments ask for | [slate](../scripts/cooked-or-not.md#cadence-and-slate) |
 
 All posts are public YouTube Shorts in *Education*, **not made for kids**, and not flagged as synthetic content (they're typographic motion design with no realistic generated people or voices). The people quoted appear as text only, with no photos, and nothing implies they endorse OffLadder. Each post's description lists its sources, and its first comment asks the episode's question. The videos are in [motion/videos/](motion/videos/) and the post copy is in [motion/posts.json](motion/posts.json).
 
@@ -37,7 +41,7 @@ FONTS_DIR=../shorts/fonts node render.cjs ai01-none-of-us --sheet     # contact 
 FONTS_DIR=../shorts/fonts node render.cjs ai01-none-of-us             # full 1080x1920 MP4 in ./out
 ```
 
-The renderer warns when any text leaves the Shorts safe area (clear of the right-hand buttons and the caption), and `--strip=a,b` draws a filmstrip for checking a transition.
+The renderer warns when any text leaves the Shorts safe area (clear of the right-hand buttons and the caption), and `--strip=a,b` draws a filmstrip for checking a transition. Cooked or not? pieces (`co*`) load the shared components of both series with an `@shared ai co` line.
 
 ### The first six (replaced)
 
@@ -55,6 +59,7 @@ Metricool publishes posts; it can't change channel settings. These take about 15
 - [ ] **About text:** paste the About copy from [09-launch-plan.md](../09-launch-plan.md#channel-copy).
 - [ ] **Comments:** turn on *hold potentially inappropriate comments for review*, and add the blocked-words list ([07-production-workflow.md](../07-production-workflow.md#5-safety-consent-and-safeguarding)).
 - [ ] **Pin** each Short's first comment once it's live (Metricool posts it, but pinning is manual).
+- [ ] **Answer the comments on Cooked or not?** For the first two hours after each episode goes live, reply to every "my job is…" comment with the reply [lookup/lookup.py](lookup/) prints, and log the request in [lookup/requests.md](lookup/requests.md). About 20 minutes a day; it's the series' growth loop.
 - [ ] **Reply** to hobby comments on the Hobby → Verb Shorts. The strongest ones feed video 17 (*Your Hobby Is a Verb*).
 - [ ] **Related video:** once the first long-form videos exist, set each Short's related video (Shorts slate, last column).
 
@@ -75,4 +80,4 @@ The research sprint's title changes are already applied to the slate: [research/
 
 ## Making more Shorts
 
-New episodes follow the format and rules in [scripts/ai-series.md](../scripts/ai-series.md): a verbatim quote or sourced figure that's legible on the first frame, the evidence, the approach, OffLadder's loop, and a seamless loop back to the hook. Build them as pieces in [motion/pieces/](motion/pieces/) (shared components are in `ai-shared.js`), check the contact sheet and the safe-area warnings, render, then add the post to [motion/posts.json](motion/posts.json) and schedule it in Metricool with its sources in the description.
+New **Cooked or not?** episodes follow [scripts/cooked-or-not.md](../scripts/cooked-or-not.md): verify every number at its primary source, add it to the claims register, then build the piece in [motion/pieces/](motion/pieces/) from the shared heat map, gauge and icons in `co-shared.js`. Check the contact sheet and the safe-area warnings, render, add the post to [motion/posts.json](motion/posts.json), and schedule it in Metricool with its sources in the description and the lookup offer as the first comment.

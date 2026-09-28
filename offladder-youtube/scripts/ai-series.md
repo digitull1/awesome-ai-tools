@@ -2,6 +2,8 @@
 
 *Added 28 September 2026. This series replaces the first six launch Shorts in the schedule. Episode 1 went live on 28 September: [youtube.com/shorts/c62_PVxUDCo](https://www.youtube.com/shorts/c62_PVxUDCo).*
 
+*From episode 6 the Shorts continue as **[Cooked or not?](cooked-or-not.md)**, a verdict series on one job or degree at a time. The two episodes drafted below as 6 and 7 are on the bench: rendered, not scheduled.*
+
 ## Why this series
 
 Almost everyone, whatever their age or career stage, is anxious about what AI will do to work. In the US, 52% of workers say they're worried about the future impact of AI in the workplace ([Pew Research Center, February 2025](https://www.pewresearch.org/social-trends/2025/02/25/u-s-workers-are-more-worried-than-hopeful-about-future-ai-use-in-the-workplace/)). The fear is specific: *the job I'm doing, or the course I'm about to choose, might not exist.*
@@ -66,9 +68,9 @@ Checked on 28 September 2026.
 | 1 · "Probably none of us will have a job." | Mon 28 Sep, 05:46 | [Live](https://www.youtube.com/shorts/c62_PVxUDCo) |
 | 2 · The jobs employers expect to shrink | Tue 29 Sep, 18:00 | Scheduled |
 | 3 · 39% of your skills | Thu 1 Oct, 18:00 | Scheduled |
-| 4 · The people building AI can't agree | Sat 3 Oct, 18:00 | Rendering |
-| 5 · The 80% test | Tue 6 Oct, 18:00 | Rendering |
-| 6 · Half of workers are worried | Thu 8 Oct, 18:00 | Rendering |
+| 4 · The people building AI can't agree | Sat 3 Oct, 18:00 | Scheduled |
+| 5 · The 80% test | Tue 6 Oct, 18:00 | Scheduled |
+| 6 onwards | From Thu 8 Oct | [Cooked or not?](cooked-or-not.md#cadence-and-slate) |
 
 ## Episode 1 · "Probably none of us will have a job."
 
@@ -130,10 +132,19 @@ Checked on 28 September 2026.
 - **The test:** *Give AI your most repetitive task* (an illustrative prompt types in, a draft appears), then *write down what you had to fix*: an orange pen strikes and circles, and the fix list builds. *That list is where your value sits* (offladder.com's AI guide).
 - **OffLadder:** *Some people are turning that list into a job:* AI workflow designer and model evaluation writer, as described on offladder.com, each with a test for tonight. *It adapts to what you enjoyed.*
 
-## Episode 6 · Half of workers are worried
+## Bench · Half of workers are worried
 
-**File:** [ai06-worried.js](../launch/motion/pieces/ai06-worried.js) · **Title:** Half of workers are worried about AI. Here's what to do this month · **First comment:** Which of the four are you starting with?
+*Rendered, not scheduled.* **File:** [ai06-worried.js](../launch/motion/pieces/ai06-worried.js) · **Title:** Half of workers are worried about AI. Here's what to do this month · **First comment:** Which of the four are you starting with?
 
 - **Hook:** a donut drawn to **52%**: *of US workers are worried about the future impact of AI at work* (C10). *If that's you, here's what to do this month.*
 - **Approach:** the four moves from offladder.com's AI guide, ticked off one by one: audit one week; use AI on one cheap block, properly; get better at one hard block; test one direction next to yours.
 - **OffLadder:** *OffLadder is for this one.* 3 questions, 2 directions you'd never have thought of, 1 experiment for tonight. *Then tell Laddie how it went. It remembers, spots patterns, and adapts your next step.*
+
+## Bench · 4 kinds of work AI is creating
+
+*Rendered, not scheduled.* **File:** [ai07-new-work.js](../launch/motion/pieces/ai07-new-work.js) · **Title:** 4 kinds of work AI is creating that nobody's told you about · **First comment:** Which one would you try tonight?
+
+- **Hook:** *4 kinds of work AI is creating, that nobody's told you about*, over a fan of four face-down cards with OffLadder's mark on the backs.
+- **The cards:** one by one, each card flies to the centre and flips: AI workflow designer, model evaluation writer, provenance and authenticity analyst, AI tutor designer, each in offladder.com's words with its test for tonight (C12).
+- **Approach:** *Nobody knows which will become settled job titles. That's why you test.*
+- **OffLadder:** *24 directions like these, each with a test, at offladder.com/directions. Or answer 3 questions: it picks directions for you, then adapts to what you enjoy.*
