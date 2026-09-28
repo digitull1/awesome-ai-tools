@@ -2,7 +2,7 @@
 
 *Started 27 September 2026, following [09-launch-plan.md](../09-launch-plan.md).*
 
-The channel is [@offladder](https://www.youtube.com/@offladder). Posting runs through Metricool (brand *OffLadder*, YouTube and Instagram connected). This log records what has been made, what is scheduled, and what still needs a person.
+The channel is [@offladder](https://www.youtube.com/@offladder). Posting runs through Metricool (brand *OffLadder*, with YouTube, Instagram and TikTok connected). This log records what has been made, what is scheduled, and what still needs a person.
 
 ---
 
@@ -54,25 +54,24 @@ The original text-led Shorts (S22, S05, S04, S06, S07, S15) are still in [shorts
 
 ## On Instagram and TikTok: the social batch
 
-From 28 September every short is built once for TikTok, Reels and Shorts to the standard in [10-viral-standard.md](../10-viral-standard.md). The first five go out as Instagram Reels at 18:00 UK on alternate days, between the posts already in the calendar (those belong to a separate content stream and are untouched). They go out as regular Reels, not trial reels, so the new account's grid fills with its best work. Captions for every platform are in [motion/social-posts.json](motion/social-posts.json).
+From 28 September every short is built once for TikTok, Reels and Shorts to the standard in [10-viral-standard.md](../10-viral-standard.md). The first five go out on Instagram and TikTok at 18:00 UK on alternate days. On Instagram they sit between the posts already in the calendar (those belong to a separate content stream and are untouched), as regular Reels rather than trial reels, so the new account's grid fills with its best work. Captions for every platform are in [motion/social-posts.json](motion/social-posts.json).
 
-| Goes live (UK) | Reel | Job it gives the viewer | Metricool |
-|---|---|---|---|
-| **Tue 29 Sep, 18:00** | POV: telling your mum what you want to study | Recognise the chat, laugh at the ending, send it to your mum | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-3637511346048515290) |
-| **Thu 1 Oct, 18:00** | AI tier list | Argue with where 15 jobs land, by Microsoft's data | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=6934987345918445199) |
-| **Sat 3 Oct, 18:00** | Pick one | Pick one; each pick shows two directions you'd never have thought of | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=6825747789232098301) |
-| **Mon 5 Oct, 18:00** | Guess #1 | Guess the top job of 785, then comment yours | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-195366417915820977) |
-| **Wed 7 Oct, 18:00** | Is a CS degree cooked? | Watch the needle, then comment your degree | [open](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-6561201692308781502) |
+| Goes live (UK) | Video | Job it gives the viewer | Instagram | TikTok |
+|---|---|---|---|---|
+| **Tue 29 Sep, 18:00** | POV: telling your mum what you want to study | Recognise the chat, laugh at the ending, send it to your mum | [Reel](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-3637511346048515290) | [TikTok](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-4645280073303307001) |
+| **Thu 1 Oct, 18:00** | AI tier list | Argue with where 15 jobs land, by Microsoft's data | [Reel](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=6934987345918445199) | [TikTok](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=3461737090190167689) |
+| **Sat 3 Oct, 18:00** | Pick one | Pick one; each pick shows two directions you'd never have thought of | [Reel](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=6825747789232098301) | [TikTok](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-7626377329309956475) |
+| **Mon 5 Oct, 18:00** | Guess #1 | Guess the top job of 785, then comment yours | [Reel](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-195366417915820977) | [TikTok](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-8138143163272183355) |
+| **Wed 7 Oct, 18:00** | Is a CS degree cooked? | Watch the needle, then comment your degree | [Reel](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-6561201692308781502) | [TikTok](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=6047845993072249081) |
 
 The chat, the tier list and *Pick one* also go to YouTube Shorts on 12 to 14 October (table above). *Guess #1* and the CS cut stay off YouTube, where episodes 6 and 7 already cover them.
 
-**TikTok isn't connected to Metricool yet** (only Instagram and YouTube are). Connect the OffLadder TikTok account in Metricool and these can be scheduled the same way; until then, upload the files in [motion/videos/](motion/videos/) natively in the TikTok app with the captions in `social-posts.json`, in the same order. Business accounts can only use TikTok's Commercial Music Library, so keep the original score: it's ours and cleared everywhere.
+**On TikTok** each post is marked *Your brand* in the content disclosure setting, because it ends on offladder.com. TikTok requires disclosure for content that promotes a brand, product or service, and undisclosed commercial content "may not be eligible for distribution in the For You feed" ([TikTok Business Help Center](https://ads.tiktok.com/help/article/about-the-commercial-content-disclosure-setting-for-advertisers)). The label TikTok shows is *Promotional content*. Business accounts can only use TikTok's Commercial Music Library, so keep the original score: it's ours and cleared everywhere.
 
-What these need from a person, in the Instagram (and TikTok) app:
+What these need from a person, in the Instagram and TikTok apps:
 
-- [ ] **Pin** each Reel's first comment once it's live. Metricool posts it; pinning is manual.
-- [ ] **Answer comments for the first two hours** after each Reel goes live. For "my job is…" or "my degree is…", paste the reply [lookup/lookup.py](lookup/) prints. Early replies keep the thread going, and comments are one of the interactions both apps rank on.
-- [ ] **Connect TikTok** in Metricool, or upload the five files natively, in the order above.
+- [ ] **Pin** each post's first comment once it's live. Metricool posts it; pinning is manual. On TikTok, check it appeared, and post it yourself if it didn't.
+- [ ] **Answer comments for the first two hours** after each post goes live. For "my job is…" or "my degree is…", paste the reply [lookup/lookup.py](lookup/) prints. Early replies keep the thread going, and comments are one of the interactions both apps rank on.
 
 ---
 

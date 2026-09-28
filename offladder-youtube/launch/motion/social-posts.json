@@ -10,8 +10,12 @@
    "metricool_uuid": "-3637511346048515290"
   },
   "tiktok": {
-   "caption": "POV: telling your mum you want to study computer science. NY Fed data: 7.0% of recent CS grads unemployed, 4th highest of 73 majors. Send this to your mum, then comment what they told you to study #pov #careertok #computerscience #university",
-   "first_comment": "What did your mum tell you to study?"
+   "slot_uk": "2026-09-29T18:00",
+   "date_sgt": "2026-09-30T01:00:00+08:00",
+   "caption": "POV: telling your mum you want to study computer science. NY Fed data: recent CS grads had a 7.0% unemployment rate, 4th highest of 73 majors. Send this to your mum, then comment what they told you to study #pov #careertok #computerscience #university",
+   "first_comment": "What did your mum tell you to study?",
+   "disclosure": "Your brand (Promotional content)",
+   "metricool_uuid": "-4645280073303307001"
   },
   "youtube": {
    "slot_uk": "2026-10-12T18:00",
@@ -42,8 +46,12 @@
    "metricool_uuid": "6934987345918445199"
   },
   "tiktok": {
+   "slot_uk": "2026-10-01T18:00",
+   "date_sgt": "2026-10-02T01:00:00+08:00",
    "caption": "AI tier list: 15 jobs ranked by Microsoft’s data on how much AI overlaps with the work. S isn’t doomed, D isn’t safe. Comment a job for part 2. #careertok #ai #jobs #tierlist",
-   "first_comment": "Which job should we tier next?"
+   "first_comment": "Which job should we tier next?",
+   "disclosure": "Your brand (Promotional content)",
+   "metricool_uuid": "3461737090190167689"
   },
   "youtube": {
    "slot_uk": "2026-10-13T18:00",
@@ -74,8 +82,12 @@
    "metricool_uuid": "6825747789232098301"
   },
   "tiktok": {
+   "slot_uk": "2026-10-03T18:00",
+   "date_sgt": "2026-10-04T01:00:00+08:00",
    "caption": "Pick one: your pick shows jobs you’d never have thought of. Comment your number, and send this to a friend who’s a 4. Directions from offladder.com #careertok #careeradvice #jobsofthefuture",
-   "first_comment": "Which number are you: 1, 2, 3 or 4?"
+   "first_comment": "Which number are you: 1, 2, 3 or 4?",
+   "disclosure": "Your brand (Promotional content)",
+   "metricool_uuid": "-7626377329309956475"
   },
   "youtube": {
    "slot_uk": "2026-10-14T18:00",
@@ -106,8 +118,12 @@
    "metricool_uuid": "-195366417915820977"
   },
   "tiktok": {
+   "slot_uk": "2026-10-05T18:00",
+   "date_sgt": "2026-10-06T01:00:00+08:00",
    "caption": "Microsoft ranked 785 jobs by AI overlap. Guess #1 before it drops. Comment your job and we’ll reply with its rank. #careertok #ai #jobs #microsoft",
-   "first_comment": "What was your guess for #1? Comment your job for its rank."
+   "first_comment": "What was your guess for #1? Comment your job for its rank.",
+   "disclosure": "Your brand (Promotional content)",
+   "metricool_uuid": "-8138143163272183355"
   }
  },
  {
@@ -121,8 +137,12 @@
    "metricool_uuid": "-6561201692308781502"
   },
   "tiktok": {
-   "caption": "Is a computer science degree cooked? NY Fed data: 7.0% of recent CS grads unemployed, 4th highest of 73 majors. But here’s the part nobody posts. Comment your degree. #computerscience #cs #careertok #csmajor",
-   "first_comment": "What are you studying?"
+   "slot_uk": "2026-10-07T18:00",
+   "date_sgt": "2026-10-08T01:00:00+08:00",
+   "caption": "Is a computer science degree cooked? NY Fed data: recent CS grads had a 7.0% unemployment rate, 4th highest of 73 majors. But that’s only half the data. Comment your degree. #computerscience #cs #careertok #csmajor",
+   "first_comment": "What are you studying?",
+   "disclosure": "Your brand (Promotional content)",
+   "metricool_uuid": "6047845993072249081"
   }
  }
 ]
