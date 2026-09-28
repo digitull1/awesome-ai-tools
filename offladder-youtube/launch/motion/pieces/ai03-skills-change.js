@@ -29,7 +29,7 @@ window.build = function () {
     const keep = K.el('div', 'keep', bar); keep.style.width = KEEP + 'px';
     const gone = K.el('div', 'gone', bar); K.css(gone, { left: KEEP + 6 + 'px', width: BW - KEEP - 6 + 'px' });
     const fresh = K.el('div', 'fresh', bar); K.css(fresh, { left: KEEP + 6 + 'px', width: BW - KEEP - 6 + 'px' });
-    const l1 = K.lines(parent, { lines: ['YOUR SKILLS TODAY'], x: 72, y: BY + 116, size: 24, color: C.paper, track: 0.08 });
+    const l1 = K.lines(parent, { lines: ['YOUR SKILLS'], x: 72, y: BY + 116, size: 24, color: C.paper, track: 0.08 });
     const l2 = K.lines(parent, { lines: ['39% TRANSFORMED OR OUTDATED'], x: 72, y: BY + 116, size: 24, color: C.orange, track: 0.08 });
     l2.box.style.left = BX + BW - 6 + 'px'; l2.box.style.width = 'auto'; l2.box.style.transform = 'translateX(-100%)'; l2.box.style.textAlign = 'right';
     return { lab, big, cap, bar, keep, gone, fresh, l1, l2 };
