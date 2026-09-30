@@ -92,7 +92,7 @@ This is the growth loop, and it needs a person for about 20 minutes a day.
 | 6 | **Microsoft ranked 785 jobs by AI overlap. Is yours top 10?** | A countdown to #1, then: software developers are only #120, and the researchers say reading it as job loss "would be a mistake" | K1–K6 |
 | 7 | **Is a computer science degree cooked? (NY Fed data)** | 4th-highest unemployment of 73 majors, higher than art history, *but* only 19% underemployed, and jobs projected +10% | K7–K10 |
 | 8 | Are customer service jobs cooked? | #7 of 785 and 2.9 million US workers; BLS projects −5% by 2035, yet about 289,500 openings a year. The one honest *HEATING UP* | Microsoft K1; BLS (Aug 2026): "projected to decline 5 percent from 2025 to 2035", "about 289,500 openings … each year". Altman's customer-support line (C3) only after checking the video |
-| 9 | Are writers cooked? | #3 of 785, but BLS projects "little or no change" to 2035 | Microsoft K1; BLS (Aug 2026) |
+| 9 | **Are writers cooked?** (made: the 7 October social cut, below) | Six writing jobs in the top 20 of 785, but BLS projects "little or no change" for writers to 2035 and 11,900 openings a year | K4, K6, K12–K15 |
 | 10 | Is graphic design cooked? | #196 of 785 (less overlap than people think), BLS −2% to 2035, grads 5.7% unemployed | Microsoft K1; BLS (Aug 2026); NY Fed (2024 data) |
 | 11 | Is journalism cooked? | Reporters are #11 of 785 for AI overlap, yet journalism grads have one of the *lowest* unemployment rates (2.3%) | Microsoft K1; NY Fed (2024 data); BLS projection *to verify* |
 | 12 | Is nursing cooked? | #460 of 785 and 2.1% grad unemployment: low overlap isn't the same as safe, so what *is* changing? | Microsoft K1; NY Fed (2024 data); BLS *to verify* |
@@ -104,7 +104,7 @@ After episode 8, the tally decides the order.
 
 ## Claims register
 
-Checked 28 September 2026.
+K1–K11 checked 28 September 2026; K12–K15 checked 30 September 2026.
 
 | # | On screen | Exact figure or wording | Source |
 |---|---|---|---|
@@ -119,6 +119,10 @@ Checked 28 September 2026.
 | K9 | 19% vs 39% | Underemployment (working in a job that typically doesn't need a degree): computer science 19.127%, all recent grads 39.35% | K7 |
 | K10 | Software developer jobs +10% (average +3%) | Software developers: 10%; "Overall employment of software developers, quality assurance analysts, and testers is projected to grow 10 percent from 2025 to 2035, much faster than the average for all occupations." Total, all occupations: 3% | [BLS Occupational Outlook Handbook](https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm), last modified 27 Aug 2026 |
 | K11 | Directions next to CS | Model evaluation writer, AI workflow designer, agentic systems operator | [offladder.com/directions](https://offladder.com/directions) (C12) |
+| K12 | Six writing jobs, all in the top 20 | #3 Writers and authors (score 0.454); #11 News analysts, reporters, and journalists (0.383); #13 Technical writers (0.373); #15 Proofreaders and copy markers (0.369); #16 Editors (0.368); #18 Public relations specialists (0.365). On screen: REPORTERS, PR SPECIALISTS | K1 data, `ai_applicability_scores.csv`, ranked by score (checked 30 Sep 2026) |
+| K13 | Technical writers +1%, writers little or no change, editors −1%, reporters −6% (average +3%) | "Employment of technical writers is projected to grow 1 percent from 2025 to 2035, slower than the average for all occupations." "Employment of writers and authors is projected to show little or no change from 2025 to 2035." "Employment of editors is projected to decline 1 percent from 2025 to 2035." "Employment of news analysts, reporters, and journalists is projected to decline 6 percent from 2025 to 2035." Total, all occupations: 3% | BLS Occupational Outlook Handbook: [technical writers](https://www.bls.gov/ooh/media-and-communication/technical-writers.htm), [writers and authors](https://www.bls.gov/ooh/media-and-communication/writers-and-authors.htm), [editors](https://www.bls.gov/ooh/media-and-communication/editors.htm), [reporters](https://www.bls.gov/ooh/media-and-communication/reporters-correspondents-and-broadcast-news-analysts.htm), all last modified 27 Aug 2026 |
+| K14 | 11,900 openings a year; "People retire, move and switch. The seats refill." | "About 11,900 openings for writers and authors are projected each year, on average, over the decade." "Most of those openings are expected to result from the need to replace workers who transfer to different occupations or exit the labor force, such as to retire." The on-screen line is our paraphrase of the second sentence | [BLS, writers and authors](https://www.bls.gov/ooh/media-and-communication/writers-and-authors.htm), last modified 27 Aug 2026 |
+| K15 | Directions next to writing | Model evaluation writer, provenance and authenticity analyst, AI tutor designer | [offladder.com/directions](https://offladder.com/directions) (C12; all three checked on the page 30 Sep 2026) |
 
 ---
 
@@ -154,3 +158,20 @@ Checked 28 September 2026.
 | 18.0 | Ladder wipe to paper. IF YOU'RE STUDYING IT: **DON'T JUST COLLECT THE DEGREE. BUILD PROOF:** ship one real project a month; get good at checking AI's code; test a direction next to yours |
 | 21.4 | DIRECTIONS NEXT TO CS, from offladder.com/directions: model evaluation writer, AI workflow designer, agentic systems operator (K11). *OffLadder finds yours in 3 questions, then adapts to what you try.* |
 | 24.0 | End card. *Comment your degree. We'll look it up.* |
+
+## Episode 9 · Are writers cooked? (social cut)
+
+**File:** [launch/motion/pieces/sx06-writers.js](../launch/motion/pieces/sx06-writers.js), built to [10-viral-standard.md](../10-viral-standard.md) in the social safe box · **Posted:** Instagram and TikTok, Wed 7 October, 18:00 UK, in the slot that had a second CS cut · **First comment:** Comment your job and we'll reply with its rank out of 785, and what that does and doesn't mean.
+
+| Time | On screen |
+|---|---|
+| 0.0 | MICROSOFT AI DATA · BLS PROJECTIONS. **ARE WRITERS COOKED?** over the gauge, the needle flinching towards COOKED |
+| 2.0 | MICROSOFT RANKED 785 JOBS BY AI OVERLAP. **SIX WRITING JOBS. ALL IN THE TOP 20.** #3 writers and authors, #11 reporters, #13 technical writers, #15 proofreaders, #16 editors, #18 PR specialists; a 785-long strip with all six ticks at its start (K12) |
+| 6.5 | THE RESEARCHERS WHO MADE THE LIST, ON READING IT AS JOB LOSS: *"This would be a mistake."* (K4) |
+| 8.6 | PROJECTED US JOBS, 2025 TO 2035: technical writers **+1%**, writers and authors *little or no change*, editors **−1%**, reporters **−6%**; a dashed line at *Average job: +3%* (K13) |
+| 12.0 | Glitch. **BUT.** |
+| 12.6 | PROJECTED EVERY YEAR TO 2035: **11,900** *openings for writers and authors. People retire, move and switch. The seats refill.* (K14) |
+| 15.5 | The gauge returns. Stamp: **HEATING UP.** *Tasks change before titles do.* (K6) |
+| 18.0 | Ladder wipe to paper. IF YOU WRITE FOR A LIVING: **THE FIRST DRAFT GOT CHEAP. SO:** own a subject, not just the words; get good at editing AI drafts; test a direction next to yours |
+| 21.4 | DIRECTIONS NEXT TO WRITING, from offladder.com/directions: model evaluation writer, provenance and authenticity analyst, AI tutor designer (K15). *OffLadder finds yours in 3 questions, then adapts to what you try.* |
+| 24.0 | End card. **COMMENT YOUR JOB.** *We'll reply with its rank out of 785.* Note: *Overlap with AI, not job loss. Data: Microsoft, BLS.* |

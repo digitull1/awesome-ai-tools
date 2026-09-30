@@ -1,0 +1,10 @@
+.wrow { position: absolute; left: 80px; width: 812px; height: 60px; display: flex; align-items: baseline; gap: 18px; font-family: 'Archivo Black', sans-serif; color: #F4F2EE; }
+.wrow b { width: 126px; flex: none; font-size: 54px; line-height: 1; color: #FA5608; font-weight: 400; }
+.wrow span { font-size: 42px; line-height: 1; white-space: nowrap; }
+.rstrip { position: absolute; left: 80px; width: 812px; height: 16px; transform-origin: 0% 50%; }
+.rtick { position: absolute; width: 3px; height: 32px; background: #FBFAF7; transform-origin: 50% 100%; box-shadow: 0 0 10px rgba(251, 250, 247, 0.8); }
+.zaxis { position: absolute; width: 4px; background: #6E6B66; transform-origin: 50% 0%; }
+.pbar { position: absolute; height: 48px; }
+.avgline { position: absolute; width: 0; border-left: 4px dashed #F4F2EE; transform-origin: 50% 0%; }
+.chk { position: absolute; left: 72px; width: 800px; padding-left: 92px; font-family: 'Hind', sans-serif; font-weight: 600; font-size: 46px; line-height: 1.12; color: #0C0C0C; }
+.chk .box { position: absolute; left: 0; top: -2px; width: 60px; height: 60px; border: 6px solid #0C0C0C; background: #FBFAF7; }
