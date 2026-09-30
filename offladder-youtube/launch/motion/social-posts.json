@@ -145,5 +145,70 @@
    "disclosure": "Your brand (Promotional content)",
    "metricool_uuid": "6047845993072249081"
   }
+ },
+ {
+  "id": "tt01-none-of-us",
+  "video": "videos/tt01-none-of-us.mp4",
+  "cut_of": "ai01-none-of-us",
+  "tiktok": {
+   "slot_uk": "2026-10-02T18:00",
+   "date_sgt": "2026-10-03T01:00:00+08:00",
+   "caption": "Elon Musk: “Probably none of us will have a job.”\nEmployers expect 92 million jobs displaced by 2030, and 170 million created (World Economic Forum). So don’t bet your future on a job title. Test it first. What job were you told was safe?\n#ai #careertok #futureofwork #jobs",
+   "first_comment": "Sources: Elon Musk at VivaTech, 23 May 2024 (CNN); Sam Altman, “The Gentle Singularity”, June 2025; World Economic Forum, Future of Jobs Report 2025.",
+   "disclosure": "Your brand (Promotional content)",
+   "metricool_uuid": "-307420315476538636"
+  }
+ },
+ {
+  "id": "tt02-shrinking-jobs",
+  "video": "videos/tt02-shrinking-jobs.mp4",
+  "cut_of": "ai02-shrinking-jobs",
+  "tiktok": {
+   "slot_uk": "2026-10-04T18:00",
+   "date_sgt": "2026-10-05T01:00:00+08:00",
+   "caption": "The jobs employers expect to shrink fastest by 2030\nBank tellers, data entry clerks, postal service clerks, cashiers (World Economic Forum). But about 60% of US jobs are types of work created since 1940. Is yours on the list?\n#careertok #jobs #ai #futureofwork",
+   "first_comment": "Sources: World Economic Forum, Future of Jobs Report 2025; MIT News (1 April 2024) on Autor, Chin, Salomons and Seegmiller in the Quarterly Journal of Economics. Directions from offladder.com/directions.",
+   "disclosure": "Your brand (Promotional content)",
+   "metricool_uuid": "3476066403812461864"
+  }
+ },
+ {
+  "id": "tt03-skills-change",
+  "video": "videos/tt03-skills-change.mp4",
+  "cut_of": "ai03-skills-change",
+  "tiktok": {
+   "slot_uk": "2026-10-06T18:00",
+   "date_sgt": "2026-10-07T01:00:00+08:00",
+   "caption": "39% of your skills will change by 2030\nSo says the World Economic Forum, which also expects 59 in every 100 workers to need training. Before you pay for a course, try an hour of the real work. What skill do you want to learn next?\n#careertok #skills #ai #futureofwork",
+   "first_comment": "Source: World Economic Forum, Future of Jobs Report 2025 (January 2025).",
+   "disclosure": "Your brand (Promotional content)",
+   "metricool_uuid": "-8020581443332324037"
+  }
+ },
+ {
+  "id": "tt04-cant-agree",
+  "video": "videos/tt04-cant-agree.mp4",
+  "cut_of": "ai04-cant-agree",
+  "tiktok": {
+   "slot_uk": "2026-10-08T18:00",
+   "date_sgt": "2026-10-09T01:00:00+08:00",
+   "caption": "The people building AI can’t agree what happens to jobs\nAnthropic’s CEO warned AI could wipe out half of all entry-level white-collar jobs. Nvidia’s CEO: “Some jobs will be obsolete, but many jobs are going to be created.” Nobody knows yet. Which part of your week could AI already do?\n#ai #careertok #futureofwork #jobs",
+   "first_comment": "Sources: Dario Amodei to Axios (May 2025) and Jensen Huang at VivaTech (June 2025), both reported by Fortune on 11 June 2025.",
+   "disclosure": "Your brand (Promotional content)",
+   "metricool_uuid": "-1781004212144094931"
+  }
+ },
+ {
+  "id": "tt05-80-percent",
+  "video": "videos/tt05-80-percent.mp4",
+  "cut_of": "ai05-80-percent",
+  "tiktok": {
+   "slot_uk": "2026-10-09T18:00",
+   "date_sgt": "2026-10-10T01:00:00+08:00",
+   "caption": "Nvidia’s CEO: you won’t lose your job to AI. You’ll lose it to this\nJensen Huang: “You’re not going to lose your job to an AI, but you’re going to lose your job to someone who uses AI.” So become that someone: try the 80% test in the video. What’s the most repetitive task in your week?\n#ai #careertok #productivity #futureofwork",
+   "first_comment": "Source: Jensen Huang at the Milken Institute Global Conference, May 2025 (Fortune, 29 May 2025).",
+   "disclosure": "Your brand (Promotional content)",
+   "metricool_uuid": "979116686603929764"
+  }
  }
 ]
