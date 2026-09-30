@@ -1,0 +1,17 @@
+.tile { position: absolute; width: 38px; height: 60px; background: #1F1E1C; overflow: hidden; }
+.tile::after { content: ''; position: absolute; left: 0; right: 0; top: 29px; height: 2px; background: #0C0C0C; }
+.tile span { position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; align-items: center; justify-content: center;
+             font-family: 'Archivo Black', sans-serif; font-size: 34px; line-height: 1; color: #F4F2EE; padding-top: 4px; }
+.fig { position: absolute; width: 64px; height: 118px; }
+.fig i { position: absolute; left: 16px; top: 0; width: 32px; height: 32px; background: currentColor; }
+.fig b { position: absolute; left: 0; top: 40px; width: 64px; height: 78px; background: currentColor; }
+.qcard { position: absolute; left: 72px; width: 808px; background: #FBFAF7; border: 5px solid #0C0C0C; box-shadow: 10px 10px 0 #0C0C0C; padding: 18px 22px 20px; }
+.qcard .tag { font-family: 'Archivo Black', sans-serif; font-size: 21px; letter-spacing: 0.1em; text-transform: uppercase; color: #54524F; margin-bottom: 8px; }
+.qcard .q { font-family: 'Hind', sans-serif; font-weight: 600; font-size: 42px; line-height: 1.12; margin-bottom: 14px; }
+.qopts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.qopt { position: relative; border: 4px solid #0C0C0C; background: #F4F2EE; padding: 16px 16px 12px; min-height: 92px; display: flex; align-items: center; }
+.qopt b { display: block; font-family: 'Archivo Black', sans-serif; font-weight: 400; font-size: 29px; line-height: 1.04; text-transform: uppercase; }
+.qopt em { display: block; font-family: 'Hind', sans-serif; font-weight: 500; font-style: normal; font-size: 22px; line-height: 1.2; color: #54524F; margin-top: 4px; }
+.qopt .hl { position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: #FA5608; transform: scaleX(0); transform-origin: 0 50%; }
+.qopt > * { position: relative; }
+.cursor { position: absolute; left: 0; top: 0; width: 54px; height: 70px; }

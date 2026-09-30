@@ -1,0 +1,11 @@
+/* Shared styles for "Cooked or not?" (episodes 6 onwards). */
+.coglow { pointer-events: none; }
+.cogauge { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.colabel { position: absolute; font-family: 'Archivo Black', sans-serif; font-size: 30px; line-height: 1; letter-spacing: 0.08em; white-space: nowrap; color: #6E6B66; }
+.conote { position: absolute; font-family: 'Archivo Black', sans-serif; font-size: 20px; line-height: 1; letter-spacing: 0.14em; white-space: nowrap; color: #8A8680; }
+.rank small { font-size: 0.5em; vertical-align: 0.62em; margin-right: 0.04em; }
+.src { position: absolute; font-family: 'Archivo Black', sans-serif; font-size: 20px; line-height: 1.2; letter-spacing: 0.12em; text-transform: uppercase; color: #8A8680; white-space: nowrap; }
+.cometer { position: absolute; }
+.cozone { position: absolute; top: 0; }
+.copin { position: absolute; top: -26px; width: 0; height: 0; margin-left: -17px; border-left: 17px solid transparent; border-right: 17px solid transparent; border-top: 24px solid #FBFAF7; }
+.copin::after { content: ''; position: absolute; left: -3px; top: -2px; width: 6px; height: 50px; background: #FBFAF7; }

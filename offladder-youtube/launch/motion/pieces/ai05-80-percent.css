@@ -1,0 +1,18 @@
+.win { position: absolute; left: 72px; width: 820px; background: #FBFAF7; border: 5px solid #0C0C0C; box-shadow: 12px 12px 0 #FA5608; }
+.win .bar { height: 44px; border-bottom: 5px solid #0C0C0C; display: flex; align-items: center; padding: 0 16px; gap: 10px;
+            font-family: 'Archivo Black', sans-serif; font-size: 18px; letter-spacing: 0.1em; text-transform: uppercase; color: #54524F; }
+.win .bar i { width: 14px; height: 14px; border: 3px solid #0C0C0C; display: inline-block; }
+.win .body { padding: 18px 22px 22px; position: relative; }
+.prompt { font-family: 'Hind', sans-serif; font-weight: 600; font-size: 36px; line-height: 1.2; color: #0C0C0C; background: #F4F2EE; border: 3px solid #0C0C0C; padding: 12px 14px 8px; min-height: 64px; }
+.out { margin-top: 16px; }
+.out p { position: relative; font-family: 'Hind', sans-serif; font-weight: 500; font-size: 36px; line-height: 1.25; color: #0C0C0C; margin-bottom: 8px; }
+.skel { position: absolute; left: 0; top: 6px; height: 26px; background: #E3DFD7; }
+.note { position: absolute; font-family: 'Instrument Serif', serif; font-style: italic; font-size: 40px; line-height: 1; color: #FA5608; white-space: nowrap; }
+.fix { position: absolute; left: 72px; width: 820px; background: #0C0C0C; color: #F4F2EE; border: 5px solid #0C0C0C; box-shadow: 12px 12px 0 #FA5608; padding: 18px 24px 16px; }
+.fix h5 { font-family: 'Archivo Black', sans-serif; font-weight: 400; font-size: 22px; letter-spacing: 0.1em; color: #FA5608; margin-bottom: 10px; }
+.fix li { list-style: none; font-family: 'Hind', sans-serif; font-weight: 600; font-size: 34px; line-height: 1.3; }
+.fix li::before { content: ''; display: inline-block; width: 16px; height: 16px; background: #FA5608; margin-right: 14px; vertical-align: 2px; }
+.dir { position: absolute; left: 72px; width: 820px; background: #FBFAF7; border: 5px solid #0C0C0C; box-shadow: 10px 10px 0 #0C0C0C; padding: 16px 22px 14px; }
+.dir h5 { font-family: 'Archivo Black', sans-serif; font-weight: 400; font-size: 40px; line-height: 1; text-transform: uppercase; margin-bottom: 8px; }
+.dir p { font-family: 'Hind', sans-serif; font-weight: 600; font-size: 33px; line-height: 1.2; color: #54524F; }
+.dir .t { display: inline-block; margin-top: 10px; font-family: 'Archivo Black', sans-serif; font-size: 20px; letter-spacing: 0.08em; background: #FA5608; border: 3px solid #0C0C0C; padding: 7px 10px 4px; }

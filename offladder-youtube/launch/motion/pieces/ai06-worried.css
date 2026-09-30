@@ -1,0 +1,8 @@
+.move { position: absolute; left: 72px; width: 800px; padding-left: 104px; }
+.move .box { position: absolute; left: 0; top: 2px; width: 74px; height: 74px; border: 6px solid #0C0C0C; background: #FBFAF7; }
+.move h4 { font-family: 'Archivo Black', sans-serif; font-weight: 400; font-size: 40px; line-height: 1.02; text-transform: uppercase; margin-bottom: 8px; }
+.move p { font-family: 'Hind', sans-serif; font-weight: 600; font-size: 32px; line-height: 1.18; color: #54524F; }
+.move .num { font-family: 'Archivo Black', sans-serif; font-size: 22px; letter-spacing: 0.1em; color: #FA5608; margin-bottom: 6px; }
+.big321 { position: absolute; left: 72px; width: 820px; display: flex; align-items: baseline; gap: 26px; }
+.big321 b { font-family: 'Archivo Black', sans-serif; font-weight: 400; font-size: 220px; line-height: 0.8; color: #FA5608; width: 150px; flex: none; }
+.big321 span { font-family: 'Archivo Black', sans-serif; font-size: 54px; line-height: 0.98; text-transform: uppercase; }
