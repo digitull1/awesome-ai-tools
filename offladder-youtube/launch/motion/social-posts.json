@@ -127,20 +127,21 @@
   }
  },
  {
-  "id": "sx04-cs-degree",
-  "video": "videos/sx04-cs-degree.mp4",
+  "id": "sx06-writers",
+  "video": "videos/sx06-writers.mp4",
+  "replaces": "sx04-cs-degree, which repeated the CS episode (co02) on YouTube; the same Metricool posts were updated on 30 Sep 2026. The sx04 file stays in videos/ for later use",
   "instagram": {
    "slot_uk": "2026-10-07T18:00",
    "date_sgt": "2026-10-08T01:00:00+08:00",
-   "caption": "Is a computer science degree cooked?\n\nRecent CS grads (ages 22 to 27) had the 4th-highest unemployment rate of 73 majors in 2024: 7.0%, against 4.2% for all recent grads. Higher than art history, English and philosophy.\n\nBut only 19% of CS grads work in jobs that don’t need a degree (all recent grads: 39%), and US software developer jobs are projected to grow 10% from 2025 to 2035 (the average job: 3%).\n\nOur read: not cooked, but harder to get into. So don’t just collect the degree. Build proof: ship one real project a month, get good at checking AI’s code, and test a direction next to yours.\n\nComment your degree. We’ll reply with its NY Fed numbers.\n\noffladder.com (link in bio)\n\nSources: Federal Reserve Bank of New York, recent graduates by major (2024 data, Feb 2026); US Bureau of Labor Statistics (Aug 2026).\n\n#computerscience #careers #ai",
-   "first_comment": "What are you studying?",
+   "caption": "Are writers cooked?\n\nMicrosoft ranked 785 jobs by how much their work overlaps with AI. Six writing jobs made the top 20: writers and authors (#3), reporters (#11), technical writers (#13), proofreaders (#15), editors (#16) and PR specialists (#18).\n\nBut the researchers who made the list warn against reading it as job loss: “This would be a mistake.”\n\nUS job projections, 2025 to 2035: technical writers +1%, writers and authors little or no change, editors −1%, reporters −6% (the average job: +3%). And about 11,900 openings for writers and authors every year, mostly as people retire or move to other work.\n\nOur read: heating up, not cooked. Tasks change before titles do. The first draft got cheap, so own a subject, not just the words, get good at editing AI drafts, and test a direction next to yours.\n\nComment your job. We’ll reply with its rank out of 785.\n\noffladder.com (link in bio)\n\nSources: Microsoft Research, “Working with AI” (2025); US Bureau of Labor Statistics (Aug 2026).\n\n#writers #careers #ai",
+   "first_comment": "Writers, editors, reporters: what’s changed in your work this year?",
    "metricool_uuid": "-6561201692308781502"
   },
   "tiktok": {
    "slot_uk": "2026-10-07T18:00",
    "date_sgt": "2026-10-08T01:00:00+08:00",
-   "caption": "Is a computer science degree cooked? NY Fed data: recent CS grads had a 7.0% unemployment rate, 4th highest of 73 majors. But that’s only half the data. Comment your degree. #computerscience #cs #careertok #csmajor",
-   "first_comment": "What are you studying?",
+   "caption": "Are writers cooked? Microsoft ranked 785 jobs by AI overlap, and six writing jobs made the top 20. But that’s only half the data. Comment your job and we’ll reply with its rank. #writers #writertok #careertok #ai",
+   "first_comment": "Writers, editors, reporters: what’s changed in your work this year?",
    "disclosure": "Your brand (Promotional content)",
    "metricool_uuid": "6047845993072249081"
   }

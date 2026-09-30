@@ -73,6 +73,8 @@ Every hook is true, fits in seven words, and works with the sound off.
 
 **The safe zone.** Anything that must be read sits inside **x 65–900, y 270–1250**. That box clears Instagram's interface (Meta asks for the top 14%, the bottom 35% and 6% at each side, per its [Business Help Centre](https://www.facebook.com/business/help/980593475366490/)), TikTok's right-hand buttons and caption, and YouTube's. Decoration can bleed to the edges. Instagram's profile grid crops covers to 3:4, so the hook sits in the middle of the frame. The renderer checks this for every piece that opts in (`safe: 'social'`).
 
+**TikTok-only cuts** can use the taller box **x 65–900, y 270–1400**: with a short caption, TikTok's interface covers the bottom 484 px and the right 140 px ([Cadenus](https://cadenus.io/resources/blog/tiktok-safe-zone/), July 2026, which notes the bottom margin grows with longer captions), so keep TikTok captions short. A video laid out for YouTube's box is re-cut with `K.refit(x, y, scale)` as the last line of its build: everything the camera sees is scaled uniformly into the TikTok box, while backgrounds, wipes and the logo stay full-bleed, and the renderer then checks the TikTok box. The AI series episodes 1 to 5 were re-cut this way (`tt01` to `tt05`, scale 0.859).
+
 ## 7. Posting
 
 - **One master, native uploads.** The same file goes to TikTok, Reels and Shorts, uploaded natively (never a download with another platform's watermark), with platform-specific captions.
@@ -111,5 +113,6 @@ In posting order:
 | **Pick one** | Pick one of four things you'd do on a Sunday; each pick reveals two directions you'd never have thought of | Beat | [sx01-pick-one](launch/motion/pieces/sx01-pick-one.js) |
 | **Guess #1** | Guess the top job before it drops, then comment yours for its rank | Epic | [sx03-guess-one](launch/motion/pieces/sx03-guess-one.js) |
 | **Is a CS degree cooked?** | Watch the needle, then comment your degree | Epic | [sx04-cs-degree](launch/motion/pieces/sx04-cs-degree.js) |
+| **Are writers cooked?** (replaced the CS cut on 7 Oct) | Watch the needle, then comment your job for its rank out of 785 | Epic | [sx06-writers](launch/motion/pieces/sx06-writers.js) |
 
-The facts in *Guess #1*, *Is a CS degree cooked?* and the POV chat (one figure, K7) are claims K1–K11 in [scripts/cooked-or-not.md](scripts/cooked-or-not.md). The tier list uses the same Microsoft data (K1): the tiers are rank bands (S is the paper's top 40, A the top 20%, B the top half, C the lower half, D the bottom 20%). *Pick one* uses directions from [offladder.com/directions](https://offladder.com/directions), described in our own words.
+The facts in *Guess #1*, *Is a CS degree cooked?* and the POV chat (one figure, K7) are claims K1–K11 in [scripts/cooked-or-not.md](scripts/cooked-or-not.md); *Are writers cooked?* adds K12–K15. On 30 September the CS cut made way for the writers episode before it went out: computer science had already been covered twice, and YouTube episode 7 covers it again on 10 October. The tier list uses the same Microsoft data (K1): the tiers are rank bands (S is the paper's top 40, A the top 20%, B the top half, C the lower half, D the bottom 20%). *Pick one* uses directions from [offladder.com/directions](https://offladder.com/directions), described in our own words.

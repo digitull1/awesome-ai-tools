@@ -62,16 +62,33 @@ From 28 September every short is built once for TikTok, Reels and Shorts to the 
 | **Thu 1 Oct, 18:00** | AI tier list | Argue with where 15 jobs land, by Microsoft's data | [Reel](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=6934987345918445199) | [TikTok](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=3461737090190167689) |
 | **Sat 3 Oct, 18:00** | Pick one | Pick one; each pick shows two directions you'd never have thought of | [Reel](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=6825747789232098301) | [TikTok](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-7626377329309956475) |
 | **Mon 5 Oct, 18:00** | Guess #1 | Guess the top job of 785, then comment yours | [Reel](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-195366417915820977) | [TikTok](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-8138143163272183355) |
-| **Wed 7 Oct, 18:00** | Is a CS degree cooked? | Watch the needle, then comment your degree | [Reel](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-6561201692308781502) | [TikTok](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=6047845993072249081) |
+| **Wed 7 Oct, 18:00** | Are writers cooked? | Watch the needle, then comment your job for its rank out of 785 | [Reel](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=-6561201692308781502) | [TikTok](https://app.metricool.com/planner/calendar?blogId=7116319&openWithPostUuid=6047845993072249081) |
 
-The chat, the tier list and *Pick one* also go to YouTube Shorts on 12 to 14 October (table above). *Guess #1* and the CS cut stay off YouTube, where episodes 6 and 7 already cover them.
+The chat, the tier list and *Pick one* also go to YouTube Shorts on 12 to 14 October (table above). *Guess #1* and the writers episode stay off YouTube for now: episode 6 covers the same ranking, and writers is on the YouTube slate from 15 October.
+
+**Changed on 30 September.** The 7 October slot was going to carry a second computer-science cut. Computer science had already gone out twice (a Reel posted directly on 28 September, and the POV chat's key figure) and YouTube episode 7 covers it on 10 October, so the slot now tests a new job: *Are writers cooked?* ([claims K12–K15](../scripts/cooked-or-not.md#claims-register)). The same Metricool posts were updated, so the links above still work.
 
 **On TikTok** each post is marked *Your brand* in the content disclosure setting, because it ends on offladder.com. TikTok requires disclosure for content that promotes a brand, product or service, and undisclosed commercial content "may not be eligible for distribution in the For You feed" ([TikTok Business Help Center](https://ads.tiktok.com/help/article/about-the-commercial-content-disclosure-setting-for-advertisers)). The label TikTok shows is *Promotional content*. Business accounts can only use TikTok's Commercial Music Library, so keep the original score: it's ours and cleared everywhere.
 
 What these need from a person, in the Instagram and TikTok apps:
 
 - [ ] **Pin** each post's first comment once it's live. Metricool posts it; pinning is manual. On TikTok, check it appeared, and post it yourself if it didn't.
+- [ ] **Seed the accounts this week** with the [seed kit](seed-kit.md): the team follows, watches, answers and shares, with ready-to-send messages and copy for offladder.com and the app. No bought followers.
+- [ ] **Ask two or three creators to co-author Reels** with the [collab kit](collab-kit.md). Their handles go on the scheduled Reels as collaborators (the kit shows how).
 - [ ] **Answer comments for the first two hours** after each post goes live. For "my job is…" or "my degree is…", paste the reply [lookup/lookup.py](lookup/) prints. Early replies keep the thread going, and comments are one of the interactions both apps rank on.
+
+## Reviews
+
+Two reviews are booked, at 09:00 UK on **Mon 5 October** (day 7) and **Mon 12 October** (day 14). Each one reads Metricool's data, records the results here and ends with a plan for the next week. On 30 September the accounts had 0 followers on Instagram and TikTok and one YouTube subscriber, so the first job is to get posts seen ([seed kit](seed-kit.md), [collab kit](collab-kit.md)).
+
+For every post, on each platform: reach or views, average watch time, shares, saves, comments and follows. Then:
+
+- **Part two:** a post 50% or more above its platform's median gets a follow-up within 48 hours, on the next most similar job or topic.
+- **Drop:** a format that comes last at both reviews stops.
+- **Audience (your call):** Instagram carries two streams for two audiences, students and recent graduates, and people changing career in their late 20s and 30s. A new account's first engagers teach the app who it's for, so on 5 October we compare the two and you choose one for October.
+- **Seed and collab:** followers against the target of 100 real followers each on Instagram and TikTok by 12 October, and collab Reels' reach against the account's average.
+
+---
 
 ---
 

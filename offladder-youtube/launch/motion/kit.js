@@ -470,6 +470,17 @@
   K.SAFE_SHORTS = { l: 40, t: 170, r: 900, b: 1500, rTop: 1020, split: 1000 };
   K.SAFE_SOCIAL = { l: 65, t: 270, r: 900, b: 1250, rTop: 940, split: 1000 };
   K.SAFE = K.SAFE_SHORTS;
+  // TikTok alone: its short-caption UI takes the bottom 484px and the right 140px (see 10-viral-standard.md).
+  K.SAFE_TIKTOK = { l: 65, t: 270, r: 900, b: 1400, rTop: 940, split: 1000 };
+  // Re-cut a finished layout for a tighter box: everything the camera sees is scaled uniformly about the
+  // top-left corner, so camera moves still frame what they framed. Backgrounds, wipes and the HUD stay full size.
+  // Call it last in build(): K.fit and the pen marks measure the page at build time.
+  K.refit = function (x, y, scale, safe = K.SAFE_TIKTOK) {
+    const wrap = K.el('div', 'layer refit');
+    K.stage.insertBefore(wrap, K.cam); wrap.appendChild(K.cam);
+    gsap.set(wrap, { x, y, scale, transformOrigin: '0px 0px' });
+    K.SAFE = safe;
+  };
   K.check = function (e, t, name) { K.checks.push({ e, t, name: name || (e.textContent || '').trim().slice(0, 40) }); };
   // Measures the ink, not the layout box: words, marks, or the element itself.
   window.__checks = function () {

@@ -72,6 +72,8 @@ Checked on 28 September 2026.
 | 5 · The 80% test | Tue 6 Oct, 18:00 | Scheduled |
 | 6 onwards | From Thu 8 Oct | [Cooked or not?](cooked-or-not.md#cadence-and-slate) |
 
+**On TikTok.** Episodes 1 to 5 were re-cut for TikTok's screen (`tt01` to `tt05` in [launch/motion/pieces/](../launch/motion/pieces/): the same video, scaled into TikTok's safe area as set out in [10-viral-standard.md](../10-viral-standard.md)). They go out at 18:00 UK on Fri 2, Sun 4, Tue 6, Thu 8 and Fri 9 October, on the days between the social batch, so TikTok gets a post every day from 1 to 9 October. Each caption names its source and the first comment gives the full reference; both are in [launch/motion/social-posts.json](../launch/motion/social-posts.json).
+
 ## Episode 1 · "Probably none of us will have a job."
 
 **Live:** Mon 28 Sep ([youtube.com/shorts/c62_PVxUDCo](https://www.youtube.com/shorts/c62_PVxUDCo)) · **File:** [launch/motion/pieces/ai01-none-of-us.js](../launch/motion/pieces/ai01-none-of-us.js)
