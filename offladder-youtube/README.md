@@ -31,7 +31,7 @@ A complete system for producing YouTube videos for [offladder.com](https://offla
 | [09-launch-plan.md](09-launch-plan.md) | Research sprint, channel set-up, trailer script, the 12-week calendar and checkpoints | Producer |
 | [10-viral-standard.md](10-viral-standard.md) | **The standard every short-form video is built to**, one master for TikTok, Reels and Shorts: what each platform says it ranks on, why people share, ten laws, formats, a hook bank, the safe zone, and the proud test | Everyone making Shorts |
 | [templates/](templates/) | Concept card, claims register, script, thumbnail brief, release and safety checklist, publish checklist, packaging log, post-mortem | Everyone |
-| [launch/](launch/) | **What's been made and scheduled:** the launch log, the AI series (live and queued in Metricool), the motion engine that renders it, channel art, and the search-language research | Everyone |
+| [launch/](launch/) | **What's been made and scheduled:** the launch log, the AI series (live and queued in Metricool), the motion engine that renders it, channel art, and the search-language research. The [seed kit](launch/seed-kit.md) and [collab kit](launch/collab-kit.md) are how the accounts find their first audience | Everyone |
 
 ---
 
